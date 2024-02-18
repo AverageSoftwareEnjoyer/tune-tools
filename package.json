@@ -9,12 +9,13 @@
         "test": "ng test",
         "serve:ssr:tune-tools": "node dist/tune-tools/server/server.mjs",
         "prepare": "husky install",
-        "lint": "npx eslint \"src/**/*.{js,ts}\" --quiet --fix",
+        "lint": "npx eslint \"src/**/*.{js,ts}\" --fix",
         "format": "npx prettier \"src/**/*.{js,ts,html,css,scss}\" --write"
     },
     "private": true,
     "dependencies": {
         "@angular/animations": "^17.2.1",
+        "@angular/cdk": "^17.2.0",
         "@angular/common": "^17.2.1",
         "@angular/compiler": "^17.2.1",
         "@angular/core": "^17.2.1",
@@ -43,8 +44,8 @@
         "@types/express": "^4.17.21",
         "@types/jest": "^29.5.12",
         "@types/node": "^18.19.17",
-        "@typescript-eslint/eslint-plugin": "^7.0.1",
-        "@typescript-eslint/parser": "^7.0.1",
+        "@typescript-eslint/eslint-plugin": "^6.4.0",
+        "@typescript-eslint/parser": "^6.4.0",
         "@typescript-eslint/types": "^7.0.1",
         "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
@@ -74,7 +75,7 @@
             "prettier --write ."
         ],
         "src/**/*.{js,ts}": [
-            "eslint . --fix --quiet"
+            "eslint . --fix"
         ]
     }
 }
