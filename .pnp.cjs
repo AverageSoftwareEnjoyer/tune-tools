@@ -59,7 +59,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:5.1.3"],\
           ["eslint-plugin-promise", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:6.1.1"],\
           ["eslint-plugin-simple-import-sort", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:12.0.0"],\
-          ["husky", "npm:8.0.3"],\
+          ["husky", "npm:9.0.11"],\
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
           ["lint-staged", "npm:15.2.2"],\
@@ -9287,7 +9287,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["esbuild", [\
       ["npm:0.19.12", {\
-        "packageLocation": "./.yarn/cache/esbuild-npm-0.19.12-fb5a3a4313-861fa8eb24.zip/node_modules/esbuild/",\
+        "packageLocation": "./.yarn/unplugged/esbuild-npm-0.19.12-fb5a3a4313/node_modules/esbuild/",\
         "packageDependencies": [\
           ["esbuild", "npm:0.19.12"],\
           ["@esbuild/aix-ppc64", "npm:0.19.12"],\
@@ -9317,7 +9317,7 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }],\
       ["npm:0.20.0", {\
-        "packageLocation": "./.yarn/cache/esbuild-npm-0.20.0-ed7bdf2043-d881b7462f.zip/node_modules/esbuild/",\
+        "packageLocation": "./.yarn/unplugged/esbuild-npm-0.20.0-ed7bdf2043/node_modules/esbuild/",\
         "packageDependencies": [\
           ["esbuild", "npm:0.20.0"],\
           ["@esbuild/aix-ppc64", "npm:0.20.0"],\
@@ -11004,10 +11004,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["husky", [\
-      ["npm:8.0.3", {\
-        "packageLocation": "./.yarn/cache/husky-npm-8.0.3-b0b59c5127-b754cf70fd.zip/node_modules/husky/",\
+      ["npm:9.0.11", {\
+        "packageLocation": "./.yarn/cache/husky-npm-9.0.11-227bb1e4e4-8a9b7cb9dc.zip/node_modules/husky/",\
         "packageDependencies": [\
-          ["husky", "npm:8.0.3"]\
+          ["husky", "npm:9.0.11"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13605,14 +13605,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["nx", [\
       ["npm:17.2.8", {\
-        "packageLocation": "./.yarn/cache/nx-npm-17.2.8-d3844699f7-174833bf08.zip/node_modules/nx/",\
+        "packageLocation": "./.yarn/unplugged/nx-virtual-081c0f41c0/node_modules/nx/",\
         "packageDependencies": [\
           ["nx", "npm:17.2.8"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:e67fe0eeadd34c8926ef988e223ebff2ee68edc356038af7a1e6ec9929c5ab45d4d1d62f2a042303cbc5fdcf46786e29279425b684d1116fc4e590fe11346ca2#npm:17.2.8", {\
-        "packageLocation": "./.yarn/__virtual__/nx-virtual-081c0f41c0/0/cache/nx-npm-17.2.8-d3844699f7-174833bf08.zip/node_modules/nx/",\
+        "packageLocation": "./.yarn/unplugged/nx-virtual-081c0f41c0/node_modules/nx/",\
         "packageDependencies": [\
           ["nx", "virtual:e67fe0eeadd34c8926ef988e223ebff2ee68edc356038af7a1e6ec9929c5ab45d4d1d62f2a042303cbc5fdcf46786e29279425b684d1116fc4e590fe11346ca2#npm:17.2.8"],\
           ["@nrwl/tao", "npm:17.2.8"],\
@@ -16259,7 +16259,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:5.1.3"],\
           ["eslint-plugin-promise", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:6.1.1"],\
           ["eslint-plugin-simple-import-sort", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:12.0.0"],\
-          ["husky", "npm:8.0.3"],\
+          ["husky", "npm:9.0.11"],\
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
           ["lint-staged", "npm:15.2.2"],\
