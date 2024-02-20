@@ -64,10 +64,10 @@
     "packageManager": "yarn@4.1.0",
     "lint-staged": {
         "src/**/*.{js,ts,html,scss}": [
-            "prettier --write ."
+            "yarn format"
         ],
         "src/**/*.{js,ts}": [
-            "eslint . --fix"
+            "yarn lint"
         ]
     }
 }
