@@ -7,6 +7,7 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "standard-with-typescript",
+        "plugin:jsdoc/recommended-typescript-error",
         "prettier"
     ],
     "overrides": [
@@ -136,12 +137,22 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["simple-import-sort", "import", "@typescript-eslint"],
+    "plugins": [
+        "simple-import-sort",
+        "import",
+        "@typescript-eslint",
+        "no-relative-import-paths",
+        "jsdoc"
+    ],
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
         "import/first": "error",
         "import/newline-after-import": "error",
-        "import/no-duplicates": "error"
+        "import/no-duplicates": "error",
+        "no-relative-import-paths/no-relative-import-paths": [
+            "warn",
+            { "allowSameFolder": true }
+        ]
     }
 }
