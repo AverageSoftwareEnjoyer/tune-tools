@@ -64,10 +64,8 @@
     "packageManager": "yarn@4.1.0",
     "lint-staged": {
         "src/**/*.{js,ts,html,scss}": [
-            "yarn format"
-        ],
-        "src/**/*.{js,ts}": [
-            "yarn lint"
+            "eslint --quiet --fix",
+            "prettier --write --ignore-unknown"
         ]
     }
 }
