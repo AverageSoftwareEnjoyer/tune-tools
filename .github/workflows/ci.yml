@@ -7,22 +7,33 @@ on:
     pull_request:
         branches:
             - main
+    workflow_dispatch: {}
 
 jobs:
     lint-and-test:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+            - uses: actions/checkout@v4
+
+            - name: Enable Corepack
+              run: corepack enable
+            - name: Update Yarn
+              run: |
+                  yarn set version 4.1.0
+            - name: Setup Node 18.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  corepack: true
 
             - name: Install dependencies
-              run: npm install
+              run: yarn install --immutable
 
             - name: Run Prettier and ESLint
               run: |
-                  npm run lint
-                  npm run format
+                  yarn lint
+                  yarn format
 
             - name: Run unit tests
-              run: npm run test
+              run: yarn test
