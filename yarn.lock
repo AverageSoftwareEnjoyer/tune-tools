@@ -3984,6 +3984,111 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry-internal/feedback@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry-internal/feedback@npm:7.102.1"
+  dependencies:
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/1d7157f62844d8c06d59941c8fed48fd7987a7b76eaf81666d071ebefe4fc9fc6e43ced902725964191b613062f71f1bd98b99a199449aa2f5b187e90abb7568
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/replay-canvas@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry-internal/replay-canvas@npm:7.102.1"
+  dependencies:
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/replay": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/737a437925267bb0296b8d1d742cfee2154fdf6dd1ad13a9148a658b98d5c19dbbfbd85014770e704d6a36d802e59370761185e23c69eadfefcde74fc08e95a6
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/tracing@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry-internal/tracing@npm:7.102.1"
+  dependencies:
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/5577d8cdd92187ebfe4213d52c3fa13d013528d04b09d63c112a0460c5a1c9d6d890653c0379e30fdff9d324894f85931551bda1a9734c02ac6b26b70a806562
+  languageName: node
+  linkType: hard
+
+"@sentry/angular-ivy@npm:^7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/angular-ivy@npm:7.102.1"
+  dependencies:
+    "@sentry/browser": "npm:7.102.1"
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+    tslib: "npm:^2.4.1"
+  peerDependencies:
+    "@angular/common": ">= 12.x <= 17.x"
+    "@angular/core": ">= 12.x <= 17.x"
+    "@angular/router": ">= 12.x <= 17.x"
+    rxjs: ^6.5.5 || ^7.x
+  checksum: 10/4d9889bbcd4a170aa64d2f759eacc8465b6febb4a69e145b0148497652f1ecfa005466af7b3184cc1f36cf596212460ff045520ad72e64353b89d66a5c38cab6
+  languageName: node
+  linkType: hard
+
+"@sentry/browser@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/browser@npm:7.102.1"
+  dependencies:
+    "@sentry-internal/feedback": "npm:7.102.1"
+    "@sentry-internal/replay-canvas": "npm:7.102.1"
+    "@sentry-internal/tracing": "npm:7.102.1"
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/replay": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/709b3d74ad115801e3e3934f1bc56e160c9e963ac34c68dc971dc5dfad0bf1ad64c1da8a84b5297c11e3d39046412443c1e9802a5eb6ebcf588bdd85d2823f89
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/core@npm:7.102.1"
+  dependencies:
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/8a4e75aa0b366be9801b309f3e2d1bf8e9b4a8b4532b5e17134e0a9d5eb07691151be1fff9fe592a07522a2c5d29d854234eac339235f664a395ea131ce7f20f
+  languageName: node
+  linkType: hard
+
+"@sentry/replay@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/replay@npm:7.102.1"
+  dependencies:
+    "@sentry-internal/tracing": "npm:7.102.1"
+    "@sentry/core": "npm:7.102.1"
+    "@sentry/types": "npm:7.102.1"
+    "@sentry/utils": "npm:7.102.1"
+  checksum: 10/ad2cf119298a9b62e7440033b531d983d126f4d9603471baef188cc2f0a8f48bec90eb5d8b920f4d364ed003f128a3dc4551a1456fd8c208914dd29a089b3e21
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/types@npm:7.102.1"
+  checksum: 10/794aeeb398f37374f7527de5490e6ae220c2e4ae190a5c6eed3cf3facbe65b603ce8e74691441701cc65294028b0e16eeb7394d07ef498098c207183dcc7f963
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.102.1":
+  version: 7.102.1
+  resolution: "@sentry/utils@npm:7.102.1"
+  dependencies:
+    "@sentry/types": "npm:7.102.1"
+  checksum: 10/9ec4f4778eac7ac36d0fed2ab4a1fbe9953a5a18258255bbc7a65db93739f87d7d10cb92afea05c2db8bd219f2c4db1715088f2a0cdc9b6892c4cc65e5d97386
+  languageName: node
+  linkType: hard
+
 "@sigstore/bundle@npm:^2.2.0":
   version: 2.2.0
   resolution: "@sigstore/bundle@npm:2.2.0"
@@ -13408,7 +13513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.2, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
+"tslib@npm:2.6.2, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10/bd26c22d36736513980091a1e356378e8b662ded04204453d353a7f34a4c21ed0afc59b5f90719d4ba756e581a162ecbf93118dc9c6be5acf70aa309188166ca
@@ -13449,6 +13554,7 @@ __metadata:
     "@angular/platform-browser-dynamic": "npm:^17.2.1"
     "@angular/platform-server": "npm:^17.2.1"
     "@angular/router": "npm:^17.2.1"
+    "@sentry/angular-ivy": "npm:^7.102.1"
     "@supabase/supabase-js": "npm:^2.39.7"
     "@types/eslint": "npm:^8.56.2"
     "@types/jest": "npm:^29.5.12"

@@ -45,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\
           ["@types/eslint", "npm:8.56.2"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -5976,6 +5977,141 @@ const RAW_RUNTIME_STATE =
           ["@angular-devkit/core", "virtual:396a50cf7ede9d80455752d7debbcf7787570f89114fa38912b0ec711b177ff7b8d075dab3012c06ba4fa488ca8a67b3da5e93cc51ed01f98cfb66a185fbd15e#npm:17.2.0"],\
           ["@angular-devkit/schematics", "npm:17.2.0"],\
           ["jsonc-parser", "npm:3.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry-internal/feedback", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-feedback-npm-7.102.1-12222395de-1d7157f628.zip/node_modules/@sentry-internal/feedback/",\
+        "packageDependencies": [\
+          ["@sentry-internal/feedback", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry-internal/replay-canvas", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-replay-canvas-npm-7.102.1-117256ce40-737a437925.zip/node_modules/@sentry-internal/replay-canvas/",\
+        "packageDependencies": [\
+          ["@sentry-internal/replay-canvas", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/replay", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry-internal/tracing", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-tracing-npm-7.102.1-7bdc61f6c9-5577d8cdd9.zip/node_modules/@sentry-internal/tracing/",\
+        "packageDependencies": [\
+          ["@sentry-internal/tracing", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/angular-ivy", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-angular-ivy-npm-7.102.1-ce9d1ee6d4-4d9889bbcd.zip/node_modules/@sentry/angular-ivy/",\
+        "packageDependencies": [\
+          ["@sentry/angular-ivy", "npm:7.102.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1", {\
+        "packageLocation": "./.yarn/__virtual__/@sentry-angular-ivy-virtual-43ece2aa61/0/cache/@sentry-angular-ivy-npm-7.102.1-ce9d1ee6d4-4d9889bbcd.zip/node_modules/@sentry/angular-ivy/",\
+        "packageDependencies": [\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1"],\
+          ["@angular/common", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
+          ["@angular/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
+          ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
+          ["@sentry/browser", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"],\
+          ["@types/angular__common", null],\
+          ["@types/angular__core", null],\
+          ["@types/angular__router", null],\
+          ["@types/rxjs", null],\
+          ["rxjs", "npm:7.8.1"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@angular/common",\
+          "@angular/core",\
+          "@angular/router",\
+          "@types/angular__common",\
+          "@types/angular__core",\
+          "@types/angular__router",\
+          "@types/rxjs",\
+          "rxjs"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/browser", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-browser-npm-7.102.1-5977c4694a-709b3d74ad.zip/node_modules/@sentry/browser/",\
+        "packageDependencies": [\
+          ["@sentry/browser", "npm:7.102.1"],\
+          ["@sentry-internal/feedback", "npm:7.102.1"],\
+          ["@sentry-internal/replay-canvas", "npm:7.102.1"],\
+          ["@sentry-internal/tracing", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/replay", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/core", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-core-npm-7.102.1-23afb2f929-8a4e75aa0b.zip/node_modules/@sentry/core/",\
+        "packageDependencies": [\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/replay", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-replay-npm-7.102.1-d94daf7cb0-ad2cf11929.zip/node_modules/@sentry/replay/",\
+        "packageDependencies": [\
+          ["@sentry/replay", "npm:7.102.1"],\
+          ["@sentry-internal/tracing", "npm:7.102.1"],\
+          ["@sentry/core", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"],\
+          ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/types", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-types-npm-7.102.1-5c81d807f1-794aeeb398.zip/node_modules/@sentry/types/",\
+        "packageDependencies": [\
+          ["@sentry/types", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/utils", [\
+      ["npm:7.102.1", {\
+        "packageLocation": "./.yarn/cache/@sentry-utils-npm-7.102.1-fd8001aa58-9ec4f4778e.zip/node_modules/@sentry/utils/",\
+        "packageDependencies": [\
+          ["@sentry/utils", "npm:7.102.1"],\
+          ["@sentry/types", "npm:7.102.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17085,6 +17221,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\
           ["@types/eslint", "npm:8.56.2"],\
           ["@types/jest", "npm:29.5.12"],\
