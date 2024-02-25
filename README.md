@@ -62,6 +62,7 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **Backend**
 
 -   **[Supabase](https://supabase.io/)**: The open source Firebase alternative.
+-   **[Drizzle ORM](https://drizzle.orm.io/)**: A lightweight and intuitive ORM for TypeScript and Node.js.
 
 **Code Quality**
 
@@ -83,7 +84,6 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **Monitoring and analytics**
 
 -   **[Sentry](https://sentry.io/welcome/)**: Application monitoring and error tracking software.
--   **[Matomo](https://matomo.org/)**: The Google Analytics alternative that protects your data and your customers' privacy.
 
 ## Author
 
