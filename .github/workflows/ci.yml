@@ -1,0 +1,28 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    lint-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Run Prettier and ESLint
+              run: |
+                  npm run lint
+                  npm run format
+
+            - name: Run unit tests
+              run: npm run test
