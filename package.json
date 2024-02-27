@@ -6,7 +6,9 @@
         "start": "ng serve",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:watch": "jest --watch",
         "lint": "npx eslint \"src/**/*.{js,ts}\" --fix",
         "format": "npx prettier \"src/**/*.{js,ts,html,css,scss}\" --write",
         "postinstall": "husky install"
@@ -24,10 +26,12 @@
         "@angular/platform-browser-dynamic": "^17.2.1",
         "@angular/platform-server": "^17.2.1",
         "@angular/router": "^17.2.1",
+        "@sentry/angular-ivy": "^7.102.1",
         "@supabase/supabase-js": "^2.39.7",
         "drizzle-orm": "^0.29.4",
         "postgres": "^3.4.3",
         "rxjs": "~7.8.1",
+        "ts-node": "^10.9.2",
         "tslib": "^2.6.2",
         "zone.js": "~0.14.4"
     },
