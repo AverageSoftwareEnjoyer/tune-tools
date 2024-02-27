@@ -6,7 +6,7 @@
         "start": "ng serve",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test",
+        "test": "jest",
         "lint": "npx eslint \"src/**/*.{js,ts}\" --fix",
         "format": "npx prettier \"src/**/*.{js,ts,html,css,scss}\" --write",
         "postinstall": "husky install"
@@ -29,6 +29,7 @@
         "drizzle-orm": "^0.29.4",
         "postgres": "^3.4.3",
         "rxjs": "~7.8.1",
+        "ts-node": "^10.9.2",
         "tslib": "^2.6.2",
         "zone.js": "~0.14.4"
     },
