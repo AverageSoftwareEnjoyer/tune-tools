@@ -18,7 +18,7 @@ Follow these instructions to get TuneTools up and running on your local machine 
 Ensure you have the following installed:
 
 -   Node.js v18
--   yarn 2
+-   Yarn v4
 -   Angular CLI
 
 ### Installation
@@ -80,6 +80,7 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **CI/CD**
 
 -   **[GitHub Actions](https://github.com/features/actions)**: GitHub Actions makes it easy to automate all your software workflows.
+-   **[Codecov](https://codecov.io/)**: Code coverage reporting and analysis tool.
 
 **Monitoring and analytics**
 
