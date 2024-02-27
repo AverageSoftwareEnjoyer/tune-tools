@@ -7,6 +7,8 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:watch": "jest --watch",
         "lint": "npx eslint \"src/**/*.{js,ts}\" --fix",
         "format": "npx prettier \"src/**/*.{js,ts,html,css,scss}\" --write",
         "postinstall": "husky install"
