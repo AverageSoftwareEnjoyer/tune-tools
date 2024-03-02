@@ -46,6 +46,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1"],\
+          ["@sentry/cli", "npm:2.28.6"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\
           ["@types/eslint", "npm:8.56.2"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -69,6 +70,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
           ["lint-staged", "npm:15.2.2"],\
           ["postgres", "npm:3.4.3"],\
           ["prettier", "npm:3.2.5"],\
@@ -6089,6 +6091,90 @@ const RAW_RUNTIME_STATE =
           ["@sentry/replay", "npm:7.102.1"],\
           ["@sentry/types", "npm:7.102.1"],\
           ["@sentry/utils", "npm:7.102.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-npm-2.28.6-1afac08ca0/node_modules/@sentry/cli/",\
+        "packageDependencies": [\
+          ["@sentry/cli", "npm:2.28.6"],\
+          ["@sentry/cli-darwin", "npm:2.28.6"],\
+          ["@sentry/cli-linux-arm", "npm:2.28.6"],\
+          ["@sentry/cli-linux-arm64", "npm:2.28.6"],\
+          ["@sentry/cli-linux-i686", "npm:2.28.6"],\
+          ["@sentry/cli-linux-x64", "npm:2.28.6"],\
+          ["@sentry/cli-win32-i686", "npm:2.28.6"],\
+          ["@sentry/cli-win32-x64", "npm:2.28.6"],\
+          ["https-proxy-agent", "npm:5.0.1"],\
+          ["node-fetch", "virtual:1afac08ca048df792cff4819994a17ccc039c4ec0d875025472163cfda9e95bff9e4ba9c5097b6b5f22a5b98c339d3ec4e69ca4d2a5a0686bcea1f094ebb41b9#npm:2.7.0"],\
+          ["progress", "npm:2.0.3"],\
+          ["proxy-from-env", "npm:1.1.0"],\
+          ["which", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-darwin", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-darwin-npm-2.28.6-1e0052faff/node_modules/@sentry/cli-darwin/",\
+        "packageDependencies": [\
+          ["@sentry/cli-darwin", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-linux-arm", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-linux-arm-npm-2.28.6-5631c4f249/node_modules/@sentry/cli-linux-arm/",\
+        "packageDependencies": [\
+          ["@sentry/cli-linux-arm", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-linux-arm64", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-linux-arm64-npm-2.28.6-fa21a2f165/node_modules/@sentry/cli-linux-arm64/",\
+        "packageDependencies": [\
+          ["@sentry/cli-linux-arm64", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-linux-i686", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-linux-i686-npm-2.28.6-97a008a23a/node_modules/@sentry/cli-linux-i686/",\
+        "packageDependencies": [\
+          ["@sentry/cli-linux-i686", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-linux-x64", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-linux-x64-npm-2.28.6-7dafded590/node_modules/@sentry/cli-linux-x64/",\
+        "packageDependencies": [\
+          ["@sentry/cli-linux-x64", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-win32-i686", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-win32-i686-npm-2.28.6-dbadb39d97/node_modules/@sentry/cli-win32-i686/",\
+        "packageDependencies": [\
+          ["@sentry/cli-win32-i686", "npm:2.28.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/cli-win32-x64", [\
+      ["npm:2.28.6", {\
+        "packageLocation": "./.yarn/unplugged/@sentry-cli-win32-x64-npm-2.28.6-2f1e7e3485/node_modules/@sentry/cli-win32-x64/",\
+        "packageDependencies": [\
+          ["@sentry/cli-win32-x64", "npm:2.28.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13473,6 +13559,19 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["jsonc-eslint-parser", [\
+      ["npm:2.4.0", {\
+        "packageLocation": "./.yarn/cache/jsonc-eslint-parser-npm-2.4.0-b1fd3169df-bd1d41c852.zip/node_modules/jsonc-eslint-parser/",\
+        "packageDependencies": [\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
+          ["acorn", "npm:8.11.3"],\
+          ["eslint-visitor-keys", "npm:3.4.3"],\
+          ["espree", "npm:9.6.1"],\
+          ["semver", "npm:7.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["jsonc-parser", [\
       ["npm:3.2.0", {\
         "packageLocation": "./.yarn/cache/jsonc-parser-npm-3.2.0-1896ece3b7-bd68b902e5.zip/node_modules/jsonc-parser/",\
@@ -14389,6 +14488,29 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["node-addon-api", "npm:3.2.1"],\
           ["node-gyp", "npm:10.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["node-fetch", [\
+      ["npm:2.7.0", {\
+        "packageLocation": "./.yarn/cache/node-fetch-npm-2.7.0-587d57004e-b24f8a3dc9.zip/node_modules/node-fetch/",\
+        "packageDependencies": [\
+          ["node-fetch", "npm:2.7.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1afac08ca048df792cff4819994a17ccc039c4ec0d875025472163cfda9e95bff9e4ba9c5097b6b5f22a5b98c339d3ec4e69ca4d2a5a0686bcea1f094ebb41b9#npm:2.7.0", {\
+        "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-e628c7332b/0/cache/node-fetch-npm-2.7.0-587d57004e-b24f8a3dc9.zip/node_modules/node-fetch/",\
+        "packageDependencies": [\
+          ["node-fetch", "virtual:1afac08ca048df792cff4819994a17ccc039c4ec0d875025472163cfda9e95bff9e4ba9c5097b6b5f22a5b98c339d3ec4e69ca4d2a5a0686bcea1f094ebb41b9#npm:2.7.0"],\
+          ["@types/encoding", null],\
+          ["encoding", null],\
+          ["whatwg-url", "npm:5.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/encoding",\
+          "encoding"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15436,6 +15558,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/process-nextick-args-npm-2.0.1-b8d7971609-1d38588e52.zip/node_modules/process-nextick-args/",\
         "packageDependencies": [\
           ["process-nextick-args", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["progress", [\
+      ["npm:2.0.3", {\
+        "packageLocation": "./.yarn/cache/progress-npm-2.0.3-d1f87e2ac6-e6f0bcb71f.zip/node_modules/progress/",\
+        "packageDependencies": [\
+          ["progress", "npm:2.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17350,6 +17481,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.2.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.102.1"],\
+          ["@sentry/cli", "npm:2.28.6"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\
           ["@types/eslint", "npm:8.56.2"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -17373,6 +17505,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
           ["lint-staged", "npm:15.2.2"],\
           ["postgres", "npm:3.4.3"],\
           ["prettier", "npm:3.2.5"],\

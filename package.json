@@ -1,17 +1,18 @@
 {
     "name": "tune-tools",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build && yarn sentry:sourcemaps",
         "watch": "ng build --watch --configuration development",
         "test": "jest",
         "test:coverage": "jest --coverage",
         "test:watch": "jest --watch",
         "lint": "npx eslint \"src/**/*.{js,ts}\" --fix",
         "format": "npx prettier \"src/**/*.{js,ts,html,css,scss}\" --write",
-        "postinstall": "husky install"
+        "postinstall": "husky install",
+        "sentry:sourcemaps": "sentry-cli sourcemaps inject --org tune-tools --project tune-tools ./dist && sentry-cli sourcemaps upload --org tune-tools --project tune-tools ./dist"
     },
     "private": true,
     "dependencies": {
@@ -27,6 +28,7 @@
         "@angular/platform-server": "^17.2.1",
         "@angular/router": "^17.2.1",
         "@sentry/angular-ivy": "^7.102.1",
+        "@sentry/cli": "^2.28.6",
         "@supabase/supabase-js": "^2.39.7",
         "drizzle-orm": "^0.29.4",
         "postgres": "^3.4.3",
@@ -65,6 +67,7 @@
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
         "jest-preset-angular": "^14.0.3",
+        "jsonc-eslint-parser": "^2.4.0",
         "lint-staged": "^15.2.2",
         "prettier": "^3.2.5",
         "typescript": "~5.3.3"
