@@ -69,6 +69,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
           ["lint-staged", "npm:15.2.2"],\
           ["postgres", "npm:3.4.3"],\
           ["prettier", "npm:3.2.5"],\
@@ -13473,6 +13474,19 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["jsonc-eslint-parser", [\
+      ["npm:2.4.0", {\
+        "packageLocation": "./.yarn/cache/jsonc-eslint-parser-npm-2.4.0-b1fd3169df-bd1d41c852.zip/node_modules/jsonc-eslint-parser/",\
+        "packageDependencies": [\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
+          ["acorn", "npm:8.11.3"],\
+          ["eslint-visitor-keys", "npm:3.4.3"],\
+          ["espree", "npm:9.6.1"],\
+          ["semver", "npm:7.6.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["jsonc-parser", [\
       ["npm:3.2.0", {\
         "packageLocation": "./.yarn/cache/jsonc-parser-npm-3.2.0-1896ece3b7-bd68b902e5.zip/node_modules/jsonc-parser/",\
@@ -17373,6 +17387,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:29.7.0"],\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.0.3"],\
+          ["jsonc-eslint-parser", "npm:2.4.0"],\
           ["lint-staged", "npm:15.2.2"],\
           ["postgres", "npm:3.4.3"],\
           ["prettier", "npm:3.2.5"],\
