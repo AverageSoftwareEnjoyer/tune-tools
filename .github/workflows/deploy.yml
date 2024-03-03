@@ -47,6 +47,6 @@ jobs:
                   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
             - name: Deploy
-              run: npx angular-cli-ghpages --base-href="/tune-tools/"
+              run: yarn ng deploy --base-href="/tune-tools/"
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
