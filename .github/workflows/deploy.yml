@@ -1,8 +1,10 @@
+name: Deploy
+
 on:
     push:
         branches: ["main"]
 
-    workflow_dispatch:
+    workflow_dispatch: {}
 
 permissions:
     contents: read
@@ -49,5 +51,3 @@ jobs:
               run: |
                   sentry-cli sourcemaps inject /dist
                   sentry-cli sourcemaps upload
-
-            -
