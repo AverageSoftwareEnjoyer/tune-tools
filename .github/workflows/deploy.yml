@@ -22,16 +22,20 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
+            - name: Setup git user
+              run: |
+                  git config --global user.name ${{ github.event.schedule.user.login }}
+                  git config "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
             - name: Enable Corepack
               run: corepack enable
             - name: Update Yarn
               run: |
                   yarn set version 4.1.0
-            - name: Setup Node 18.x
+            - name: Setup Node 20.x
               uses: actions/setup-node@v3
               with:
-                  node-version: 18
-                  corepack: true
+                  node-version: 20
 
             - name: Install dependencies
               run: yarn install --immutable
@@ -47,7 +51,7 @@ jobs:
                   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
             - name: Deploy
-              run: yarn ng deploy --base-href="/tune-tools/" --name=${{ github.event.schedule.user.login }} --email="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+              run: yarn ng deploy --base-href="/tune-tools/"
 
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
