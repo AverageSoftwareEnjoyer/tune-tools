@@ -51,3 +51,7 @@ jobs:
               run: |
                   sentry-cli sourcemaps inject /dist
                   sentry-cli sourcemaps upload
+              env:
+                  SENTRY_ORG: tune-tools
+                  SENTRY_PROJECT: tune-tools
+                  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
