@@ -24,7 +24,7 @@ jobs:
 
             - name: Setup git user
               run: |
-                  git config --global user.name ${{ github.event.schedule.user.login }}
+                  git config --global user.name ${{ github.actor }}
                   git config --global user.email "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
 
             - name: Enable Corepack
