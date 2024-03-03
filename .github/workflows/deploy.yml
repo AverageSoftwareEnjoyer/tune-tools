@@ -37,21 +37,18 @@ jobs:
               run: yarn install --immutable
 
             - name: Build the app
-              run: yarn build
-
-            - name: Deploy to GitHub Pages
-              uses: crazy-max/ghaction-github-pages@v4
-              with:
-                  target_branch: main
-                  build_dir: dist
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: yarn build --prod --base-href "https://averagesoftwareenjoyer.github.io/tune-tools/"
 
             - name: Upload source maps to Sentry
               run: |
                   sentry-cli sourcemaps inject /dist
-                  sentry-cli sourcemaps upload
+                  sentry-cli sourcemaps upload --validate
               env:
                   SENTRY_ORG: tune-tools
                   SENTRY_PROJECT: tune-tools
                   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
+            - name: Deploy
+              run: npx angular-cli-ghpages --dir=dist/<project-name>
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
