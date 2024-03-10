@@ -47,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
+          ["@playwright/test", "npm:1.42.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.106.0"],\
           ["@sentry/cli", "npm:2.30.0"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\
@@ -6410,6 +6411,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@playwright/test", [\
+      ["npm:1.42.1", {\
+        "packageLocation": "./.yarn/cache/@playwright-test-npm-1.42.1-1e93511e64-5bd7f1c779.zip/node_modules/@playwright/test/",\
+        "packageDependencies": [\
+          ["@playwright/test", "npm:1.42.1"],\
+          ["playwright", "npm:1.42.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@rollup/rollup-android-arm-eabi", [\
       ["npm:4.12.0", {\
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm-eabi-npm-4.12.0-e216111d4f/node_modules/@rollup/rollup-android-arm-eabi/",\
@@ -12085,6 +12096,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fsevents", [\
+      ["patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1", {\
+        "packageLocation": "./.yarn/unplugged/fsevents-patch-19706e7e35/node_modules/fsevents/",\
+        "packageDependencies": [\
+          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
+          ["node-gyp", "npm:10.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1", {\
         "packageLocation": "./.yarn/unplugged/fsevents-patch-6b67494872/node_modules/fsevents/",\
         "packageDependencies": [\
@@ -16112,6 +16131,26 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["playwright", [\
+      ["npm:1.42.1", {\
+        "packageLocation": "./.yarn/cache/playwright-npm-1.42.1-ad14b1d04e-1f866a6820.zip/node_modules/playwright/",\
+        "packageDependencies": [\
+          ["playwright", "npm:1.42.1"],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"],\
+          ["playwright-core", "npm:1.42.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["playwright-core", [\
+      ["npm:1.42.1", {\
+        "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.42.1-9ffc4604de/node_modules/playwright-core/",\
+        "packageDependencies": [\
+          ["playwright-core", "npm:1.42.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["postcss", [\
       ["npm:8.4.35", {\
         "packageLocation": "./.yarn/cache/postcss-npm-8.4.35-6bc1848fff-93a7ce50cd.zip/node_modules/postcss/",\
@@ -18286,6 +18325,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.0-rc.0"],\
+          ["@playwright/test", "npm:1.42.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.106.0"],\
           ["@sentry/cli", "npm:2.30.0"],\
           ["@supabase/supabase-js", "npm:2.39.7"],\

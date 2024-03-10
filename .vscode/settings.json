@@ -17,5 +17,9 @@
     },
     "jest.runMode": {
         "type": "on-demand"
+    },
+    "jest.jestCommandLine": "yarn test",
+    "playwright.env": {
+        "NODE_OPTIONS": "-r ./.pnp.cjs"
     }
 }
