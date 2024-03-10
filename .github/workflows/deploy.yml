@@ -3,7 +3,6 @@ name: Deploy
 on:
     push:
         branches: ["main"]
-
     workflow_dispatch: {}
 
 permissions:
@@ -53,6 +52,5 @@ jobs:
 
             - name: Deploy
               run: yarn ng deploy --base-href="/tune-tools/"
-
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
