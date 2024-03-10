@@ -17,7 +17,7 @@ Follow these instructions to get TuneTools up and running on your local machine 
 
 Ensure you have the following installed:
 
--   Node.js v18
+-   Node.js v20
 -   Yarn v4
 -   Angular CLI
 
@@ -75,7 +75,7 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **Testing**
 
 -   **[Jest](https://jestjs.io/)**: A delightful JavaScript Testing Framework with a focus on simplicity.
--   **[Cypress](https://www.cypress.io/)**: Fast, easy and reliable testing for anything that runs in a browser.
+-   **[Playwright](https://playwright.dev/)**: Fast and reliable end-to-end testing for modern web apps across browsers.
 
 **CI/CD**
 
