@@ -8,5 +8,14 @@
     "svg.preview.background": "editor",
     "files.eol": "\n",
     "eslint.nodePath": ".yarn/sdks",
-    "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs"
+    "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+    "testing.openTesting": "neverOpen",
+    "jest.outputConfig": {
+        "revealOn": "run",
+        "revealWithFocus": "none",
+        "clearOnRun": "none"
+    },
+    "jest.runMode": {
+        "type": "on-demand"
+    }
 }
