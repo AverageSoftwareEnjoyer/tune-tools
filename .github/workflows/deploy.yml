@@ -31,9 +31,9 @@ jobs:
               run: corepack enable
             - name: Update Yarn
               run: |
-                  yarn set version 4.1.0
+                  yarn set version 4.1.1
             - name: Setup Node 20.x
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 20
 
