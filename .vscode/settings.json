@@ -1,4 +1,8 @@
 {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "never"
+    },
     "search.exclude": {
         "**/.yarn": true,
         "**/.pnp.*": true
@@ -8,6 +12,7 @@
     "svg.preview.background": "editor",
     "files.eol": "\n",
     "eslint.nodePath": ".yarn/sdks",
+    "eslint.experimental.useFlatConfig": true,
     "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
     "testing.openTesting": "neverOpen",
     "jest.outputConfig": {
@@ -21,5 +26,7 @@
     "jest.jestCommandLine": "yarn test",
     "playwright.env": {
         "NODE_OPTIONS": "-r ./.pnp.cjs"
-    }
+    },
+    "vs-code-prettier-eslint.prettierLast": false,
+    "eslint.run": "onType"
 }

@@ -36,5 +36,5 @@
         "strictInputAccessModifiers": true,
         "strictTemplates": true
     },
-    "include": ["**/*.d.ts", "**/*.ts", "**/*.html"]
+    "include": ["**/*.d.ts", "**/*.ts", "**/*.html", "**/*.js"]
 }
