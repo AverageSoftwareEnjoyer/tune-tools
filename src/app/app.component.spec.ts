@@ -1,32 +1,53 @@
-import { TestBed } from "@angular/core/testing";
+import { BreakpointObserver } from "@angular/cdk/layout";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { ActivatedRoute } from "@angular/router";
+import { firstValueFrom, of } from "rxjs";
 
 import { AppComponent } from "./app.component";
 
 describe("AppComponent", () => {
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [AppComponent],
-        }).compileComponents();
+    let fixture: ComponentFixture<AppComponent>;
+    let component: AppComponent;
+    const breakpointObserverMock = {
+        observe: jest.fn().mockReturnValue(of({ matches: true })),
+    };
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                AppComponent,
+                NoopAnimationsModule,
+                HttpClientTestingModule,
+            ],
+            providers: [
+                {
+                    provide: BreakpointObserver,
+                    useValue: breakpointObserverMock,
+                },
+                {
+                    provide: ActivatedRoute,
+                    useValue: {
+                        snapshot: {},
+                    },
+                },
+            ],
+        });
+
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
     });
 
-    it("should create the app", () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.componentInstance;
-        expect(app).toBeTruthy();
+    it("should create the AppComponent", () => {
+        expect(component).toBeTruthy();
     });
 
-    it("should have the 'tune-tools' title", () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.componentInstance;
-        expect(app.title).toEqual("tune-tools");
-    });
-
-    it("should render title", () => {
-        const fixture = TestBed.createComponent(AppComponent);
+    it("should set isHandset$ based on BreakpointObserver", async () => {
         fixture.detectChanges();
-        const compiled = fixture.nativeElement as HTMLElement;
-        expect(compiled.querySelector("h1")?.textContent).toContain(
-            "Hello, tune-tools"
-        );
+
+        const isHandset = await firstValueFrom(component["isHandset$"]);
+
+        expect(isHandset).toBe(true);
     });
 });

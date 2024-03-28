@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="header__toolbar">
+    @if (isHandset) {
+        <button
+            mat-icon-button
+            (click)="onToggleMenu()"
+            class="header__menu-btn"
+        >
+            <mat-icon>menu</mat-icon>
+        </button>
+    }
+    <span class="header__title">TuneTools</span>
+    @if (!isHandset) {
+        <div class="header__nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    }
+</mat-toolbar>
