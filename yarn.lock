@@ -484,9 +484,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/material@npm:17.3.0":
-  version: 17.3.0
-  resolution: "@angular/material@npm:17.3.0"
+"@angular/material@npm:^17.3.1":
+  version: 17.3.1
+  resolution: "@angular/material@npm:17.3.1"
   dependencies:
     "@material/animation": "npm:15.0.0-canary.7f224ddd4.0"
     "@material/auto-init": "npm:15.0.0-canary.7f224ddd4.0"
@@ -538,13 +538,13 @@ __metadata:
     tslib: "npm:^2.3.0"
   peerDependencies:
     "@angular/animations": ^17.0.0 || ^18.0.0
-    "@angular/cdk": 17.3.0
+    "@angular/cdk": 17.3.1
     "@angular/common": ^17.0.0 || ^18.0.0
     "@angular/core": ^17.0.0 || ^18.0.0
     "@angular/forms": ^17.0.0 || ^18.0.0
     "@angular/platform-browser": ^17.0.0 || ^18.0.0
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10/0aac5cb1d3efefce6fd3aed65df8d3e453af8d542bae256df2c8b43adc6b89c7c457c63708bce55c6157a7996041108dd4338993002576953580a70bbfb82e82
+  checksum: 10/8ca7a3164e8a7e297116ffa0e36b187fa699b22df930f48f2534566fd99ca9d1b88b62a65b511a01545658f1b7613b93284167ad9bf4e6aab4b1777ccb416319
   languageName: node
   linkType: hard
 
@@ -7690,12 +7690,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.30.2":
-  version: 0.30.2
-  resolution: "drizzle-orm@npm:0.30.2"
+"drizzle-orm@npm:^0.30.6":
+  version: 0.30.6
+  resolution: "drizzle-orm@npm:0.30.6"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
+    "@electric-sql/pglite": ">=0.1.1"
     "@libsql/client": "*"
     "@neondatabase/serverless": ">=0.1"
     "@op-engineering/op-sqlite": ">=2"
@@ -7706,6 +7707,7 @@ __metadata:
     "@types/react": ">=18"
     "@types/sql.js": "*"
     "@vercel/postgres": "*"
+    "@xata.io/client": "*"
     better-sqlite3: ">=7"
     bun-types: "*"
     expo-sqlite: ">=13.2.0"
@@ -7721,6 +7723,8 @@ __metadata:
     "@aws-sdk/client-rds-data":
       optional: true
     "@cloudflare/workers-types":
+      optional: true
+    "@electric-sql/pglite":
       optional: true
     "@libsql/client":
       optional: true
@@ -7741,6 +7745,8 @@ __metadata:
     "@types/sql.js":
       optional: true
     "@vercel/postgres":
+      optional: true
+    "@xata.io/client":
       optional: true
     better-sqlite3:
       optional: true
@@ -7764,7 +7770,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10/7355cb54af007b2fa55ae97c1a04b7968a18e393980b3731b66806d37dd4ff0b3520312a64aa2db9661ef35bb6ffb2f54c5a158ea75f836e6af5640c9d8d5475
+  checksum: 10/41993656441fcfda4745aa56f931aa319ddeb117d6efb733eeb880cd62a509521550d38e5ded7e0a0979d8d26f8f54be65b7f386a018483247a42afa216d36d6
   languageName: node
   linkType: hard
 
@@ -13611,7 +13617,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:7.8.1, rxjs@npm:^7.8.1, rxjs@npm:~7.8.1":
+"rxjs@npm:7.8.1, rxjs@npm:^7.8.1":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
   dependencies:
@@ -14843,7 +14849,7 @@ __metadata:
     "@angular/compiler-cli": "npm:^17.3.2"
     "@angular/core": "npm:^17.3.2"
     "@angular/forms": "npm:^17.3.2"
-    "@angular/material": "npm:17.3.0"
+    "@angular/material": "npm:^17.3.1"
     "@angular/platform-browser": "npm:^17.3.2"
     "@angular/platform-browser-dynamic": "npm:^17.3.2"
     "@angular/platform-server": "npm:^17.3.2"
@@ -14863,7 +14869,7 @@ __metadata:
     "@typescript-eslint/types": "npm:^7.3.0"
     angular-cli-ghpages: "npm:2.0.0-beta.2"
     drizzle-kit: "npm:^0.20.14"
-    drizzle-orm: "npm:^0.30.2"
+    drizzle-orm: "npm:^0.30.6"
     eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import: "npm:^2.29.1"
@@ -14883,12 +14889,12 @@ __metadata:
     lint-staged: "npm:^15.2.2"
     postgres: "npm:^3.4.4"
     prettier: "npm:^3.2.5"
-    rxjs: "npm:~7.8.1"
+    rxjs: "npm:^7.8.1"
     ts-node: "npm:^10.9.2"
     tslib: "npm:^2.6.2"
     typescript: "npm:^5.4.2"
     typescript-eslint: "npm:^7.3.0"
-    zone.js: "npm:~0.14.4"
+    zone.js: "npm:^0.14.4"
   languageName: unknown
   linkType: soft
 
@@ -15787,7 +15793,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zone.js@npm:~0.14.4":
+"zone.js@npm:^0.14.4":
   version: 0.14.4
   resolution: "zone.js@npm:0.14.4"
   dependencies:

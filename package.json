@@ -25,7 +25,7 @@
         "@angular/compiler": "^17.3.2",
         "@angular/core": "^17.3.2",
         "@angular/forms": "^17.3.2",
-        "@angular/material": "17.3.0",
+        "@angular/material": "^17.3.1",
         "@angular/platform-browser": "^17.3.2",
         "@angular/platform-browser-dynamic": "^17.3.2",
         "@angular/platform-server": "^17.3.2",
@@ -33,12 +33,12 @@
         "@sentry/angular-ivy": "^7.108.0",
         "@sentry/cli": "^2.31.0",
         "@supabase/supabase-js": "^2.41.1",
-        "drizzle-orm": "^0.30.2",
+        "drizzle-orm": "^0.30.6",
         "postgres": "^3.4.4",
-        "rxjs": "~7.8.1",
+        "rxjs": "^7.8.1",
         "ts-node": "^10.9.2",
         "tslib": "^2.6.2",
-        "zone.js": "~0.14.4"
+        "zone.js": "^0.14.4"
     },
     "devDependencies": {
         "@angular-devkit/architect": "^0.1703.2",
