@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.component.scss"],
+  "sourcesContent": [":host {\n    display: flex;\n    flex-direction: column;\n    min-height: 100vh;\n\n    app-header {\n        flex-shrink: 0;\n    }\n\n    app-main-content {\n        flex-grow: 1;\n        display: flex;\n    }\n\n    app-footer {\n        flex-shrink: 0;\n    }\n}\n"],
+  "mappings": "AAAA,MACI,QAAA,KACA,eAAA,OACA,WAAA,MAEA,MAAA,WACI,YAAA,EAGJ,MAAA,iBACI,UAAA,EACA,QAAA,KAGJ,MAAA,WACI,YAAA",
+  "names": []
+}

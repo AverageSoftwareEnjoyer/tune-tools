@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/base/main-content/main-content.component.scss"],
+  "sourcesContent": [":host {\n    .main-content {\n        flex: 1 1 auto;\n        position: static;\n\n        &__sidenav {\n            width: 250px;\n        }\n\n        &__area {\n            padding: 20px;\n            height: 100%;\n        }\n\n        &__nav-item {\n            display: flex;\n            align-items: center;\n            gap: 10px;\n        }\n    }\n}\n"],
+  "mappings": "AACI,MAAA,CAAA,aACI,KAAA,EAAA,EAAA,KACA,SAAA,OAEA,MAAA,CAAA,sBACI,MAAA,MAGJ,MAAA,CAAA,mBARJ,QASQ,KACA,OAAA,KAGJ,MAAA,CAAA,uBACI,QAAA,KACA,YAAA,OACA,IAAA",
+  "names": []
+}
