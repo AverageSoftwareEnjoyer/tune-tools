@@ -22,6 +22,7 @@ module.exports = [
     ...tseslint.configs.stylisticTypeChecked,
     stylisticEslint.configs["recommended-flat"],
     {
+        ignores: [".pnp.cjs"],
         plugins: {
             "simple-import-sort": simpleImportSort,
         },
@@ -31,6 +32,7 @@ module.exports = [
             curly: "error",
             "default-case": "error",
             "default-case-last": "error",
+            "dot-notation": "off",
             "no-console": ["warn", { allow: ["warn", "error"] }],
             "no-duplicate-imports": "error",
             "no-else-return": "error",
@@ -51,11 +53,27 @@ module.exports = [
             /** Stylistic rules */
             "@stylistic/arrow-parens": ["error", "always"],
             "@stylistic/arrow-spacing": "error",
+            "@stylistic/brace-style": ["error", "1tbs"],
             "@stylistic/comma-dangle": "off",
             "@stylistic/dot-location": ["error", "property"],
             "@stylistic/indent": ["error", 4],
             "@stylistic/linebreak-style": ["error", "unix"],
+            "@stylistic/member-delimiter-style": [
+                "error",
+                {
+                    multiline: {
+                        delimiter: "semi",
+                        requireLast: true,
+                    },
+                    singleline: {
+                        delimiter: "semi",
+                        requireLast: false,
+                    },
+                    multilineDetection: "brackets",
+                },
+            ],
             "@stylistic/no-confusing-arrow": "warn",
+            "@stylistic/operator-linebreak": ["error", "after"],
             "@stylistic/promise-function-async": "off",
             "@stylistic/quotes": ["error", "double"],
             "@stylistic/quote-props": "off",
@@ -175,6 +193,9 @@ module.exports = [
     {
         files: ["src/**/*.spec.ts"],
         ...jest.configs["flat/recommended"],
+        rules: {
+            "@typescript-eslint/dot-notation": "off",
+        }
     },
     {
         files: ["*.component.html"],

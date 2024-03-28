@@ -1,0 +1,21 @@
+:host {
+    .main-content {
+        flex: 1 1 auto;
+        position: static;
+
+        &__sidenav {
+            width: 250px;
+        }
+
+        &__area {
+            padding: 20px;
+            height: 100%;
+        }
+
+        &__nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}

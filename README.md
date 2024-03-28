@@ -40,7 +40,7 @@ yarn
 3. Serve the application locally:
 
 ```bash
-ng serve
+yarn start
 ```
 
 Open http://localhost:4200/ in your browser to see TuneTools in action.
