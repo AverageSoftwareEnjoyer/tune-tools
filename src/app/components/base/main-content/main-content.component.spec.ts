@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { MatSidenav } from "@angular/material/sidenav";
+import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { By } from "@angular/platform-browser";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { RouterModule } from "@angular/router";
 import { Observable, Subject } from "rxjs";
 
 import { SidenavService } from "../sidenav.service";
@@ -24,7 +26,12 @@ describe("MainContentComponent", () => {
         };
 
         TestBed.configureTestingModule({
-            imports: [MainContentComponent],
+            imports: [
+                MainContentComponent,
+                NoopAnimationsModule,
+                MatSidenavModule,
+                RouterModule.forRoot([]),
+            ],
             providers: [
                 { provide: SidenavService, useValue: mockSidenavService },
             ],
@@ -34,6 +41,7 @@ describe("MainContentComponent", () => {
         component = fixture.componentInstance;
 
         component.sidenav = mockSidenav as MatSidenav;
+        component.isHandset = true;
         fixture.detectChanges();
     });
 
@@ -43,15 +51,26 @@ describe("MainContentComponent", () => {
 
     it("should toggle sidenav on sidenavService event", () => {
         toggleSidenavSubject.subscribe(() => {
-            expect(mockSidenav.toggle).toHaveBeenCalled();
+            expect(mockSidenav.toggle).toHaveBeenCalledTimes(1);
         });
 
         toggleSidenavSubject.next();
     });
 
-    it("should contain a router outlet", () => {
-        fixture.detectChanges();
+    it("should close sidenav on clicking a link", () => {
+        component.sidenav.open();
+        expect(component.sidenav.opened).toBe(true);
 
+        const link = fixture.debugElement.query(
+            By.css(".main-content__nav-link"),
+        ).nativeElement as HTMLAnchorElement;
+        expect(link).not.toBeNull();
+        link.click();
+
+        expect(component.sidenav.opened).toBe(false);
+    });
+
+    it("should contain a router outlet", () => {
         const routerOutlet = fixture.debugElement.query(
             By.css("router-outlet"),
         );

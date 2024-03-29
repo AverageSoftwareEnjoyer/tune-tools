@@ -2,7 +2,12 @@
     @if (isHandset) {
         <mat-sidenav #menu mode="over" class="main-content__sidenav">
             <mat-nav-list>
-                <a mat-list-item routerLink="/" class="main-content__nav-link">
+                <a
+                    mat-list-item
+                    routerLink="/"
+                    class="main-content__nav-link"
+                    (click)="menu.toggle()"
+                >
                     <span class="main-content__nav-item">
                         <mat-icon
                             aria-hidden="false"
@@ -17,6 +22,7 @@
                     mat-list-item
                     routerLink="/features"
                     class="main-content__nav-link"
+                    (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
@@ -32,6 +38,7 @@
                     mat-list-item
                     routerLink="/about"
                     class="main-content__nav-link"
+                    (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
@@ -47,6 +54,7 @@
                     mat-list-item
                     routerLink="/contact"
                     class="main-content__nav-link"
+                    (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
