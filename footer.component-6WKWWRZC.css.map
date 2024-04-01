@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/base/footer/footer.component.scss", "src/app/styles/_variables.scss"],
-  "sourcesContent": ["@use \"../../../styles/variables\" as *;\n\n:host {\n    .footer {\n        text-align: center;\n        padding: 8px 0;\n        font-size: 10px;\n        color: $gray--dark;\n\n        &__text {\n            margin: 0;\n        }\n    }\n}\n", "$gray--dark: hsl(0, 0%, 60%);\n"],
-  "mappings": "AAGI,MAAA,CAAA,OACI,WAAA,OADJ,QAEI,IAAA,EACA,UAAA,KACA,MCPK,KDSL,MAAA,CAAA,aANJ,OAOQ",
-  "names": []
-}
