@@ -1,6 +1,7 @@
 @use "@angular/material" as mat;
 
 @use "./variables" as *;
+@use "./typography" as *;
 
 $primary-palette: mat.define-palette(
     (
@@ -202,6 +203,8 @@ $light-theme: mat.define-light-theme(
                 icon: darken($light-background, 45%),
             ),
         ),
+        density: -1,
+        typography: $typography-config,
     )
 );
 
@@ -230,5 +233,7 @@ $dark-theme: mat.define-dark-theme(
                 icon: lighten($dark-background, 45%),
             ),
         ),
+        density: -1,
+        typography: $typography-config,
     )
 );
