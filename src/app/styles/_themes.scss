@@ -1,0 +1,239 @@
+@use "@angular/material" as mat;
+
+@use "./variables" as *;
+@use "./typography" as *;
+
+$primary-palette: mat.define-palette(
+    (
+        50: lighten($spotify-green, 50%),
+        100: lighten($spotify-green, 40%),
+        200: lighten($spotify-green, 30%),
+        300: lighten($spotify-green, 20%),
+        400: lighten($spotify-green, 10%),
+        500: $spotify-green,
+        600: darken($spotify-green, 10%),
+        700: darken($spotify-green, 20%),
+        800: darken($spotify-green, 30%),
+        900: darken($spotify-green, 40%),
+        A100: lighten($spotify-green, 25%),
+        A200: lighten($spotify-green, 20%),
+        A400: lighten($spotify-green, 15%),
+        A700: darken($spotify-green, 10%),
+        contrast: (
+            50: $dark-background,
+            100: $dark-background,
+            200: $dark-background,
+            300: $dark-background,
+            400: $dark-background,
+            500: $light-background,
+            600: $light-background,
+            700: $light-background,
+            800: $light-background,
+            900: $light-background,
+            A100: $dark-background,
+            A200: $dark-background,
+            A400: $dark-background,
+            A700: $light-background,
+        ),
+    )
+);
+
+$accent-palette: mat.define-palette(
+    (
+        50: lighten($deep-sky-blue, 50%),
+        100: lighten($deep-sky-blue, 40%),
+        200: lighten($deep-sky-blue, 30%),
+        300: lighten($deep-sky-blue, 20%),
+        400: lighten($deep-sky-blue, 10%),
+        500: $deep-sky-blue,
+        600: darken($deep-sky-blue, 10%),
+        700: darken($deep-sky-blue, 20%),
+        800: darken($deep-sky-blue, 30%),
+        900: darken($deep-sky-blue, 40%),
+        A100: lighten($deep-sky-blue, 25%),
+        A200: lighten($deep-sky-blue, 20%),
+        A400: lighten($deep-sky-blue, 15%),
+        A700: darken($deep-sky-blue, 10%),
+        contrast: (
+            50: $dark-background,
+            100: $dark-background,
+            200: $dark-background,
+            300: $dark-background,
+            400: $dark-background,
+            500: $light-background,
+            600: $light-background,
+            700: $light-background,
+            800: $light-background,
+            900: $light-background,
+            A100: $dark-background,
+            A200: $dark-background,
+            A400: $dark-background,
+            A700: $light-background,
+        ),
+    )
+);
+
+$success-color-palette: mat.define-palette(
+    (
+        50: lighten($success-color, 50%),
+        100: lighten($success-color, 40%),
+        200: lighten($success-color, 30%),
+        300: lighten($success-color, 20%),
+        400: lighten($success-color, 10%),
+        500: $success-color,
+        600: darken($success-color, 10%),
+        700: darken($success-color, 20%),
+        800: darken($success-color, 30%),
+        900: darken($success-color, 40%),
+        A100: lighten($success-color, 25%),
+        A200: lighten($success-color, 20%),
+        A400: lighten($success-color, 15%),
+        A700: darken($success-color, 10%),
+        contrast: (
+            50: $dark-background,
+            100: $dark-background,
+            200: $dark-background,
+            300: $dark-background,
+            400: $dark-background,
+            500: $light-background,
+            600: $light-background,
+            700: $light-background,
+            800: $light-background,
+            900: $light-background,
+            A100: $dark-background,
+            A200: $dark-background,
+            A400: $dark-background,
+            A700: $light-background,
+        ),
+    )
+);
+
+$warning-color-palette: mat.define-palette(
+    (
+        50: lighten($warning-color, 50%),
+        100: lighten($warning-color, 40%),
+        200: lighten($warning-color, 30%),
+        300: lighten($warning-color, 20%),
+        400: lighten($warning-color, 10%),
+        500: $warning-color,
+        600: darken($warning-color, 10%),
+        700: darken($warning-color, 20%),
+        800: darken($warning-color, 30%),
+        900: darken($warning-color, 40%),
+        A100: lighten($warning-color, 25%),
+        A200: lighten($warning-color, 20%),
+        A400: lighten($warning-color, 15%),
+        A700: darken($warning-color, 10%),
+        contrast: (
+            50: $dark-background,
+            100: $dark-background,
+            200: $dark-background,
+            300: $dark-background,
+            400: $dark-background,
+            500: $dark-background,
+            600: $dark-background,
+            700: $dark-background,
+            800: $light-background,
+            900: $light-background,
+            A100: $dark-background,
+            A200: $dark-background,
+            A400: $dark-background,
+            A700: $light-background,
+        ),
+    )
+);
+
+$error-color-palette: mat.define-palette(
+    (
+        50: lighten($error-color, 50%),
+        100: lighten($error-color, 40%),
+        200: lighten($error-color, 30%),
+        300: lighten($error-color, 20%),
+        400: lighten($error-color, 10%),
+        500: $error-color,
+        600: darken($error-color, 10%),
+        700: darken($error-color, 20%),
+        800: darken($error-color, 30%),
+        900: darken($error-color, 40%),
+        A100: lighten($error-color, 25%),
+        A200: lighten($error-color, 20%),
+        A400: lighten($error-color, 15%),
+        A700: darken($error-color, 10%),
+        contrast: (
+            50: $dark-background,
+            100: $dark-background,
+            200: $dark-background,
+            300: $dark-background,
+            400: $dark-background,
+            500: $light-background,
+            600: $light-background,
+            700: $light-background,
+            800: $light-background,
+            900: $light-background,
+            A100: $dark-background,
+            A200: $dark-background,
+            A400: $dark-background,
+            A700: $light-background,
+        ),
+    )
+);
+
+$light-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $primary-palette,
+            accent: $accent-palette,
+            warn: $error-color-palette,
+            background: (
+                background: $light-background,
+                card: lighten($light-background, 5%),
+                dialog: lighten($light-background, 5%),
+                status-bar: darken($light-background, 5%),
+                app-bar: darken($light-background, 5%),
+                hover: darken($light-background, 2.5%),
+            ),
+            foreground: (
+                base: $text-color,
+                text: $text-color,
+                divider: darken($light-background, 15%),
+                dividers: darken($light-background, 10%),
+                disabled: darken($light-background, 20%),
+                hint-text: darken($light-background, 35%),
+                secondary-text: $secondary-text-color,
+                icon: darken($light-background, 45%),
+            ),
+        ),
+        density: -1,
+        typography: $typography-config,
+    )
+);
+
+$dark-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: $primary-palette,
+            accent: $accent-palette,
+            warn: $error-color-palette,
+            background: (
+                background: $dark-background,
+                card: lighten($dark-background, 5%),
+                dialog: lighten($dark-background, 5%),
+                status-bar: lighten($dark-background, 2.5%),
+                app-bar: lighten($dark-background, 2.5%),
+                hover: lighten($dark-background, 5%),
+            ),
+            foreground: (
+                base: $text-color,
+                text: $text-color,
+                divider: lighten($dark-background, 10%),
+                dividers: lighten($dark-background, 15%),
+                disabled: lighten($dark-background, 20%),
+                hint-text: lighten($dark-background, 35%),
+                secondary-text: $secondary-text-color,
+                icon: lighten($dark-background, 45%),
+            ),
+        ),
+        density: -1,
+        typography: $typography-config,
+    )
+);
