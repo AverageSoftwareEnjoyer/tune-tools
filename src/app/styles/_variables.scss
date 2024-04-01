@@ -1,1 +1,16 @@
-$gray--dark: hsl(0, 0%, 60%);
+@use "@angular/material" as mat;
+
+// Base and Accent Colors
+$spotify-green: #1db954;
+$deep-sky-blue: #1ca1f1;
+
+// Neutral Colors
+$light-background: #f0f2f5;
+$dark-background: #121212;
+$text-color: #ffffff; // Off-White
+$secondary-text-color: #b3b3b3; // Light Gray
+
+// Utility Colors
+$success-color: #4caf50; // Bright Green
+$warning-color: #ffc107; // Amber
+$error-color: #d32f2f; // Crimson Red
