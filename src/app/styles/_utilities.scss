@@ -1,0 +1,128 @@
+@mixin display-utilities {
+    $values: block flex inline inline-block none grid inline-grid;
+
+    @each $value in $values {
+        .d-#{$value} {
+            display: $value;
+        }
+    }
+}
+
+@mixin flex-direction-utilities {
+    $directions: row row-reverse column column-reverse;
+
+    @each $dir in $directions {
+        .flex-#{$dir} {
+            flex-direction: $dir;
+        }
+    }
+}
+
+@mixin flex-wrap-utilities {
+    $wraps: nowrap wrap wrap-reverse;
+
+    @each $wrap in $wraps {
+        .flex-#{$wrap} {
+            flex-wrap: $wrap;
+        }
+    }
+}
+
+@mixin flex-align-utilities {
+    $alignments: center start end space-around space-between;
+
+    @each $align in $alignments {
+        .justify-content-#{$align} {
+            justify-content: $align;
+        }
+        .align-items-#{$align} {
+            align-items: $align;
+        }
+    }
+}
+
+@mixin flex-direction-utilities {
+    $directions: row row-reverse column column-reverse;
+
+    @each $dir in $directions {
+        .flex-#{$dir} {
+            flex-direction: $dir;
+        }
+    }
+}
+
+@mixin flex-wrap-utilities {
+    $wraps: nowrap wrap wrap-reverse;
+
+    @each $wrap in $wraps {
+        .flex-#{$wrap} {
+            flex-wrap: $wrap;
+        }
+    }
+}
+
+@mixin flex-align-utilities {
+    $alignments: center start end space-around space-between;
+
+    @each $align in $alignments {
+        .justify-content-#{$align} {
+            justify-content: $align;
+        }
+        .align-items-#{$align} {
+            align-items: $align;
+        }
+    }
+}
+
+@mixin spacing-utilities($property, $abbrev) {
+    $sizes: (
+        0: 0,
+        1: 0.25rem,
+        2: 0.5rem,
+        3: 1rem,
+        4: 1.5rem,
+        5: 3rem,
+    );
+    $sides: (
+        all: "",
+        top: "-t",
+        right: "-r",
+        bottom: "-b",
+        left: "-l",
+        x: "-x",
+        y: "-y",
+    );
+
+    @each $sizeKey, $sizeValue in $sizes {
+        .#{$abbrev}-#{$sizeKey} {
+            #{$property}: $sizeValue !important;
+        }
+
+        @each $sideKey, $sideValue in $sides {
+            @if $sideKey != "all" {
+                @if $sideKey == "x" {
+                    .#{$abbrev}#{$sideValue}-#{$sizeKey} {
+                        #{$property}-left: $sizeValue !important;
+                        #{$property}-right: $sizeValue !important;
+                    }
+                } @else if $sideKey == "y" {
+                    .#{$abbrev}#{$sideValue}-#{$sizeKey} {
+                        #{$property}-top: $sizeValue !important;
+                        #{$property}-bottom: $sizeValue !important;
+                    }
+                } @else {
+                    .#{$abbrev}#{$sideValue}-#{$sizeKey} {
+                        #{$property}-#{$sideKey}: $sizeValue !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include display-utilities;
+@include flex-direction-utilities;
+@include flex-wrap-utilities;
+@include flex-align-utilities;
+@include spacing-utilities(margin, "m");
+@include spacing-utilities(padding, "p");
