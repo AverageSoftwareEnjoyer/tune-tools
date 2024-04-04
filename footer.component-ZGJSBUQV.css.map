@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/base/footer/footer.component.scss", "src/app/styles/_variables.scss"],
-  "sourcesContent": ["@use \"../../../styles/variables\" as *;\n\n:host {\n    .footer {\n        text-align: center;\n        padding: 8px 0;\n        font-size: 10px;\n        color: $secondary-text-color;\n\n        &__text {\n            margin: 0;\n        }\n    }\n}\n", "@use \"@angular/material\" as mat;\n\n// Base and Accent Colors\n$spotify-green: #1db954;\n$deep-sky-blue: #1ca1f1;\n\n// Neutral Colors\n$light-background: #f0f2f5;\n$dark-background: #121212;\n$text-color: #ffffff; // Off-White\n$secondary-text-color: #b3b3b3; // Light Gray\n\n// Utility Colors\n$success-color: #4caf50; // Bright Green\n$warning-color: #ffc107; // Amber\n$error-color: #d32f2f; // Crimson Red\n"],
-  "mappings": "AAGI,MAAA,CAAA,OACI,WAAA,OADJ,QAEI,IAAA,EACA,UAAA,KACA,MCGe,QDDf,MAAA,CAAA,aANJ,OAOQ",
-  "names": []
-}

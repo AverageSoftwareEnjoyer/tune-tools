@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/base/header/header.component.scss"],
-  "sourcesContent": [":host {\n    .header__toolbar {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n\n        .header__title {\n            flex-grow: 1;\n        }\n\n        .header__nav-links {\n            display: flex;\n            gap: 20px;\n\n            a {\n                color: inherit;\n                text-decoration: none;\n            }\n        }\n    }\n}\n"],
-  "mappings": "AACI,MAAA,CAAA,gBACI,QAAA,KACA,gBAAA,cACA,YAAA,OAEA,MAAA,CALJ,gBAKI,CAAA,cACI,UAAA,EAGJ,MAAA,CATJ,gBASI,CAAA,kBACI,QAAA,KACA,IAAA,KAEA,MAAA,CAbR,gBAaQ,CAJJ,kBAII,EACI,MAAA,QACA,gBAAA",
-  "names": []
-}
