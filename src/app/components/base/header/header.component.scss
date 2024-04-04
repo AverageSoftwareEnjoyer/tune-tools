@@ -1,14 +1,10 @@
 :host {
-    .header__toolbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .header__title {
+    .header {
+        &__title {
             flex-grow: 1;
         }
 
-        .header__nav-links {
+        &__nav-links {
             display: flex;
             gap: 20px;
 
