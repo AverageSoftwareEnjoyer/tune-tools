@@ -10,7 +10,6 @@ const prettierConfig = require("eslint-config-prettier");
 const angularEslint = require("@angular-eslint/eslint-plugin");
 const angularEslintTemplate = require("@angular-eslint/eslint-plugin-template");
 const stylisticEslint = require("@stylistic/eslint-plugin");
-// @ts-expect-error For some reason TS does not recognise the import correctly
 const typescriptParser = require("@typescript-eslint/parser");
 const angularTemplateParser = require("@angular-eslint/template-parser");
 const simpleImportSort = require("eslint-plugin-simple-import-sort");
@@ -195,7 +194,7 @@ module.exports = [
         ...jest.configs["flat/recommended"],
         rules: {
             "@typescript-eslint/dot-notation": "off",
-        }
+        },
     },
     {
         files: ["*.component.html"],
