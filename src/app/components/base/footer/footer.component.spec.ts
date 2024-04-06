@@ -9,7 +9,7 @@ describe("FooterComponent", () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [FooterComponent], // Import MatToolbarModule if you're using mat-toolbar in the template
+            imports: [FooterComponent],
         });
     });
 

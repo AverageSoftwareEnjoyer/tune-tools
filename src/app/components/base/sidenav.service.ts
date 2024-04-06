@@ -7,7 +7,7 @@ import { Observable, Subject } from "rxjs";
 export class SidenavService {
     toggleSidenav$: Observable<null>;
 
-    #toggleSidenavSubject = new Subject<null>();
+    readonly #toggleSidenavSubject = new Subject<null>();
 
     constructor() {
         this.toggleSidenav$ = this.#toggleSidenavSubject.asObservable();
