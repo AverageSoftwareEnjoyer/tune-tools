@@ -13,7 +13,10 @@ export class SidenavService {
         this.toggleSidenav$ = this.#toggleSidenavSubject.asObservable();
     }
 
-    toggleSidenav(): void {
+    /**
+     * Publishes an event to toggle the side navigation's visibility.
+     */
+    toggleSidenavPublish(): void {
         this.#toggleSidenavSubject.next(null);
     }
 }

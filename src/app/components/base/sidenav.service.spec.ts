@@ -22,7 +22,7 @@ describe("SidenavService", () => {
             });
         });
 
-        sidenavService.toggleSidenav();
+        sidenavService.toggleSidenavPublish();
 
         await expect(promise).resolves.toBeUndefined();
     });

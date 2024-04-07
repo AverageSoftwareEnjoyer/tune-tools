@@ -16,7 +16,7 @@ describe("HeaderComponent", () => {
 
     beforeEach(() => {
         mockSidenavService = {
-            toggleSidenav: jest.fn(),
+            toggleSidenavPublish: jest.fn(),
         };
 
         TestBed.configureTestingModule({
@@ -48,7 +48,7 @@ describe("HeaderComponent", () => {
         const button = fixture.debugElement.query(By.css(".header__menu-btn"));
         button.triggerEventHandler("click", null);
 
-        expect(mockSidenavService.toggleSidenav).toHaveBeenCalled();
+        expect(mockSidenavService.toggleSidenavPublish).toHaveBeenCalled();
     });
 
     it("should display menu button for handset", () => {

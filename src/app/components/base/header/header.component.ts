@@ -31,7 +31,10 @@ export class HeaderComponent {
 
     readonly #sidenavService = inject(SidenavService);
 
-    protected onToggleMenu(): void {
-        this.#sidenavService.toggleSidenav();
+    /**
+     * Toggles the side navigation's visibility.
+     */
+    protected onMenuToggle(): void {
+        this.#sidenavService.toggleSidenavPublish();
     }
 }
