@@ -5,6 +5,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { ActivatedRoute } from "@angular/router";
+import { of } from "rxjs";
 
 import { SidenavService } from "../sidenav.service";
 import { HeaderComponent } from "./header.component";
@@ -30,12 +32,13 @@ describe("HeaderComponent", () => {
             ],
             providers: [
                 { provide: SidenavService, useValue: mockSidenavService },
+                { provide: ActivatedRoute, useValue: of({}) },
             ],
         });
 
         fixture = TestBed.createComponent(HeaderComponent);
         component = fixture.componentInstance;
-        component.isHandset = true;
+        component.isBelowMediumWidth = true;
     });
 
     it("should create", () => {
@@ -59,7 +62,7 @@ describe("HeaderComponent", () => {
     });
 
     it("should not display menu button for non-handset", () => {
-        component.isHandset = false;
+        component.isBelowMediumWidth = false;
         fixture.detectChanges();
 
         const button = fixture.debugElement.query(By.css(".header__menu-btn"));
@@ -67,7 +70,7 @@ describe("HeaderComponent", () => {
     });
 
     it("should display nav links for non-handset", () => {
-        component.isHandset = false;
+        component.isBelowMediumWidth = false;
         fixture.detectChanges();
 
         const navLinks = fixture.debugElement.query(

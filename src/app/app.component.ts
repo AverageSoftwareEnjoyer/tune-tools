@@ -22,13 +22,13 @@ import { MainContentComponent } from "./components/base/main-content/main-conten
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-    protected isHandset$: Observable<boolean>;
+    protected isBelowMediumWidth$: Observable<boolean>;
 
     readonly #breakpointObserver = inject(BreakpointObserver);
 
     constructor() {
-        this.isHandset$ = this.#breakpointObserver
-            .observe(Breakpoints.Handset)
+        this.isBelowMediumWidth$ = this.#breakpointObserver
+            .observe([Breakpoints.XSmall, Breakpoints.Small])
             .pipe(
                 map(({ matches }) => matches),
                 shareReplay(),

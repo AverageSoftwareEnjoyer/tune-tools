@@ -9,6 +9,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { RouterModule } from "@angular/router";
 
 import { SidenavService } from "../sidenav.service";
 
@@ -21,13 +22,14 @@ import { SidenavService } from "../sidenav.service";
         MatIconModule,
         MatListModule,
         AsyncPipe,
+        RouterModule,
     ],
     templateUrl: "./header.component.html",
     styleUrls: ["./header.component.scss"],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-    @Input() isHandset!: boolean | null;
+    @Input() isBelowMediumWidth!: boolean | null;
 
     readonly #sidenavService = inject(SidenavService);
 

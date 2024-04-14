@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="header">
-    @if (isHandset) {
+    @if (isBelowMediumWidth) {
         <button
             mat-icon-button
             (click)="onMenuToggle()"
@@ -7,14 +7,16 @@
         >
             <mat-icon>menu</mat-icon>
         </button>
-    }
-    <span class="header__title">TuneTools</span>
-    @if (!isHandset) {
+        <div class="header__title">TuneTools</div>
+    } @else {
+        <a routerLink="/home" class="header__title">TuneTools</a>
         <div class="header__nav-links">
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a routerLink="/top-tracks">Top tracks</a>
+            <a routerLink="/top-artists">Top artists</a>
+            <a routerLink="/top-genres">Top genres</a>
+            <a routerLink="/recently-played">Recently played</a>
+            <a routerLink="/playlists">Playlists</a>
+            <a routerLink="/settings">Settings</a>
         </div>
     }
 </mat-toolbar>
