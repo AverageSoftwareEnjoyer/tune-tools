@@ -1,11 +1,17 @@
 <mat-sidenav-container class="main-content">
     @if (isBelowMediumWidth) {
-        <mat-sidenav #menu mode="over" class="main-content__sidenav">
+        <mat-sidenav
+            #menu
+            mode="over"
+            class="main-content__sidenav"
+            [autoFocus]="false"
+        >
             <mat-nav-list>
                 <a
                     mat-list-item
-                    routerLink="/"
+                    routerLink="/home"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -22,6 +28,7 @@
                     mat-list-item
                     routerLink="/top-tracks"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -38,6 +45,7 @@
                     mat-list-item
                     routerLink="/top-artists"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -54,6 +62,7 @@
                     mat-list-item
                     routerLink="/top-genres"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -70,6 +79,7 @@
                     mat-list-item
                     routerLink="/recently-played"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -79,13 +89,16 @@
                             class="main-content__icon"
                             >history</mat-icon
                         >
-                        <span class="main-content__link-text">Recently played</span>
+                        <span class="main-content__link-text"
+                            >Recently played</span
+                        >
                     </span>
                 </a>
                 <a
                     mat-list-item
                     routerLink="/playlists"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -102,6 +115,7 @@
                     mat-list-item
                     routerLink="/settings"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
