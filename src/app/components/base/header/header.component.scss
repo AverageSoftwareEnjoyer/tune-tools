@@ -1,16 +1,36 @@
+@use "../../../styles/variables" as *;
+
 :host {
     .header {
         &__title {
-            flex-grow: 1;
+            margin-right: auto;
         }
 
-        &__nav-links {
+        &__nav {
+            $block: &;
             display: flex;
-            gap: 20px;
+            width: 100%;
 
-            a {
-                color: inherit;
-                text-decoration: none;
+            &-links {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin: 0;
+                padding: 0;
+
+                @at-root #{ $block }-link {
+                    border-radius: 4px;
+                    padding: 4px 8px;
+
+                    &--active {
+                        background-color: rgba(
+                            $color: $dark-background,
+                            $alpha: 0.2
+                        );
+                    }
+                }
             }
         }
     }

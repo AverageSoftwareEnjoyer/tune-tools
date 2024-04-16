@@ -1,3 +1,5 @@
-<app-header [isHandset]="isHandset$ | async"></app-header>
-<app-main-content [isHandset]="isHandset$ | async"></app-main-content>
+<app-header [isBelowMediumWidth]="isBelowMediumWidth$ | async"></app-header>
+<app-main-content
+    [isBelowMediumWidth]="isBelowMediumWidth$ | async"
+></app-main-content>
 <app-footer></app-footer>

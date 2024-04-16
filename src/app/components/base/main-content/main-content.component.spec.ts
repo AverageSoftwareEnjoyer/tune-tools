@@ -41,7 +41,7 @@ describe("MainContentComponent", () => {
         component = fixture.componentInstance;
 
         component.sidenav = mockSidenav as MatSidenav;
-        component.isHandset = true;
+        component.isBelowMediumWidth = true;
         fixture.detectChanges();
     });
 

@@ -43,11 +43,13 @@ describe("AppComponent", () => {
         expect(component).toBeTruthy();
     });
 
-    it("should set isHandset$ based on BreakpointObserver", async () => {
+    it("should set isBelowMediumWidth$ based on BreakpointObserver", async () => {
         fixture.detectChanges();
 
-        const isHandset = await firstValueFrom(component["isHandset$"]);
+        const isBelowMediumWidth = await firstValueFrom(
+            component["isBelowMediumWidth$"],
+        );
 
-        expect(isHandset).toBe(true);
+        expect(isBelowMediumWidth).toBe(true);
     });
 });

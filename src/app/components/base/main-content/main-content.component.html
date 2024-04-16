@@ -1,11 +1,17 @@
 <mat-sidenav-container class="main-content">
-    @if (isHandset) {
-        <mat-sidenav #menu mode="over" class="main-content__sidenav">
+    @if (isBelowMediumWidth) {
+        <mat-sidenav
+            #menu
+            mode="over"
+            class="main-content__sidenav"
+            [autoFocus]="false"
+        >
             <mat-nav-list>
                 <a
                     mat-list-item
-                    routerLink="/"
+                    routerLink="/home"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
@@ -20,50 +26,106 @@
                 </a>
                 <a
                     mat-list-item
-                    routerLink="/features"
+                    routerLink="/top-tracks"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
                             aria-hidden="false"
-                            aria-label="Features icon"
+                            aria-label="Audiotrack icon"
                             class="main-content__icon"
-                            >build</mat-icon
+                            >audiotrack</mat-icon
                         >
-                        <span class="main-content__link-text">Features</span>
+                        <span class="main-content__link-text">Top tracks</span>
                     </span>
                 </a>
                 <a
                     mat-list-item
-                    routerLink="/about"
+                    routerLink="/top-artists"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
                             aria-hidden="false"
-                            aria-label="About icon"
+                            aria-label="Person icon"
                             class="main-content__icon"
-                            >info</mat-icon
+                            >person</mat-icon
                         >
-                        <span class="main-content__link-text">About</span>
+                        <span class="main-content__link-text">Top tracks</span>
                     </span>
                 </a>
                 <a
                     mat-list-item
-                    routerLink="/contact"
+                    routerLink="/top-genres"
                     class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
                 >
                     <span class="main-content__nav-item">
                         <mat-icon
                             aria-hidden="false"
-                            aria-label="Contact icon"
+                            aria-label="Category icon"
                             class="main-content__icon"
-                            >contacts</mat-icon
+                            >category</mat-icon
                         >
-                        <span class="main-content__link-text">Contact</span>
+                        <span class="main-content__link-text">Top tracks</span>
+                    </span>
+                </a>
+                <a
+                    mat-list-item
+                    routerLink="/recently-played"
+                    class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
+                    (click)="menu.toggle()"
+                >
+                    <span class="main-content__nav-item">
+                        <mat-icon
+                            aria-hidden="false"
+                            aria-label="History icon"
+                            class="main-content__icon"
+                            >history</mat-icon
+                        >
+                        <span class="main-content__link-text"
+                            >Recently played</span
+                        >
+                    </span>
+                </a>
+                <a
+                    mat-list-item
+                    routerLink="/playlists"
+                    class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
+                    (click)="menu.toggle()"
+                >
+                    <span class="main-content__nav-item">
+                        <mat-icon
+                            aria-hidden="false"
+                            aria-label="Queue music icon"
+                            class="main-content__icon"
+                            >queue_music</mat-icon
+                        >
+                        <span class="main-content__link-text">Playlists</span>
+                    </span>
+                </a>
+                <a
+                    mat-list-item
+                    routerLink="/settings"
+                    class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
+                    (click)="menu.toggle()"
+                >
+                    <span class="main-content__nav-item">
+                        <mat-icon
+                            aria-hidden="false"
+                            aria-label="Settings icon"
+                            class="main-content__icon"
+                            >settings</mat-icon
+                        >
+                        <span class="main-content__link-text">Settings</span>
                     </span>
                 </a>
             </mat-nav-list>

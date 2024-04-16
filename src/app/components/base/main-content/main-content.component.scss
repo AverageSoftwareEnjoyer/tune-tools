@@ -1,3 +1,5 @@
+@use "../../../styles/variables" as *;
+
 :host {
     .main-content {
         flex: 1 1 auto;
@@ -11,10 +13,24 @@
             height: 100%;
         }
 
-        &__nav-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        &__nav {
+            &-link {
+                border-radius: 4px;
+                padding: 4px 8px;
+
+                &--active {
+                    background-color: rgba(
+                        $color: $dark-background,
+                        $alpha: 0.2
+                    );
+                }
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
         }
     }
 }

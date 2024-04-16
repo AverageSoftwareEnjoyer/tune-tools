@@ -36,7 +36,7 @@ export class MainContentComponent
     extends DestroyClass
     implements AfterViewInit {
     @ViewChild("menu") sidenav!: MatSidenav;
-    @Input() isHandset!: boolean | null;
+    @Input() isBelowMediumWidth!: boolean | null;
 
     readonly #sidenavService = inject(SidenavService);
     readonly #changeDetectorRef = inject(ChangeDetectorRef);
