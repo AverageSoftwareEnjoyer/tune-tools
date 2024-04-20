@@ -1,0 +1,2 @@
+import{Cb as a,Fb as i,ja as n,nb as r,ob as p}from"./chunk-DVQVEIAB.js";var s=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-top-genres"]],standalone:!0,features:[i],decls:2,vars:0,template:function(o,c){o&1&&(r(0,"p"),a(1,"top-genres works!"),p())}});let t=e;return t})();var u=[{path:":timeframe",component:s},{path:"**",redirectTo:"4-weeks"}];export{u as default};
+//# sourceMappingURL=chunk-4Z3HNGLT.js.map

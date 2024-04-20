@@ -1,0 +1,2 @@
+import{Cb as p,Fb as i,ja as o,nb as r,ob as a}from"./chunk-DVQVEIAB.js";var l=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-recently-played"]],standalone:!0,features:[i],decls:2,vars:0,template:function(n,d){n&1&&(r(0,"p"),p(1,"recently-played works!"),a())}});let t=e;return t})();var u=[{path:":view-type",component:l},{path:"**",redirectTo:"unsorted"}];export{u as default};
+//# sourceMappingURL=chunk-YWUYNBSF.js.map

@@ -1,0 +1,2 @@
+import{Cb as a,Fb as r,ja as i,nb as o,ob as s}from"./chunk-DVQVEIAB.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-settings"]],standalone:!0,features:[r],decls:2,vars:0,template:function(n,c){n&1&&(o(0,"p"),a(1,"settings works!"),s())}});let t=e;return t})();export{d as SettingsComponent};
+//# sourceMappingURL=chunk-5XGO5W3M.js.map
