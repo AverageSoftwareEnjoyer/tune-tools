@@ -37,6 +37,7 @@ export class HeaderComponent {
      * Toggles the side navigation's visibility.
      */
     protected onMenuToggle(): void {
-        this.#sidenavService.toggleSidenavPublish();
+        // this.#sidenavService.toggleSidenavPublish();
+        throw new Error("test");
     }
 }
