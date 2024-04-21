@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { AsyncPipe } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { map, Observable, shareReplay } from "rxjs";
 
@@ -20,6 +20,7 @@ import { MainContentComponent } from "./components/base/main-content/main-conten
     ],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
     protected isBelowMediumWidth$: Observable<boolean>;
