@@ -28,7 +28,7 @@
     "@angular/material": "^17.3.3",
     "@angular/platform-browser": "^17.3.3",
     "@angular/platform-browser-dynamic": "^17.3.3",
-    "@angular/platform-server": "^17.3.3",
+    "@angular/platform-server": "^17.3.6",
     "@angular/router": "^17.3.3",
     "@sentry/angular-ivy": "^7.110.1",
     "@sentry/cli": "^2.31.0",
