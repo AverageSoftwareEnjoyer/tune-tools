@@ -1,2 +1,0 @@
-import{Cb as p,Fb as i,ja as n,nb as r,ob as a}from"./chunk-DVQVEIAB.js";var s=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-top-tracks"]],standalone:!0,features:[i],decls:2,vars:0,template:function(o,c){o&1&&(r(0,"p"),p(1,"top-tracks works!"),a())}});let t=e;return t})();var u=[{path:":timeframe",component:s},{path:"**",redirectTo:"4-weeks"}];export{u as default};
-//# sourceMappingURL=chunk-J4RGQ7ZV.js.map

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/routes/home/home.component.ts", "src/app/components/routes/home/home.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from \"@angular/core\";\n\n@Component({\n    selector: \"app-home\",\n    standalone: true,\n    imports: [],\n    templateUrl: \"./home.component.html\",\n    styleUrl: \"./home.component.scss\",\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HomeComponent {}\n", "<p>home works!</p>\n"],
+  "mappings": "yEAUA,IAAaA,GAAa,IAAA,CAApB,IAAOA,EAAP,MAAOA,CAAa,yCAAbA,EAAa,sBAAbA,EAAaC,UAAA,CAAA,CAAA,UAAA,CAAA,EAAAC,WAAA,GAAAC,SAAA,CAAAC,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICV1BE,EAAA,EAAA,GAAA,EAAGC,EAAA,EAAA,aAAA,EAAWC,EAAA,wBDUR,IAAOZ,EAAPa,SAAOb,CAAa,GAAA",
+  "names": ["HomeComponent", "selectors", "standalone", "features", "\u0275\u0275StandaloneFeature", "decls", "vars", "template", "rf", "ctx", "\u0275\u0275elementStart", "\u0275\u0275text", "\u0275\u0275elementEnd", "_HomeComponent"]
+}
