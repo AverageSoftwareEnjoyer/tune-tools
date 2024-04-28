@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
     selector: "app-top-artists",
@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
     imports: [],
     templateUrl: "./top-artists.component.html",
     styleUrl: "./top-artists.component.scss",
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopArtistsComponent {}
