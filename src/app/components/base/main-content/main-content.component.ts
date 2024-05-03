@@ -12,6 +12,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
+import { map } from "rxjs";
 
 import { DestroyClass } from "../../../core/destroy/destroy.class";
 import { HeaderComponent } from "../header/header.component";
@@ -43,9 +44,11 @@ export class MainContentComponent
 
     ngAfterViewInit(): void {
         this.#sidenavService.toggleSidenav$
-            .pipe(this.untilDestroyed())
+            .pipe(
+                this.untilDestroyed(),
+                map(() => this.sidenav.toggle()),
+            )
             .subscribe(() => {
-                this.sidenav.toggle();
                 this.#changeDetectorRef.markForCheck();
             });
     }
