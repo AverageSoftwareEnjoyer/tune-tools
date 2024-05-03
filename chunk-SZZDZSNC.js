@@ -1,0 +1,2 @@
+import{Cb as i,Fb as p,ja as n,nb as r,ob as a}from"./chunk-SZDXRGB6.js";var s=(()=>{let t=class t{};t.\u0275fac=function(o){return new(o||t)},t.\u0275cmp=n({type:t,selectors:[["app-top-artists"]],standalone:!0,features:[p],decls:2,vars:0,template:function(o,c){o&1&&(r(0,"p"),i(1,"top-artists works!"),a())},changeDetection:0});let e=t;return e})();var u=[{path:":timeframe",component:s},{path:"**",redirectTo:"4-weeks"}];export{u as default};
+//# sourceMappingURL=chunk-SZZDZSNC.js.map
