@@ -620,19 +620,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-server@npm:^17.3.3":
-  version: 17.3.3
-  resolution: "@angular/platform-server@npm:17.3.3"
+"@angular/platform-server@npm:^17.3.7":
+  version: 17.3.7
+  resolution: "@angular/platform-server@npm:17.3.7"
   dependencies:
     tslib: "npm:^2.3.0"
     xhr2: "npm:^0.2.0"
   peerDependencies:
-    "@angular/animations": 17.3.3
-    "@angular/common": 17.3.3
-    "@angular/compiler": 17.3.3
-    "@angular/core": 17.3.3
-    "@angular/platform-browser": 17.3.3
-  checksum: 10/fd3e8405ef2205184bfb4f6328143c8a7ec0562f67ba5f36bb0a38662b66d8442bb337188396fae057f8d079886da530ca5a60df94077a2d24f8890ad08cc111
+    "@angular/animations": 17.3.7
+    "@angular/common": 17.3.7
+    "@angular/compiler": 17.3.7
+    "@angular/core": 17.3.7
+    "@angular/platform-browser": 17.3.7
+  checksum: 10/ef3dea1d6b378726bb622b22d7bd1cc4d47fe54fbba88874be39eb7311f54be9ed4dd54be6c33bc97754b1743d927f77720465adea7c87cfb393f07f73cbcd2c
   languageName: node
   linkType: hard
 
@@ -15240,7 +15240,7 @@ __metadata:
     "@angular/material": "npm:^17.3.3"
     "@angular/platform-browser": "npm:^17.3.3"
     "@angular/platform-browser-dynamic": "npm:^17.3.3"
-    "@angular/platform-server": "npm:^17.3.3"
+    "@angular/platform-server": "npm:^17.3.7"
     "@angular/router": "npm:^17.3.3"
     "@eslint/js": "npm:^8.57.0"
     "@playwright/test": "npm:^1.43.1"
