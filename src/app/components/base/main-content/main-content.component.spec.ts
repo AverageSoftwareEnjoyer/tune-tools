@@ -1,5 +1,8 @@
+import { HarnessLoader } from "@angular/cdk/testing";
+import { TestbedHarnessEnvironment } from "@angular/cdk/testing/testbed";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSidenavHarness } from "@angular/material/sidenav/testing";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
@@ -15,11 +18,9 @@ describe("MainContentComponent", () => {
     let mockSidenavService: {
         toggleSidenav$: Observable<void>;
     };
-    let mockSidenav: Partial<MatSidenav>;
+    let loader: HarnessLoader;
 
     beforeEach(() => {
-        mockSidenav = { toggle: jest.fn() };
-
         toggleSidenavSubject = new Subject<void>();
         mockSidenavService = {
             toggleSidenav$: toggleSidenavSubject.asObservable(),
@@ -40,21 +41,20 @@ describe("MainContentComponent", () => {
         fixture = TestBed.createComponent(MainContentComponent);
         component = fixture.componentInstance;
 
-        component.sidenav = mockSidenav as MatSidenav;
         component.isBelowMediumWidth = true;
         fixture.detectChanges();
+        loader = TestbedHarnessEnvironment.loader(fixture);
     });
 
     it("should create", () => {
         expect(component).toBeTruthy();
     });
 
-    it("should toggle sidenav on sidenavService event", () => {
-        toggleSidenavSubject.subscribe(() => {
-            expect(mockSidenav.toggle).toHaveBeenCalledTimes(1);
-        });
-
+    it("should toggle sidenav on sidenavService event", async () => {
+        const harness = await loader.getHarness(MatSidenavHarness);
+        expect(await harness.isOpen()).toBe(false);
         toggleSidenavSubject.next();
+        expect(await harness.isOpen()).toBe(true);
     });
 
     it("should close sidenav on clicking a link", () => {
