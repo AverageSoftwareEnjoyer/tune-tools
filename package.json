@@ -60,7 +60,7 @@
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.8",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.5.0",
     "@typescript-eslint/types": "^7.5.0",
     "angular-cli-ghpages": "2.0.0-beta.2",
