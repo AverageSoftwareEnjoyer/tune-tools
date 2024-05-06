@@ -54,7 +54,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/cli", "npm:2.31.2"],\
           ["@sentry/wizard", "npm:3.22.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:1.7.2"],\
-          ["@supabase/supabase-js", "npm:2.42.4"],\
+          ["@supabase/supabase-js", "npm:2.43.1"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -7132,20 +7132,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@supabase/auth-js", [\
-      ["npm:2.63.0", {\
-        "packageLocation": "./.yarn/cache/@supabase-auth-js-npm-2.63.0-5d96384aa7-a8a7a33f88.zip/node_modules/@supabase/auth-js/",\
+      ["npm:2.64.2", {\
+        "packageLocation": "./.yarn/cache/@supabase-auth-js-npm-2.64.2-c04a29b67b-41ca58a34a.zip/node_modules/@supabase/auth-js/",\
         "packageDependencies": [\
-          ["@supabase/auth-js", "npm:2.63.0"],\
+          ["@supabase/auth-js", "npm:2.64.2"],\
           ["@supabase/node-fetch", "npm:2.6.15"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@supabase/functions-js", [\
-      ["npm:2.3.0", {\
-        "packageLocation": "./.yarn/cache/@supabase-functions-js-npm-2.3.0-667a167bdc-2c10d8c744.zip/node_modules/@supabase/functions-js/",\
+      ["npm:2.3.1", {\
+        "packageLocation": "./.yarn/cache/@supabase-functions-js-npm-2.3.1-c8f57c349e-308f5e8a48.zip/node_modules/@supabase/functions-js/",\
         "packageDependencies": [\
-          ["@supabase/functions-js", "npm:2.3.0"],\
+          ["@supabase/functions-js", "npm:2.3.1"],\
           ["@supabase/node-fetch", "npm:2.6.15"]\
         ],\
         "linkType": "HARD"\
@@ -7172,14 +7172,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@supabase/realtime-js", [\
-      ["npm:2.9.4", {\
-        "packageLocation": "./.yarn/cache/@supabase-realtime-js-npm-2.9.4-a8f3aea1d3-76f5ecaaff.zip/node_modules/@supabase/realtime-js/",\
+      ["npm:2.9.5", {\
+        "packageLocation": "./.yarn/cache/@supabase-realtime-js-npm-2.9.5-756734e1bd-0bfae2a784.zip/node_modules/@supabase/realtime-js/",\
         "packageDependencies": [\
-          ["@supabase/realtime-js", "npm:2.9.4"],\
+          ["@supabase/realtime-js", "npm:2.9.5"],\
           ["@supabase/node-fetch", "npm:2.6.15"],\
           ["@types/phoenix", "npm:1.6.4"],\
           ["@types/ws", "npm:8.5.10"],\
-          ["ws", "virtual:a8f3aea1d34c0638986a2d5a967db9eaad539a3becc33117b6d15bdf55fd4020849f101c1cb0b1d4a75cf351a23be4f21e6fdeae5a079302c917cccb67fc8752#npm:8.16.0"]\
+          ["ws", "virtual:756734e1bd8fd68855f8dbac2c2229dd4689c5345e2263b10190587ac39ecd7473001afe3814d08916f9fa3f24585403c4dc4bd8bb691953962c4ae012d49c5d#npm:8.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7195,15 +7195,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@supabase/supabase-js", [\
-      ["npm:2.42.4", {\
-        "packageLocation": "./.yarn/cache/@supabase-supabase-js-npm-2.42.4-40cc2d0e58-c02a2e2400.zip/node_modules/@supabase/supabase-js/",\
+      ["npm:2.43.1", {\
+        "packageLocation": "./.yarn/cache/@supabase-supabase-js-npm-2.43.1-4d0ff7a376-3e453ac8ea.zip/node_modules/@supabase/supabase-js/",\
         "packageDependencies": [\
-          ["@supabase/supabase-js", "npm:2.42.4"],\
-          ["@supabase/auth-js", "npm:2.63.0"],\
-          ["@supabase/functions-js", "npm:2.3.0"],\
+          ["@supabase/supabase-js", "npm:2.43.1"],\
+          ["@supabase/auth-js", "npm:2.64.2"],\
+          ["@supabase/functions-js", "npm:2.3.1"],\
           ["@supabase/node-fetch", "npm:2.6.15"],\
           ["@supabase/postgrest-js", "npm:1.15.2"],\
-          ["@supabase/realtime-js", "npm:2.9.4"],\
+          ["@supabase/realtime-js", "npm:2.9.5"],\
           ["@supabase/storage-js", "npm:2.5.5"]\
         ],\
         "linkType": "HARD"\
@@ -14788,7 +14788,7 @@ const RAW_RUNTIME_STATE =
           ["whatwg-encoding", "npm:2.0.0"],\
           ["whatwg-mimetype", "npm:3.0.0"],\
           ["whatwg-url", "npm:11.0.0"],\
-          ["ws", "virtual:a8f3aea1d34c0638986a2d5a967db9eaad539a3becc33117b6d15bdf55fd4020849f101c1cb0b1d4a75cf351a23be4f21e6fdeae5a079302c917cccb67fc8752#npm:8.16.0"],\
+          ["ws", "virtual:756734e1bd8fd68855f8dbac2c2229dd4689c5345e2263b10190587ac39ecd7473001afe3814d08916f9fa3f24585403c4dc4bd8bb691953962c4ae012d49c5d#npm:8.16.0"],\
           ["xml-name-validator", "npm:4.0.0"]\
         ],\
         "packagePeers": [\
@@ -19151,7 +19151,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/cli", "npm:2.31.2"],\
           ["@sentry/wizard", "npm:3.22.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:1.7.2"],\
-          ["@supabase/supabase-js", "npm:2.42.4"],\
+          ["@supabase/supabase-js", "npm:2.43.1"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -19880,7 +19880,7 @@ const RAW_RUNTIME_STATE =
           ["webpack", "virtual:fecd0a3056818adbcd0cdc98aab299422ec6cca84774e8f9aa94964c78b36a4f285998226ff0dd73a2b9ca67ee5442b0f584f3f4cf9e9fc26786cf534c3ad257#npm:5.90.3"],\
           ["webpack-cli", null],\
           ["webpack-dev-middleware", "virtual:006a6376236ddf596370b228d192db40d64e1845a3edeeb179056f915510aeeac2368ebcca954cebbfe1fe9792495a64cccfc4687423b2c9a40684e0792adab0#npm:5.3.4"],\
-          ["ws", "virtual:a8f3aea1d34c0638986a2d5a967db9eaad539a3becc33117b6d15bdf55fd4020849f101c1cb0b1d4a75cf351a23be4f21e6fdeae5a079302c917cccb67fc8752#npm:8.16.0"]\
+          ["ws", "virtual:756734e1bd8fd68855f8dbac2c2229dd4689c5345e2263b10190587ac39ecd7473001afe3814d08916f9fa3f24585403c4dc4bd8bb691953962c4ae012d49c5d#npm:8.16.0"]\
         ],\
         "packagePeers": [\
           "@types/webpack-cli",\
@@ -20133,10 +20133,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:a8f3aea1d34c0638986a2d5a967db9eaad539a3becc33117b6d15bdf55fd4020849f101c1cb0b1d4a75cf351a23be4f21e6fdeae5a079302c917cccb67fc8752#npm:8.16.0", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-4907a8339b/0/cache/ws-npm-8.16.0-46943f6199-7c511c59e9.zip/node_modules/ws/",\
+      ["virtual:756734e1bd8fd68855f8dbac2c2229dd4689c5345e2263b10190587ac39ecd7473001afe3814d08916f9fa3f24585403c4dc4bd8bb691953962c4ae012d49c5d#npm:8.16.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-9525991f0a/0/cache/ws-npm-8.16.0-46943f6199-7c511c59e9.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:a8f3aea1d34c0638986a2d5a967db9eaad539a3becc33117b6d15bdf55fd4020849f101c1cb0b1d4a75cf351a23be4f21e6fdeae5a079302c917cccb67fc8752#npm:8.16.0"],\
+          ["ws", "virtual:756734e1bd8fd68855f8dbac2c2229dd4689c5345e2263b10190587ac39ecd7473001afe3814d08916f9fa3f24585403c4dc4bd8bb691953962c4ae012d49c5d#npm:8.16.0"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
