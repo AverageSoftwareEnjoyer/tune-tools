@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@eslint/js", "npm:8.57.0"],\
           ["@playwright/test", "npm:1.43.1"],\
-          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.110.1"],\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0"],\
           ["@sentry/cli", "npm:2.31.2"],\
           ["@sentry/wizard", "npm:3.22.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:1.7.2"],\
@@ -6610,41 +6610,31 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry-internal/feedback", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-feedback-npm-7.110.1-72a6b2b8c7-b567085c44.zip/node_modules/@sentry-internal/feedback/",\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-feedback-npm-7.113.0-510b684248-e19262ece0.zip/node_modules/@sentry-internal/feedback/",\
         "packageDependencies": [\
-          ["@sentry-internal/feedback", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
+          ["@sentry-internal/feedback", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry-internal/replay-canvas", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-replay-canvas-npm-7.110.1-47c77f183a-c72248f296.zip/node_modules/@sentry-internal/replay-canvas/",\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-replay-canvas-npm-7.113.0-79a91b7f13-c0313aa3f9.zip/node_modules/@sentry-internal/replay-canvas/",\
         "packageDependencies": [\
-          ["@sentry-internal/replay-canvas", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/replay", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
+          ["@sentry-internal/replay-canvas", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/replay", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry-internal/tracing", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-tracing-npm-7.110.1-c5acb4831d-808c9629ff.zip/node_modules/@sentry-internal/tracing/",\
-        "packageDependencies": [\
-          ["@sentry-internal/tracing", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.111.0", {\
         "packageLocation": "./.yarn/cache/@sentry-internal-tracing-npm-7.111.0-b4de0a5fbe-2da0db0378.zip/node_modules/@sentry-internal/tracing/",\
         "packageDependencies": [\
@@ -6654,27 +6644,37 @@ const RAW_RUNTIME_STATE =
           ["@sentry/utils", "npm:7.111.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-tracing-npm-7.113.0-3b7498c229-9be626ef56.zip/node_modules/@sentry-internal/tracing/",\
+        "packageDependencies": [\
+          ["@sentry-internal/tracing", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/angular-ivy", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-angular-ivy-npm-7.110.1-14b8e113b3-c2d07a1502.zip/node_modules/@sentry/angular-ivy/",\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-angular-ivy-npm-7.113.0-6fc5f0f758-b0960df351.zip/node_modules/@sentry/angular-ivy/",\
         "packageDependencies": [\
-          ["@sentry/angular-ivy", "npm:7.110.1"]\
+          ["@sentry/angular-ivy", "npm:7.113.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.110.1", {\
-        "packageLocation": "./.yarn/__virtual__/@sentry-angular-ivy-virtual-cc8e62d5c3/0/cache/@sentry-angular-ivy-npm-7.110.1-14b8e113b3-c2d07a1502.zip/node_modules/@sentry/angular-ivy/",\
+      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0", {\
+        "packageLocation": "./.yarn/__virtual__/@sentry-angular-ivy-virtual-7cccc2e212/0/cache/@sentry-angular-ivy-npm-7.113.0-6fc5f0f758-b0960df351.zip/node_modules/@sentry/angular-ivy/",\
         "packageDependencies": [\
-          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.110.1"],\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0"],\
           ["@angular/common", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
-          ["@sentry/browser", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"],\
+          ["@sentry/browser", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"],\
           ["@types/angular__common", null],\
           ["@types/angular__core", null],\
           ["@types/angular__router", null],\
@@ -6696,17 +6696,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/browser", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-browser-npm-7.110.1-e74b000112-8c7a636a6c.zip/node_modules/@sentry/browser/",\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-browser-npm-7.113.0-42d4087345-2f6753c76b.zip/node_modules/@sentry/browser/",\
         "packageDependencies": [\
-          ["@sentry/browser", "npm:7.110.1"],\
-          ["@sentry-internal/feedback", "npm:7.110.1"],\
-          ["@sentry-internal/replay-canvas", "npm:7.110.1"],\
-          ["@sentry-internal/tracing", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/replay", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
+          ["@sentry/browser", "npm:7.113.0"],\
+          ["@sentry-internal/feedback", "npm:7.113.0"],\
+          ["@sentry-internal/replay-canvas", "npm:7.113.0"],\
+          ["@sentry-internal/tracing", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/integrations", "npm:7.113.0"],\
+          ["@sentry/replay", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6809,21 +6810,34 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/core", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-core-npm-7.110.1-7ea21a939b-59bc1f2537.zip/node_modules/@sentry/core/",\
-        "packageDependencies": [\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.111.0", {\
         "packageLocation": "./.yarn/cache/@sentry-core-npm-7.111.0-839cb9e0b2-424c914f3c.zip/node_modules/@sentry/core/",\
         "packageDependencies": [\
           ["@sentry/core", "npm:7.111.0"],\
           ["@sentry/types", "npm:7.111.0"],\
           ["@sentry/utils", "npm:7.111.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-core-npm-7.113.0-dd00989c55-70bd3f34fb.zip/node_modules/@sentry/core/",\
+        "packageDependencies": [\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/integrations", [\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-integrations-npm-7.113.0-b4815751ec-a3ce0c40c7.zip/node_modules/@sentry/integrations/",\
+        "packageDependencies": [\
+          ["@sentry/integrations", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"],\
+          ["localforage", "npm:1.10.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6842,48 +6856,48 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/replay", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-replay-npm-7.110.1-5f2f599448-05915722c7.zip/node_modules/@sentry/replay/",\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-replay-npm-7.113.0-a9712beab9-3bce0860e5.zip/node_modules/@sentry/replay/",\
         "packageDependencies": [\
-          ["@sentry/replay", "npm:7.110.1"],\
-          ["@sentry-internal/tracing", "npm:7.110.1"],\
-          ["@sentry/core", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"],\
-          ["@sentry/utils", "npm:7.110.1"]\
+          ["@sentry/replay", "npm:7.113.0"],\
+          ["@sentry-internal/tracing", "npm:7.113.0"],\
+          ["@sentry/core", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"],\
+          ["@sentry/utils", "npm:7.113.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/types", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-types-npm-7.110.1-d0d5422d29-2edb88b58f.zip/node_modules/@sentry/types/",\
-        "packageDependencies": [\
-          ["@sentry/types", "npm:7.110.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.111.0", {\
         "packageLocation": "./.yarn/cache/@sentry-types-npm-7.111.0-0de45df114-cb48e6b062.zip/node_modules/@sentry/types/",\
         "packageDependencies": [\
           ["@sentry/types", "npm:7.111.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-types-npm-7.113.0-b862b61cdf-a6a2c453d3.zip/node_modules/@sentry/types/",\
+        "packageDependencies": [\
+          ["@sentry/types", "npm:7.113.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/utils", [\
-      ["npm:7.110.1", {\
-        "packageLocation": "./.yarn/cache/@sentry-utils-npm-7.110.1-d2d632b89f-add5debfbb.zip/node_modules/@sentry/utils/",\
-        "packageDependencies": [\
-          ["@sentry/utils", "npm:7.110.1"],\
-          ["@sentry/types", "npm:7.110.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.111.0", {\
         "packageLocation": "./.yarn/cache/@sentry-utils-npm-7.111.0-37312bbd70-2eaccb618d.zip/node_modules/@sentry/utils/",\
         "packageDependencies": [\
           ["@sentry/utils", "npm:7.111.0"],\
           ["@sentry/types", "npm:7.111.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.113.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-utils-npm-7.113.0-8dcabb246a-e18054d298.zip/node_modules/@sentry/utils/",\
+        "packageDependencies": [\
+          ["@sentry/utils", "npm:7.113.0"],\
+          ["@sentry/types", "npm:7.113.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13389,6 +13403,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["immediate", [\
+      ["npm:3.0.6", {\
+        "packageLocation": "./.yarn/cache/immediate-npm-3.0.6-c27588a2d3-f9b3486477.zip/node_modules/immediate/",\
+        "packageDependencies": [\
+          ["immediate", "npm:3.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["immutable", [\
       ["npm:4.3.5", {\
         "packageLocation": "./.yarn/cache/immutable-npm-4.3.5-5958499808-dbc1b8c808.zip/node_modules/immutable/",\
@@ -15099,6 +15122,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lie", [\
+      ["npm:3.1.1", {\
+        "packageLocation": "./.yarn/cache/lie-npm-3.1.1-91350720d9-c2c7d9dcc3.zip/node_modules/lie/",\
+        "packageDependencies": [\
+          ["lie", "npm:3.1.1"],\
+          ["immediate", "npm:3.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lilconfig", [\
       ["npm:3.0.0", {\
         "packageLocation": "./.yarn/cache/lilconfig-npm-3.0.0-6931a31ed7-55f60f4f9f.zip/node_modules/lilconfig/",\
@@ -15182,6 +15215,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/loader-utils-npm-3.2.1-76ae2fd253-177f5bb9b4.zip/node_modules/loader-utils/",\
         "packageDependencies": [\
           ["loader-utils", "npm:3.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["localforage", [\
+      ["npm:1.10.0", {\
+        "packageLocation": "./.yarn/cache/localforage-npm-1.10.0-cf9ea9a436-d5c44be3a0.zip/node_modules/localforage/",\
+        "packageDependencies": [\
+          ["localforage", "npm:1.10.0"],\
+          ["lie", "npm:3.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19147,7 +19190,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@eslint/js", "npm:8.57.0"],\
           ["@playwright/test", "npm:1.43.1"],\
-          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.110.1"],\
+          ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0"],\
           ["@sentry/cli", "npm:2.31.2"],\
           ["@sentry/wizard", "npm:3.22.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:1.7.2"],\
