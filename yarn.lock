@@ -2817,10 +2817,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.57.0, @eslint/js@npm:^8.57.0":
+"@eslint/js@npm:8.57.0":
   version: 8.57.0
   resolution: "@eslint/js@npm:8.57.0"
   checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "@eslint/js@npm:9.2.0"
+  checksum: 10/4e9fec5395a8f6797bfa57b28b67c3b1c63ebcaf665e457546a34a42b14ebbf992d3617a64ae65addf32ab89cd7448008a275a4d73f9bcb1829f4eae67301841
   languageName: node
   linkType: hard
 
@@ -15266,7 +15273,7 @@ __metadata:
     "@angular/platform-browser-dynamic": "npm:^17.3.7"
     "@angular/platform-server": "npm:^17.3.7"
     "@angular/router": "npm:^17.3.7"
-    "@eslint/js": "npm:^8.57.0"
+    "@eslint/js": "npm:^9.2.0"
     "@playwright/test": "npm:^1.43.1"
     "@sentry/angular-ivy": "npm:^7.113.0"
     "@sentry/cli": "npm:^2.31.2"
