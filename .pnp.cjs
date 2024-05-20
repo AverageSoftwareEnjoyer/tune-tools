@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
-          ["@eslint/js", "npm:8.57.0"],\
+          ["@eslint/js", "npm:9.3.0"],\
           ["@playwright/test", "npm:1.43.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0"],\
           ["@sentry/cli", "npm:2.31.2"],\
@@ -4785,6 +4785,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@eslint-js-npm-8.57.0-00ead3710a-3c501ce8a9.zip/node_modules/@eslint/js/",\
         "packageDependencies": [\
           ["@eslint/js", "npm:8.57.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:9.3.0", {\
+        "packageLocation": "./.yarn/cache/@eslint-js-npm-9.3.0-de76de965f-3fb4b30561.zip/node_modules/@eslint/js/",\
+        "packageDependencies": [\
+          ["@eslint/js", "npm:9.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19188,7 +19195,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
           ["@angular/router", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:17.3.7"],\
-          ["@eslint/js", "npm:8.57.0"],\
+          ["@eslint/js", "npm:9.3.0"],\
           ["@playwright/test", "npm:1.43.1"],\
           ["@sentry/angular-ivy", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.113.0"],\
           ["@sentry/cli", "npm:2.31.2"],\
