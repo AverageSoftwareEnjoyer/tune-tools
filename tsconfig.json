@@ -19,15 +19,33 @@
         "target": "ES2022",
         "module": "ES2022",
         "useDefineForClassFields": false,
-        "lib": ["ES2022", "dom"],
+        "lib": [
+            "ES2022",
+            "dom"
+        ],
         "baseUrl": "src",
         "paths": {
-            "@api/*": ["app/api/*"],
-            "@dto/*": ["app/api/dto/*"],
-            "@lib/*": ["app/components-library/*"],
-            "@core/*": ["app/core/*"],
-            "@mocks/*": ["app/tests-mocks/*"],
-            "@state/*": ["app/state/*"]
+            "@api/*": [
+                "app/api/*"
+            ],
+            "@dto/*": [
+                "app/api/dto/*"
+            ],
+            "@lib/*": [
+                "app/components-library/*"
+            ],
+            "@core/*": [
+                "app/core/*"
+            ],
+            "@mocks/*": [
+                "app/tests-mocks/*"
+            ],
+            "@state/*": [
+                "app/state/*"
+            ],
+            "@env/*": [
+                "environments/*"
+            ],
         }
     },
     "angularCompilerOptions": {
@@ -36,5 +54,10 @@
         "strictInputAccessModifiers": true,
         "strictTemplates": true
     },
-    "include": ["**/*.d.ts", "**/*.ts", "**/*.html", "**/*.js"]
+    "include": [
+        "**/*.d.ts",
+        "**/*.ts",
+        "**/*.html",
+        "**/*.js"
+    ]
 }
