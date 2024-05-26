@@ -46,6 +46,9 @@
             "@env/*": [
                 "environments/*"
             ],
+            "@models/*": [
+                "app/models/*"
+            ],
         }
     },
     "angularCompilerOptions": {
