@@ -194,6 +194,8 @@ module.exports = [
         ...jest.configs["flat/recommended"],
         rules: {
             "@typescript-eslint/dot-notation": "off",
+            "@typescript-eslint/unbound-method": "off",
+            "jest/unbound-method": "error",
         },
     },
     {
