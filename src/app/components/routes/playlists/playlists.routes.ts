@@ -1,11 +1,14 @@
 import { inject } from "@angular/core";
 import { Router, Routes } from "@angular/router";
+import { from, Observable } from "rxjs";
 
 import { PlaylistsComponent } from "./playlists.component";
 
-const playlistGuard = (): Promise<boolean> => {
+const playlistGuard = (): Observable<boolean> => {
     const router = inject(Router);
-    return router.navigate(["/playlists"]);
+
+    // TODO: Update once workflows are introduced.
+    return from(router.navigateByUrl("/playlists"));
 };
 
 export default [
