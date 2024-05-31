@@ -95,6 +95,7 @@ const config: Config = {
         "@dto(.*)": "<rootDir>/src/app/api/dto/$1",
         "@env(.*)": "<rootDir>/src/environments/$1",
         "@models(.*)": "<rootDir>/src/app/models/$1",
+        "@state(.*)": "<rootDir>/src/app/state/$1",
     },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
