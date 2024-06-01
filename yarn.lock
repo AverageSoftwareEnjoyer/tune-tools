@@ -458,15 +458,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/core@npm:^17.3.9":
-  version: 17.3.9
-  resolution: "@angular/core@npm:17.3.9"
+"@angular/core@npm:^17.3.7":
+  version: 17.3.7
+  resolution: "@angular/core@npm:17.3.7"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
     rxjs: ^6.5.3 || ^7.4.0
     zone.js: ~0.14.0
-  checksum: 10/85c9a0323e1ab6802ab5a228a6842f51d4f63b71b467b2d84036924236ddcf88f19dae5362e4205dce59a66f8f960be8d5caad987e88581cc2eecab0171aa598
+  checksum: 10/8cc28d3490b27ac5e39aecc7a6e6656d87b94f7b42f0f8e66c52a8d27c00ff8472743a9490fdf852ca71a87e6089b37c9ae6744ba1053042a97d5905b55c4eae
   languageName: node
   linkType: hard
 
@@ -15259,7 +15259,7 @@ __metadata:
     "@angular/common": "npm:^17.3.7"
     "@angular/compiler": "npm:^17.3.7"
     "@angular/compiler-cli": "npm:^17.3.7"
-    "@angular/core": "npm:^17.3.9"
+    "@angular/core": "npm:^17.3.7"
     "@angular/forms": "npm:^17.3.7"
     "@angular/material": "npm:^17.3.7"
     "@angular/platform-browser": "npm:^17.3.7"
