@@ -1,10 +1,15 @@
-import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { HttpParams } from "@angular/common/http";
+import {
+    HttpClientTestingModule,
+    HttpTestingController,
+} from "@angular/common/http/testing";
 import { TestBed } from "@angular/core/testing";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthHTTPService } from "@api/auth-http.service";
 import { TokenResponse } from "@dto/spotify";
+import { environment } from "@env/environment";
 import { AuthStateService } from "@state/auth.state.service";
-import { catchError, EMPTY, firstValueFrom, Observable, of } from "rxjs";
+import { firstValueFrom, Observable, of } from "rxjs";
 
 import { AuthService } from "./auth.service";
 import { LocalStorageService } from "./local-storage.service";
@@ -16,8 +21,9 @@ describe("AuthService", () => {
     let activatedRoute: ActivatedRoute;
     let authHTTPService: AuthHTTPService;
     let authStateService: AuthStateService;
+    let httpTestingController: HttpTestingController;
 
-    const tokenResponse: Observable<TokenResponse> = of({
+    const mockTokenResponse: Observable<TokenResponse> = of({
         access_token: "access-token",
         token_type: "access_token",
         expires_in: 1000,
@@ -48,6 +54,11 @@ describe("AuthService", () => {
         activatedRoute = TestBed.inject(ActivatedRoute);
         authHTTPService = TestBed.inject(AuthHTTPService);
         authStateService = TestBed.inject(AuthStateService);
+        httpTestingController = TestBed.inject(HttpTestingController);
+    });
+
+    afterEach(() => {
+        httpTestingController.verify();
     });
 
     it("should be created", () => {
@@ -255,9 +266,7 @@ describe("AuthService", () => {
                 "test-verifier",
             );
             jest.spyOn(localStorageService, "removeItem");
-            jest.spyOn(authHTTPService, "getAccessToken$").mockReturnValue(
-                tokenResponse,
-            );
+            jest.spyOn(authHTTPService, "getAccessToken$");
 
             const promise = new Promise<void>((resolve) => {
                 const subscription = authService
@@ -276,6 +285,24 @@ describe("AuthService", () => {
                         resolve();
                         subscription.unsubscribe();
                     });
+
+                const req = httpTestingController.expectOne(
+                    environment.tokenUrl,
+                );
+                expect(req.request.method).toBe("POST");
+                expect(req.request.headers.get("Content-Type")).toBe(
+                    "application/x-www-form-urlencoded",
+                );
+
+                const params = new HttpParams()
+                    .set("client_id", environment.clientId)
+                    .set("grant_type", "authorization_code")
+                    .set("redirect_uri", environment.redirectUri)
+                    .set("code", "test-code")
+                    .set("code_verifier", "test-verifier");
+
+                expect(req.request.body).toEqual(params);
+                req.flush(mockTokenResponse);
             });
 
             await expect(promise).resolves.toBeUndefined();
@@ -286,20 +313,14 @@ describe("AuthService", () => {
                 "test-verifier",
             );
             jest.spyOn(localStorageService, "clearLocalStorageItems");
-            jest.spyOn(authHTTPService, "getAccessToken$").mockReturnValue(
-                of().pipe(
-                    catchError(() => {
-                        throw new Error();
-                    }),
-                ),
-            );
+            jest.spyOn(authHTTPService, "getAccessToken$");
             authStateService.isUserAuthenticated = true;
 
             const promise = new Promise<void>((resolve) => {
                 const subscription = authService
                     .getAccessTokenWrapper$("test-code")
-                    .pipe(
-                        catchError(() => {
+                    .subscribe({
+                        complete: () => {
                             expect(authStateService.isUserAuthenticated).toBe(
                                 false,
                             );
@@ -309,13 +330,19 @@ describe("AuthService", () => {
                             expect(router.navigateByUrl).toHaveBeenCalledWith(
                                 "",
                             );
-                            return EMPTY;
-                        }),
-                    )
-                    .subscribe();
 
-                resolve();
-                subscription.unsubscribe();
+                            resolve();
+                            subscription.unsubscribe();
+                        },
+                    });
+
+                const req = httpTestingController.expectOne(
+                    environment.tokenUrl,
+                );
+                req.flush("deliberate 404", {
+                    status: 404,
+                    statusText: "Not Found",
+                });
             });
 
             await expect(promise).resolves.toBeUndefined();
@@ -362,9 +389,7 @@ describe("AuthService", () => {
             mockLocalStorageService.mockReturnValueOnce("access-token");
             mockLocalStorageService.mockReturnValueOnce("refresh-token");
             mockLocalStorageService.mockReturnValueOnce(expiredTime);
-            jest.spyOn(authHTTPService, "refreshAccessToken$").mockReturnValue(
-                tokenResponse,
-            );
+            jest.spyOn(authHTTPService, "refreshAccessToken$");
 
             const promise = new Promise<void>((resolve) => {
                 const subscription = authService
@@ -378,6 +403,11 @@ describe("AuthService", () => {
                         resolve();
                         subscription.unsubscribe();
                     });
+
+                const req = httpTestingController.expectOne(
+                    environment.tokenUrl,
+                );
+                req.flush(mockTokenResponse);
             });
 
             await expect(promise).resolves.toBeUndefined();
@@ -393,7 +423,7 @@ describe("AuthService", () => {
             mockLocalStorageService.mockReturnValueOnce("refresh-token");
             mockLocalStorageService.mockReturnValueOnce(futureTime);
             jest.spyOn(authHTTPService, "refreshAccessToken$").mockReturnValue(
-                tokenResponse,
+                mockTokenResponse,
             );
 
             const promise = new Promise<void>((resolve) => {
