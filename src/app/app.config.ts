@@ -1,3 +1,4 @@
+import { provideHttpClient } from "@angular/common/http";
 import {
     APP_INITIALIZER,
     ApplicationConfig,
@@ -9,7 +10,9 @@ import {
     withComponentInputBinding,
     withInMemoryScrolling,
 } from "@angular/router";
+import { LocalStorageService } from "@core/auth/local-storage.service";
 import * as Sentry from "@sentry/angular-ivy";
+import { AuthStateService } from "@state/auth.state.service";
 
 import { routes } from "./app.routes";
 
@@ -23,6 +26,7 @@ export const appConfig: ApplicationConfig = {
                 scrollPositionRestoration: "enabled",
             }),
         ),
+        provideHttpClient(),
         provideAnimationsAsync(),
         {
             provide: ErrorHandler,
@@ -35,6 +39,20 @@ export const appConfig: ApplicationConfig = {
             provide: APP_INITIALIZER,
             useFactory: () => () => ({}),
             deps: [Sentry.TraceService],
+            multi: true,
+        },
+        {
+            provide: APP_INITIALIZER,
+            useFactory:
+                (
+                    localStorageService: LocalStorageService,
+                    authStateService: AuthStateService,
+                ) =>
+                    () => {
+                        authStateService.isUserAuthenticated =
+                        !!localStorageService.getItem("access_token");
+                    },
+            deps: [LocalStorageService, AuthStateService],
             multi: true,
         },
     ],
