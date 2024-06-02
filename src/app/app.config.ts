@@ -11,7 +11,7 @@ import {
     withInMemoryScrolling,
 } from "@angular/router";
 import { LocalStorageService } from "@core/auth/local-storage.service";
-import * as Sentry from "@sentry/angular-ivy";
+import * as Sentry from "@sentry/angular";
 import { AuthStateService } from "@state/auth.state.service";
 
 import { routes } from "./app.routes";

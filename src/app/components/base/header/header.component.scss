@@ -1,7 +1,15 @@
+@use "@angular/material" as mat;
+
+@use "../../../../styles.scss" as *;
 @use "../../../styles/variables" as *;
 
 :host {
     .header {
+        background-color: mat.get-theme-color($light-theme, primary, 70);
+        color: $tertiary-text-color;
+        font-weight: 500;
+        font-size: calc(1rem / 16 * 20);
+
         &__title {
             margin-right: auto;
         }
