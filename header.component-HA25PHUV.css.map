@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/base/header/header.component.scss"],
-  "sourcesContent": ["@use \"../../../styles/variables\" as *;\n\n:host {\n    .header {\n        &__title {\n            margin-right: auto;\n        }\n\n        &__nav {\n            $block: &;\n            display: flex;\n            width: 100%;\n\n            &-links {\n                width: 100%;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                gap: 20px;\n                margin: 0;\n                padding: 0;\n\n                @at-root #{ $block }-link {\n                    border-radius: 4px;\n                    padding: 4px 8px;\n\n                    &--active {\n                        background-color: rgba(\n                            $color: $dark-background,\n                            $alpha: 0.2\n                        );\n                    }\n                }\n            }\n        }\n    }\n}\n"],
-  "mappings": "AAIQ,MAAA,CAAA,cACI,aAAA,KAGJ,MAAA,CAAA,YAEI,QAAA,KACA,MAAA,KAEA,MAAA,CAAA,kBACI,MAAA,KACA,QAAA,KACA,YAAA,OACA,gBAAA,OACA,IAAA,KAdR,OAeQ,EAfR,QAgBQ,EAES,MAAA,CAAA,iBAlBjB,cAmBY,IAnBZ,QAoBY,IAAA,IAEA,MAAA,CAAA,yBACI,iBAAA",
-  "names": []
-}
