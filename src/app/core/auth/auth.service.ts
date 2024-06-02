@@ -102,6 +102,7 @@ export class AuthService {
                     .set("code_challenge_method", "S256")
                     .set("code_challenge", code)
                     .set("state", authState);
+                debugger;
                 redirectURL = `${environment.authUrl}?${params.toString()}`;
             }),
             map(() => false),
