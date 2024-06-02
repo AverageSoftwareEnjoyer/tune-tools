@@ -12,9 +12,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
+import { DestroyClass } from "@core/destroy/destroy.class";
 import { map } from "rxjs";
 
-import { DestroyClass } from "../../../core/destroy/destroy.class";
 import { HeaderComponent } from "../header/header.component";
 import { SidenavService } from "../sidenav.service";
 

@@ -1,9 +1,9 @@
 import { bootstrapApplication } from "@angular/platform-browser";
+import { environment } from "@env/environment";
 import * as Sentry from "@sentry/angular";
 
 import { AppComponent } from "./app/app.component";
 import { appConfig } from "./app/app.config";
-import { environment } from "./environments/environment";
 
 if (environment.production) {
     Sentry.init({
