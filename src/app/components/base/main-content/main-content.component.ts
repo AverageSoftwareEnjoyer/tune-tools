@@ -30,7 +30,7 @@ import { SidenavService } from "../sidenav.service";
         AsyncPipe,
     ],
     templateUrl: "./main-content.component.html",
-    styleUrls: ["./main-content.component.scss"],
+    styleUrl: "./main-content.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainContentComponent

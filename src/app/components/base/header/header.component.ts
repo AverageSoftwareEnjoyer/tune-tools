@@ -25,7 +25,7 @@ import { SidenavService } from "../sidenav.service";
         RouterModule,
     ],
     templateUrl: "./header.component.html",
-    styleUrls: ["./header.component.scss"],
+    styleUrl: "./header.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
