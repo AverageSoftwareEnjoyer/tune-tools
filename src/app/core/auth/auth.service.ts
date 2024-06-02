@@ -2,7 +2,7 @@ import { HttpParams } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthHTTPService } from "@api/auth-http.service";
-import { environment } from "@env/environment.development";
+import { environment } from "@env/environment";
 import { AuthStateService } from "@state/auth.state.service";
 import {
     catchError,
@@ -102,7 +102,6 @@ export class AuthService {
                     .set("code_challenge_method", "S256")
                     .set("code_challenge", code)
                     .set("state", authState);
-                debugger;
                 redirectURL = `${environment.authUrl}?${params.toString()}`;
             }),
             map(() => false),
