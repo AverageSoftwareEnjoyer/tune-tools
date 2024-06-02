@@ -3,6 +3,7 @@
 
 @use "./app/styles/utilities" as *;
 @use "./app/styles/typography" as *;
+@use "./app/styles/variables" as *;
 
 @include mat.core();
 
@@ -18,7 +19,7 @@ $_palettes: (
         40: #006e2c,
         50: #008a3a,
         60: #00a747,
-        70: #30c45d,
+        70: $primary-color,
         80: #54e076,
         90: #72fe8f,
         95: #c6ffc7,
@@ -63,22 +64,22 @@ $_palettes: (
         100: #ffffff,
     ),
     neutral: (
-        0: #000000,
+        0: $text-color,
         10: #1a1c19,
-        20: #2e312d,
+        20: $dark-background,
         25: #3a3c38,
         30: #454743,
         35: #51534f,
         40: #5d5f5b,
-        50: #767873,
+        50: $secondary-text-color,
         60: #8f918c,
         70: #aaaca7,
         80: #c6c7c2,
         90: #e2e3dd,
-        95: #f0f1eb,
+        95: $light-background,
         98: #f9faf4,
         99: #fcfdf7,
-        100: #ffffff,
+        100: $tertiary-text-color,
         4: #0c0f0c,
         6: #111411,
         12: #1e201d,

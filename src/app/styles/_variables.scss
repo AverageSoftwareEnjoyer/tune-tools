@@ -1,9 +1,6 @@
-@use "@angular/material" as mat;
-
-@use "../../styles.scss" as *;
-
-$light-background: mat.get-theme-color($light-theme, neutral, 20);
-$dark-background: mat.get-theme-color($light-theme, neutral, 20);
-$text-color: mat.get-theme-color($light-theme, neutral, 100);
-$secondary-text-color: mat.get-theme-color($light-theme, neutral, 50);
-$tertiary-text-color: mat.get-theme-color($dark-theme, neutral, 100);
+$primary-color: #30c45d;
+$light-background: #f0f1eb;
+$dark-background: #2e312d;
+$text-color: #000000;
+$secondary-text-color: #767873;
+$tertiary-text-color: #ffffff;

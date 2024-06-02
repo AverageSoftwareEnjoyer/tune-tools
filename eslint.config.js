@@ -44,6 +44,7 @@ module.exports = [
                     allowTernary: true,
                 },
             ],
+            "no-useless-assignment": "error",
             "no-var": "error",
             "prefer-arrow-callback": "error",
             "prefer-const": "error",
