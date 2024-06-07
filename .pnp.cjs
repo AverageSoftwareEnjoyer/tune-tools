@@ -58,7 +58,7 @@ const RAW_RUNTIME_STATE =
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/types", "npm:7.11.0"],\
@@ -8306,10 +8306,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:20.13.0", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-20.13.0-88c0bd0276-82f0e99907.zip/node_modules/@types/node/",\
+      ["npm:20.14.0", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.14.0-ca66317c0b-49b332fbf8.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.0"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -19540,7 +19540,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.0"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -19654,7 +19654,7 @@ const RAW_RUNTIME_STATE =
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/node", "npm:20.13.0"],\
+          ["@types/node", "npm:20.14.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/types", "npm:7.11.0"],\
