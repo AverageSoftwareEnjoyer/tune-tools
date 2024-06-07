@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { UserHTTPService } from "@api/user-http.service";
 
 @Component({
     selector: "app-settings",
@@ -8,4 +10,13 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
     styleUrl: "./settings.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SettingsComponent {}
+export class SettingsComponent {
+    readonly #userHTTPService = inject(UserHTTPService);
+
+    constructor() {
+        this.#userHTTPService
+            .getUserInfo$()
+            .pipe(takeUntilDestroyed())
+            .subscribe();
+    }
+}
