@@ -147,7 +147,6 @@ export class AuthService {
      * @returns An Observable that emits a boolean indicating the success or failure of the operation.
      */
     getAccessTokenWrapper$(code: string): Observable<boolean> {
-        // TODO: Include in header interceptor
         const verifier = this.#localStorageService.getItem("verifier");
         if (!verifier) {
             this.#authStateService.isUserAuthenticated = false;
@@ -183,7 +182,6 @@ export class AuthService {
      * @returns An Observable that emits a boolean indicating the success or failure of the operation.
      */
     handlePotentiallyExpiredAccessToken$(): Observable<boolean> {
-        // TODO: Include in header interceptor
         const accessToken = this.#localStorageService.getItem("access_token");
         const refreshToken = this.#localStorageService.getItem("refresh_token");
         const expiry = this.#localStorageService.getItem("token_expiry");
