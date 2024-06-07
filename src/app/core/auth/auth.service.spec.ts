@@ -1,7 +1,7 @@
-import { HttpParams } from "@angular/common/http";
+import { HttpParams, provideHttpClient } from "@angular/common/http";
 import {
-    HttpClientTestingModule,
     HttpTestingController,
+    provideHttpClientTesting,
 } from "@angular/common/http/testing";
 import { TestBed } from "@angular/core/testing";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -33,7 +33,6 @@ describe("AuthService", () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [HttpClientTestingModule],
             providers: [
                 {
                     provide: ActivatedRoute,
@@ -45,6 +44,8 @@ describe("AuthService", () => {
                         }),
                     },
                 },
+                provideHttpClient(),
+                provideHttpClientTesting(),
             ],
         });
         authService = TestBed.inject(AuthService);

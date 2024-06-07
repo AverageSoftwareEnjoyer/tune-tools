@@ -1,4 +1,4 @@
-import { provideHttpClient } from "@angular/common/http";
+import { provideHttpClient, withInterceptors } from "@angular/common/http";
 import {
     APP_INITIALIZER,
     ApplicationConfig,
@@ -10,6 +10,7 @@ import {
     withComponentInputBinding,
     withInMemoryScrolling,
 } from "@angular/router";
+import { authInterceptor } from "@core/auth/auth.interceptor";
 import { LocalStorageService } from "@core/auth/local-storage.service";
 import * as Sentry from "@sentry/angular";
 import { AuthStateService } from "@state/auth.state.service";
@@ -26,7 +27,7 @@ export const appConfig: ApplicationConfig = {
                 scrollPositionRestoration: "enabled",
             }),
         ),
-        provideHttpClient(),
+        provideHttpClient(withInterceptors([authInterceptor])),
         provideAnimationsAsync(),
         {
             provide: ErrorHandler,

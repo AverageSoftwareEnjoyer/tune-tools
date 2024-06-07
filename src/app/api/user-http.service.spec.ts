@@ -2,16 +2,16 @@ import { provideHttpClient } from "@angular/common/http";
 import { provideHttpClientTesting } from "@angular/common/http/testing";
 import { TestBed } from "@angular/core/testing";
 
-import { AuthHTTPService } from "./auth-http.service";
+import { UserHTTPService } from "./user-http.service";
 
-describe("AuthHTTPService", () => {
-    let service: AuthHTTPService;
+describe("UserHTTPService", () => {
+    let service: UserHTTPService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [provideHttpClient(), provideHttpClientTesting()],
         });
-        service = TestBed.inject(AuthHTTPService);
+        service = TestBed.inject(UserHTTPService);
     });
 
     it("should be created", () => {
