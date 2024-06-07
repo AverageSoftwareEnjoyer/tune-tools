@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/routes/settings/settings.component.ts", "src/app/components/routes/settings/settings.component.html"],
-  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from \"@angular/core\";\n\n@Component({\n    selector: \"app-settings\",\n    standalone: true,\n    imports: [],\n    templateUrl: \"./settings.component.html\",\n    styleUrl: \"./settings.component.scss\",\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class SettingsComponent {}\n", "<p>settings works!</p>\n"],
-  "mappings": "yEAUA,IAAaA,GAAiB,IAAA,CAAxB,IAAOA,EAAP,MAAOA,CAAiB,yCAAjBA,EAAiB,sBAAjBA,EAAiBC,UAAA,CAAA,CAAA,cAAA,CAAA,EAAAC,WAAA,GAAAC,SAAA,CAAAC,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICV9BE,EAAA,EAAA,GAAA,EAAGC,EAAA,EAAA,iBAAA,EAAeC,EAAA,wBDUZ,IAAOZ,EAAPa,SAAOb,CAAiB,GAAA",
-  "names": ["SettingsComponent", "selectors", "standalone", "features", "\u0275\u0275StandaloneFeature", "decls", "vars", "template", "rf", "ctx", "\u0275\u0275elementStart", "\u0275\u0275text", "\u0275\u0275elementEnd", "_SettingsComponent"]
-}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/environments/environment.ts"],
+  "sourcesContent": ["import { Environment } from \"@models/environment.model\";\n\nexport const environment: Environment = {\n    production: true,\n    clientId: \"d9716dd3efb4408491738456849796a1\",\n    redirectUri:\n        \"https://averagesoftwareenjoyer.github.io/tune-tools/auth-callback\",\n    scope: \"playlist-modify-private playlist-modify-public user-read-private user-read-email user-read-recently-played user-top-read\",\n    authUrl: \"https://accounts.spotify.com/authorize\",\n    tokenUrl: \"https://accounts.spotify.com/api/token\",\n    apiBaseUrl: \"https://api.spotify.com/v1\",\n};\n"],
+  "mappings": "AAEO,IAAMA,EAA2B,CACpCC,WAAY,GACZC,SAAU,mCACVC,YACI,oEACJC,MAAO,2HACPC,QAAS,yCACTC,SAAU,yCACVC,WAAY",
+  "names": ["environment", "production", "clientId", "redirectUri", "scope", "authUrl", "tokenUrl", "apiBaseUrl"]
+}
