@@ -1,12 +1,6 @@
-import {
-    ChangeDetectionStrategy,
-    Component,
-    inject,
-    OnDestroy,
-    OnInit,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { toSignal } from "@angular/core/rxjs-interop";
 import { AuthService } from "@core/auth/auth.service";
-import { Subscription } from "rxjs";
 
 @Component({
     selector: "app-auth-callback",
@@ -16,18 +10,10 @@ import { Subscription } from "rxjs";
     styleUrl: "./auth-callback.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthCallbackComponent implements OnInit, OnDestroy {
-    #handleAuthCallbackSubscription = new Subscription();
-
+export class AuthCallbackComponent {
     readonly #authService = inject(AuthService);
 
-    ngOnInit(): void {
-        this.#handleAuthCallbackSubscription = this.#authService
-            .handleAuthCallback$()
-            .subscribe();
-    }
-
-    ngOnDestroy(): void {
-        this.#handleAuthCallbackSubscription.unsubscribe();
+    constructor() {
+        toSignal(this.#authService.handleAuthCallback$());
     }
 }
