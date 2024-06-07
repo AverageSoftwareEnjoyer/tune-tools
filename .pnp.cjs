@@ -61,7 +61,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.14.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
-          ["@typescript-eslint/types", "npm:7.11.0"],\
+          ["@typescript-eslint/types", "npm:7.12.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
@@ -19849,7 +19849,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.14.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
-          ["@typescript-eslint/types", "npm:7.11.0"],\
+          ["@typescript-eslint/types", "npm:7.12.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.11.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
