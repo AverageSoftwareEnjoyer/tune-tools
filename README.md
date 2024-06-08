@@ -57,16 +57,14 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **UI libraries**
 
 -   **[Angular Material](https://material.angular.io/)**: Material Design components for Angular.
--   **[NGX-Charts](https://swimlane.gitbook.io/ngx-charts/)**: Declarative Charting Framework for Angular2 and beyond.
 
 **Backend**
 
 -   **[Supabase](https://supabase.io/)**: The open source Firebase alternative.
 -   **[Drizzle ORM](https://drizzle.orm.io/)**: A lightweight and intuitive ORM for TypeScript and Node.js.
 
-**Code Quality**
+**Code quality**
 
--   **[TS-Pattern](https://github.com/gvergnaud/ts-pattern)**: Exhaustive Pattern Matching for TypeScript with smart type inference.
 -   **[Husky](https://typicode.github.io/husky/#/)**: Modern native Git hooks made easy.
 -   **[lint-staged](https://github.com/okonet/lint-staged)**: Run linters on git staged files.
 -   **[ESLint](https://eslint.org/)**: A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript and TypeScript.
