@@ -6,8 +6,8 @@ import {
 import { TestBed } from "@angular/core/testing";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthHTTPService } from "@api/auth-http.service";
-import { TokenResponse } from "@dto/spotify";
 import { environment } from "@env/environment";
+import { TokenResponse } from "@model/api.model";
 import { AuthStateService } from "@state/auth-state.service";
 import { firstValueFrom, Observable, of } from "rxjs";
 
@@ -364,7 +364,7 @@ describe("AuthService", () => {
             const promise = new Promise<void>((resolve) => {
                 const subscription = authService
                     .handlePotentiallyExpiredAccessToken$()
-                    .subscribe(() => {
+                    .subscribe((result) => {
                         expect(authStateService.isUserAuthenticated).toBe(
                             false,
                         );
@@ -372,6 +372,7 @@ describe("AuthService", () => {
                             localStorageService.clearLocalStorageItems,
                         ).toHaveBeenCalled();
                         expect(router.navigateByUrl).toHaveBeenCalledWith("");
+                        expect(result).toBe(false);
 
                         resolve();
                         subscription.unsubscribe();
@@ -399,7 +400,7 @@ describe("AuthService", () => {
                         expect(
                             authHTTPService.refreshAccessToken$,
                         ).toHaveBeenCalledWith("refresh-token");
-                        expect(result).toBe(false);
+                        expect(result).toBe(true);
 
                         resolve();
                         subscription.unsubscribe();
@@ -434,7 +435,7 @@ describe("AuthService", () => {
                         expect(
                             authHTTPService.refreshAccessToken$,
                         ).not.toHaveBeenCalled();
-                        expect(result).toBe(false);
+                        expect(result).toBe(true);
 
                         resolve();
                         subscription.unsubscribe();

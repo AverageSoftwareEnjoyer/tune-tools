@@ -28,9 +28,6 @@
             "@api/*": [
                 "app/api/*"
             ],
-            "@dto/*": [
-                "app/api/dto/*"
-            ],
             "@lib/*": [
                 "app/components-library/*"
             ],
@@ -46,8 +43,8 @@
             "@env/*": [
                 "environments/*"
             ],
-            "@models/*": [
-                "app/models/*"
+            "@model/*": [
+                "app/model/*"
             ],
         }
     },
