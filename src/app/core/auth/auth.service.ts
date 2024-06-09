@@ -3,7 +3,7 @@ import { inject, Injectable } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthHTTPService } from "@api/auth-http.service";
 import { environment } from "@env/environment";
-import { AuthStateService } from "@state/auth.state.service";
+import { AuthStateService } from "@state/auth-state.service";
 import {
     catchError,
     EMPTY,

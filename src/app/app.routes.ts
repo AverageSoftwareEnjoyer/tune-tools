@@ -1,7 +1,7 @@
 import { inject } from "@angular/core";
 import { Routes } from "@angular/router";
 import { AuthService } from "@core/auth/auth.service";
-import { AuthStateService } from "@state/auth.state.service";
+import { AuthStateService } from "@state/auth-state.service";
 import { Observable } from "rxjs";
 
 const authGuard = (): true | Observable<boolean> => {

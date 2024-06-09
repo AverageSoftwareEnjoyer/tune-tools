@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { AuthHTTPService } from "@api/auth-http.service";
 import { TokenResponse } from "@dto/spotify";
 import { environment } from "@env/environment";
-import { AuthStateService } from "@state/auth.state.service";
+import { AuthStateService } from "@state/auth-state.service";
 import { firstValueFrom, Observable, of } from "rxjs";
 
 import { AuthService } from "./auth.service";
