@@ -78,7 +78,7 @@ export class AuthService {
      * It also stores the verifier and state in local storage and finally redirects the user
      * to the constructed authorization URL.
      *
-     * @returns An Observable that emits a boolean indicating the operation status.
+     * @returns An observable that emits a boolean indicating the operation status.
      */
     redirectToAuthCodeFlow$(): Observable<boolean> {
         let redirectURL: string;
@@ -112,11 +112,11 @@ export class AuthService {
     /**
      * Handles the authorization callback by processing query parameters.
      *
-     * Checks the authorization code and state from the query parameters
-     * against the stored state. If the state matches, it proceeds to obtain the access token.
-     * If the state does not match or is missing, it clears the local storage and redirects the user.
+     * Checks the authorization code and state from the query parameters against the stored state.
+     * If the state matches, it proceeds to obtain the access token. If the state does not match or
+     * is missing, it clears the local storage and redirects the user.
      *
-     * @returns An Observable that emits a boolean indicating the success or failure of the operation.
+     * @returns An observable that emits a boolean indicating the success or failure of the operation.
      */
     handleAuthCallback$(): Observable<boolean> {
         return this.#activatedRoute.queryParams.pipe(
@@ -139,12 +139,13 @@ export class AuthService {
      * Wraps the process of obtaining an access token using an authorization code.
      *
      * Retrieves the stored code verifier from local storage, and if the verifier is not found,
-     * it clears the local storage and redirects the user. If the verifier is found, it proceeds to request
-     * the access token using the provided authorization code. On success, it handles the authentication and
-     * removes the verifier from local storage. On error, it clears the local storage and redirects the user.
+     * it clears the local storage and redirects the user. If the verifier is found, it proceeds
+     * to request the access token using the provided authorization code. On success, it handles
+     * the authentication and removes the verifier from local storage. On error, it clears the
+     * local storage and redirects the user.
      *
      * @param code - The authorization code received from the authorization server.
-     * @returns An Observable that emits a boolean indicating the success or failure of the operation.
+     * @returns An observable that emits a boolean indicating the success or failure of the operation.
      */
     getAccessTokenWrapper$(code: string): Observable<boolean> {
         const verifier = this.#localStorageService.getItem("verifier");
@@ -166,7 +167,7 @@ export class AuthService {
                 this.#handleAuthentication(access_token, refresh_token);
                 this.#localStorageService.removeItem("verifier");
             }),
-            // TODO: Navigate to the requested URL instead
+            // TODO: Navigate to the requested URL instead -> store it in local storage?
             switchMap(() => from(this.#router.navigateByUrl("/top-tracks"))),
         );
     }
@@ -175,11 +176,11 @@ export class AuthService {
      * Handles the case of a potentially expired access token.
      *
      * Checks if the access token, refresh token, and token expiry are present in local storage.
-     * If any of these are missing, it clears the local storage and redirects the user. If the access token
-     * is expired, it attempts to refresh the access token using the refresh token. If the access token is not
-     * expired, it does nothing.
+     * If any of these are missing, it clears the local storage and redirects the user. If the
+     * access token is expired, it attempts to refresh the access token using the refresh token.
+     * If the access token is not expired, it does not do anything.
      *
-     * @returns An Observable that emits a boolean indicating the success or failure of the operation.
+     * @returns An observable that emits `false` if the user is not authenticated and `true` otherwise.
      */
     handlePotentiallyExpiredAccessToken$(): Observable<boolean> {
         const accessToken = this.#localStorageService.getItem("access_token");
@@ -189,17 +190,16 @@ export class AuthService {
         if (!accessToken || !refreshToken || !expiry) {
             this.#authStateService.isUserAuthenticated = false;
             this.#localStorageService.clearLocalStorageItems();
-            return from(this.#router.navigateByUrl(""));
-        }
-        if (new Date() > new Date(parseInt(expiry))) {
+            return from(this.#router.navigateByUrl("")).pipe(map(() => false));
+        } else if (new Date() > new Date(parseInt(expiry))) {
             return this.#authHTTPService.refreshAccessToken$(refreshToken).pipe(
                 tap(({ access_token, refresh_token }) =>
                     this.#handleAuthentication(access_token, refresh_token),
                 ),
-                map(() => false),
+                map(() => true),
             );
         }
-        return of(false);
+        return of(true);
     }
 
     /**
