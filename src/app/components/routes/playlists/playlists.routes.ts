@@ -1,15 +1,11 @@
 import { inject } from "@angular/core";
-import { Router, Routes } from "@angular/router";
-import { from, Observable } from "rxjs";
+import { CanActivateFn, Router, Routes } from "@angular/router";
 
 import { PlaylistsComponent } from "./playlists.component";
 
-const playlistGuard = (): Observable<boolean> => {
-    const router = inject(Router);
-
+const playlistGuard: CanActivateFn = () =>
     // TODO: Update once workflows are introduced.
-    return from(router.navigateByUrl("/playlists"));
-};
+    inject(Router).parseUrl("/playlists");
 
 export default [
     { path: "", component: PlaylistsComponent, pathMatch: "full" },
