@@ -2,24 +2,39 @@ import {
     HttpInterceptorFn,
     HttpRequest,
     HttpResponse,
+    provideHttpClient,
 } from "@angular/common/http";
+import { provideHttpClientTesting } from "@angular/common/http/testing";
 import { TestBed } from "@angular/core/testing";
+import { ActivatedRoute } from "@angular/router";
 import { environment } from "@env/environment";
 import { of } from "rxjs";
 
 import { authInterceptor } from "./auth.interceptor";
+import { AuthService } from "./auth.service";
 import { LocalStorageService } from "./local-storage.service";
 
 describe("authInterceptor", () => {
     let localStorageService: LocalStorageService;
+    let authService: AuthService;
 
     const interceptor: HttpInterceptorFn = (req, next) =>
         TestBed.runInInjectionContext(() => authInterceptor(req, next));
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
+        TestBed.configureTestingModule({
+            providers: [
+                {
+                    provide: ActivatedRoute,
+                    useValue: {},
+                },
+                provideHttpClient(),
+                provideHttpClientTesting(),
+            ],
+        });
 
         localStorageService = TestBed.inject(LocalStorageService);
+        authService = TestBed.inject(AuthService);
         jest.spyOn(localStorageService, "getItem").mockReturnValue(
             "mocked_token",
         );
@@ -35,6 +50,9 @@ describe("authInterceptor", () => {
             `${environment.apiBaseUrl}/test-endpoint`,
         );
         const httpHandler = jest.fn().mockReturnValue(of(new HttpResponse()));
+        const handlePotentiallyExpiredAccessToken$Spy = jest
+            .spyOn(authService, "handlePotentiallyExpiredAccessToken$")
+            .mockReturnValue(of(true));
 
         const promise = new Promise<void>((resolve) => {
             const subscription = interceptor(
@@ -47,6 +65,9 @@ describe("authInterceptor", () => {
                 expect(request.headers.get("Authorization")).toBe(
                     "Bearer mocked_token",
                 );
+                expect(
+                    handlePotentiallyExpiredAccessToken$Spy,
+                ).toHaveBeenCalledTimes(1);
 
                 resolve();
                 subscription.unsubscribe();
