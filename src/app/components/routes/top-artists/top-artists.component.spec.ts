@@ -6,10 +6,10 @@ describe("TopArtistsComponent", () => {
     let component: TopArtistsComponent;
     let fixture: ComponentFixture<TopArtistsComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => {
+        TestBed.configureTestingModule({
             imports: [TopArtistsComponent],
-        }).compileComponents();
+        });
 
         fixture = TestBed.createComponent(TopArtistsComponent);
         component = fixture.componentInstance;

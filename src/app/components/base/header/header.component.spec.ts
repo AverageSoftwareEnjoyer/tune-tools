@@ -6,7 +6,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { ActivatedRoute } from "@angular/router";
-import { of } from "rxjs";
 
 import { SidenavService } from "../sidenav.service";
 import { HeaderComponent } from "./header.component";
@@ -14,13 +13,9 @@ import { HeaderComponent } from "./header.component";
 describe("HeaderComponent", () => {
     let component: HeaderComponent;
     let fixture: ComponentFixture<HeaderComponent>;
-    let mockSidenavService: Partial<SidenavService>;
+    let sidenavService: SidenavService;
 
     beforeEach(() => {
-        mockSidenavService = {
-            toggleSidenavPublish: jest.fn(),
-        };
-
         TestBed.configureTestingModule({
             imports: [
                 HeaderComponent,
@@ -30,12 +25,11 @@ describe("HeaderComponent", () => {
                 MatListModule,
                 NoopAnimationsModule,
             ],
-            providers: [
-                { provide: SidenavService, useValue: mockSidenavService },
-                { provide: ActivatedRoute, useValue: of({}) },
-            ],
+            providers: [{ provide: ActivatedRoute, useValue: {} }],
         });
 
+        sidenavService = TestBed.inject(SidenavService);
+        sidenavService.toggleSidenavPublish = jest.fn();
         fixture = TestBed.createComponent(HeaderComponent);
         component = fixture.componentInstance;
         component.isBelowMediumWidth = true;
@@ -51,7 +45,7 @@ describe("HeaderComponent", () => {
         const button = fixture.debugElement.query(By.css(".header__menu-btn"));
         button.triggerEventHandler("click", null);
 
-        expect(mockSidenavService.toggleSidenavPublish).toHaveBeenCalled();
+        expect(sidenavService.toggleSidenavPublish).toHaveBeenCalled();
     });
 
     it("should display menu button for handset", () => {

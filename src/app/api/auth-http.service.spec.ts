@@ -5,16 +5,16 @@ import { TestBed } from "@angular/core/testing";
 import { AuthHTTPService } from "./auth-http.service";
 
 describe("AuthHTTPService", () => {
-    let service: AuthHTTPService;
+    let authHTTPService: AuthHTTPService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [provideHttpClient(), provideHttpClientTesting()],
         });
-        service = TestBed.inject(AuthHTTPService);
+        authHTTPService = TestBed.inject(AuthHTTPService);
     });
 
     it("should be created", () => {
-        expect(service).toBeTruthy();
+        expect(authHTTPService).toBeTruthy();
     });
 });

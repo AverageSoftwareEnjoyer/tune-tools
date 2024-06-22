@@ -6,10 +6,10 @@ describe("PlaylistsComponent", () => {
     let component: PlaylistsComponent;
     let fixture: ComponentFixture<PlaylistsComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => {
+        TestBed.configureTestingModule({
             imports: [PlaylistsComponent],
-        }).compileComponents();
+        });
 
         fixture = TestBed.createComponent(PlaylistsComponent);
         component = fixture.componentInstance;
