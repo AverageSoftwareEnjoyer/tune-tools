@@ -59,10 +59,12 @@ const RAW_RUNTIME_STATE =
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.14.2"],\
+          ["@types/ungap__structured-clone", "npm:1.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
           ["@typescript-eslint/types", "npm:7.12.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
+          ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
           ["drizzle-kit", "npm:0.22.5"],\
@@ -8479,6 +8481,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/ungap__structured-clone", [\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/@types-ungap__structured-clone-npm-1.2.0-d3577ef4ac-df0c3e47bb.zip/node_modules/@types/ungap__structured-clone/",\
+        "packageDependencies": [\
+          ["@types/ungap__structured-clone", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/ws", [\
       ["npm:8.5.10", {\
         "packageLocation": "./.yarn/cache/@types-ws-npm-8.5.10-a877a38f71-9b414dc5e0.zip/node_modules/@types/ws/",\
@@ -8789,6 +8800,15 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/visitor-keys", "npm:7.12.0"],\
           ["@typescript-eslint/types", "npm:7.12.0"],\
           ["eslint-visitor-keys", "npm:3.4.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@ungap/structured-clone", [\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/@ungap-structured-clone-npm-1.2.0-648f0b82e0-c6fe89a505.zip/node_modules/@ungap/structured-clone/",\
+        "packageDependencies": [\
+          ["@ungap/structured-clone", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19799,10 +19819,12 @@ const RAW_RUNTIME_STATE =
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.14.2"],\
+          ["@types/ungap__structured-clone", "npm:1.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
           ["@typescript-eslint/types", "npm:7.12.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.12.0"],\
+          ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
           ["drizzle-kit", "npm:0.22.5"],\
