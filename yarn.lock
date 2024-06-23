@@ -8306,16 +8306,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.22.5":
-  version: 0.22.5
-  resolution: "drizzle-kit@npm:0.22.5"
+"drizzle-kit@npm:^0.22.7":
+  version: 0.22.7
+  resolution: "drizzle-kit@npm:0.22.7"
   dependencies:
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
     esbuild: "npm:^0.19.7"
     esbuild-register: "npm:^3.5.0"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/5c9e1ff4ec275438426d1ac4c2e3a4fec719bcdc8d41ea40ca60988468ec4409a7cb0e5d2ff678253870d4ccbcf0ba47f895e35722033fa8ced28e6580cf8c83
+  checksum: 10/3952a1be314f722653236b40c7a81ad786c4fb2bf833f6b38d68d3e5f9d8e0a863d9d849f3a87ecfd8dd8118ac84469d68b00530b7fe9d950106edff487c6aa5
   languageName: node
   linkType: hard
 
@@ -15966,7 +15966,7 @@ __metadata:
     "@ungap/structured-clone": "npm:^1.2.0"
     angular-cli-ghpages: "npm:2.0.0"
     ast-types: "npm:0.16.1"
-    drizzle-kit: "npm:^0.22.5"
+    drizzle-kit: "npm:^0.22.7"
     drizzle-orm: "npm:^0.31.2"
     eslint: "npm:^9.4.0"
     eslint-config-prettier: "npm:^9.1.0"

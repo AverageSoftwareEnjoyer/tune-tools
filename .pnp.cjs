@@ -67,7 +67,7 @@ const RAW_RUNTIME_STATE =
           ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
-          ["drizzle-kit", "npm:0.22.5"],\
+          ["drizzle-kit", "npm:0.22.7"],\
           ["drizzle-orm", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:0.31.2"],\
           ["eslint", "npm:9.4.0"],\
           ["eslint-config-prettier", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:9.1.0"],\
@@ -11415,13 +11415,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["drizzle-kit", [\
-      ["npm:0.22.5", {\
-        "packageLocation": "./.yarn/cache/drizzle-kit-npm-0.22.5-315188dde8-5c9e1ff4ec.zip/node_modules/drizzle-kit/",\
+      ["npm:0.22.7", {\
+        "packageLocation": "./.yarn/cache/drizzle-kit-npm-0.22.7-19553a88f0-3952a1be31.zip/node_modules/drizzle-kit/",\
         "packageDependencies": [\
-          ["drizzle-kit", "npm:0.22.5"],\
+          ["drizzle-kit", "npm:0.22.7"],\
           ["@esbuild-kit/esm-loader", "npm:2.6.5"],\
           ["esbuild", "npm:0.19.12"],\
-          ["esbuild-register", "virtual:315188dde8bccfa564d9e8a0530077624630e16277cb95c05d9609280b837e3ff156267b70a97352dc7517e89da450a415ecfab2b4385aa92c24dab0c48f88bf#npm:3.5.0"]\
+          ["esbuild-register", "virtual:19553a88f0913166cbab86eacc7726d36b0654e7a5e90ef99e576d33e04dfaea229bee93074eae271873e7ce515ed0b2cd7c723fd39cd602f155e88ad25858a9#npm:3.5.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12014,10 +12014,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:315188dde8bccfa564d9e8a0530077624630e16277cb95c05d9609280b837e3ff156267b70a97352dc7517e89da450a415ecfab2b4385aa92c24dab0c48f88bf#npm:3.5.0", {\
-        "packageLocation": "./.yarn/__virtual__/esbuild-register-virtual-56ea7f6a1f/0/cache/esbuild-register-npm-3.5.0-d823f64ce0-af6874ce9b.zip/node_modules/esbuild-register/",\
+      ["virtual:19553a88f0913166cbab86eacc7726d36b0654e7a5e90ef99e576d33e04dfaea229bee93074eae271873e7ce515ed0b2cd7c723fd39cd602f155e88ad25858a9#npm:3.5.0", {\
+        "packageLocation": "./.yarn/__virtual__/esbuild-register-virtual-a823f9e24e/0/cache/esbuild-register-npm-3.5.0-d823f64ce0-af6874ce9b.zip/node_modules/esbuild-register/",\
         "packageDependencies": [\
-          ["esbuild-register", "virtual:315188dde8bccfa564d9e8a0530077624630e16277cb95c05d9609280b837e3ff156267b70a97352dc7517e89da450a415ecfab2b4385aa92c24dab0c48f88bf#npm:3.5.0"],\
+          ["esbuild-register", "virtual:19553a88f0913166cbab86eacc7726d36b0654e7a5e90ef99e576d33e04dfaea229bee93074eae271873e7ce515ed0b2cd7c723fd39cd602f155e88ad25858a9#npm:3.5.0"],\
           ["@types/esbuild", null],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["esbuild", "npm:0.19.12"]\
@@ -19811,7 +19811,7 @@ const RAW_RUNTIME_STATE =
           ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.0"],\
           ["ast-types", "npm:0.16.1"],\
-          ["drizzle-kit", "npm:0.22.5"],\
+          ["drizzle-kit", "npm:0.22.7"],\
           ["drizzle-orm", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:0.31.2"],\
           ["eslint", "npm:9.4.0"],\
           ["eslint-config-prettier", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:9.1.0"],\

@@ -68,7 +68,7 @@
     "@ungap/structured-clone": "^1.2.0",
     "angular-cli-ghpages": "2.0.0",
     "ast-types": "0.16.1",
-    "drizzle-kit": "^0.22.5",
+    "drizzle-kit": "^0.22.7",
     "eslint": "^9.4.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
