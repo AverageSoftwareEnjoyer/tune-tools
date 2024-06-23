@@ -6,10 +6,10 @@ describe("TopGenresComponent", () => {
     let component: TopGenresComponent;
     let fixture: ComponentFixture<TopGenresComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => {
+        TestBed.configureTestingModule({
             imports: [TopGenresComponent],
-        }).compileComponents();
+        });
 
         fixture = TestBed.createComponent(TopGenresComponent);
         component = fixture.componentInstance;

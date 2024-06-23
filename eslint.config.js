@@ -56,7 +56,7 @@ module.exports = [
             "@stylistic/brace-style": ["error", "1tbs"],
             "@stylistic/comma-dangle": "off",
             "@stylistic/dot-location": ["error", "property"],
-            "@stylistic/indent": ["error", 4],
+            "@stylistic/indent": ["off"],
             "@stylistic/linebreak-style": ["error", "unix"],
             "@stylistic/member-delimiter-style": [
                 "error",

@@ -6,10 +6,10 @@ describe("RecentlyPlayedComponent", () => {
     let component: RecentlyPlayedComponent;
     let fixture: ComponentFixture<RecentlyPlayedComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => {
+        TestBed.configureTestingModule({
             imports: [RecentlyPlayedComponent],
-        }).compileComponents();
+        });
 
         fixture = TestBed.createComponent(RecentlyPlayedComponent);
         component = fixture.componentInstance;

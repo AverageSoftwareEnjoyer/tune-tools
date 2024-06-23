@@ -1,5 +1,5 @@
 import { TestBed } from "@angular/core/testing";
-import { Key, KEYS } from "@models/local-storage.model";
+import { Key, KEYS } from "@model/local-storage.model";
 
 import { LocalStorageService } from "./local-storage.service";
 

@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import {
+    ChangeDetectionStrategy,
+    Component,
+    inject,
+    Input,
+    OnChanges,
+} from "@angular/core";
+import { TimeRangeOptions } from "@model/top-items.model";
+import { TopItemsStateService } from "@state/top-items-state.service";
 
 @Component({
     selector: "app-top-tracks",
@@ -8,4 +16,13 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
     styleUrl: "./top-tracks.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TopTracksComponent {}
+export class TopTracksComponent implements OnChanges {
+    @Input() protected readonly timeRange: TimeRangeOptions =
+        TimeRangeOptions.ShortTerm;
+
+    readonly #topItemsStateService = inject(TopItemsStateService);
+
+    ngOnChanges(): void {
+        this.#topItemsStateService.publishTopTracksTimeRange(this.timeRange);
+    }
+}

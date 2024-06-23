@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Key, KEYS } from "@models/local-storage.model";
+import { Key, KEYS } from "@model/local-storage.model";
 
 @Injectable({
     providedIn: "root",

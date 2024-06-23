@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TopArtistsComponent } from "./top-artists.component";
+import { BaseTableComponent } from "./base-table.component";
 
-describe("TopArtistsComponent", () => {
-    let component: TopArtistsComponent;
-    let fixture: ComponentFixture<TopArtistsComponent>;
+describe("BaseTableComponent", () => {
+    let component: BaseTableComponent;
+    let fixture: ComponentFixture<BaseTableComponent>;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [TopArtistsComponent],
+            imports: [BaseTableComponent],
         });
 
-        fixture = TestBed.createComponent(TopArtistsComponent);
+        fixture = TestBed.createComponent(BaseTableComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

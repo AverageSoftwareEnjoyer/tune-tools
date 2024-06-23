@@ -93,9 +93,9 @@ const config: Config = {
     moduleNameMapper: {
         "@api(.*)": "<rootDir>/src/app/api/$1",
         "@core(.*)": "<rootDir>/src/app/core/$1",
-        "@dto(.*)": "<rootDir>/src/app/api/dto/$1",
         "@env(.*)": "<rootDir>/src/environments/$1",
-        "@models(.*)": "<rootDir>/src/app/models/$1",
+        "@model(.*)": "<rootDir>/src/app/model/$1",
+        "@mocks(.*)": "<rootDir>/src/app/tests-mocks/$1",
         "@state(.*)": "<rootDir>/src/app/state/$1",
     },
 
