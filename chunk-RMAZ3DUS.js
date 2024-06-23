@@ -1,2 +1,0 @@
-import{Gb as r,Jb as c,ja as o,rb as a,sb as i}from"./chunk-SU73ZYXM.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-home"]],standalone:!0,features:[c],decls:2,vars:0,template:function(n,m){n&1&&(a(0,"p"),r(1,"home works!"),i())},changeDetection:0});let t=e;return t})();export{d as HomeComponent};
-//# sourceMappingURL=chunk-RMAZ3DUS.js.map
