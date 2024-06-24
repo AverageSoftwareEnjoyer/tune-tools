@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@playwright/test", "npm:1.44.1"],\
           ["@sentry/angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:8.11.0"],\
           ["@sentry/cli", "npm:2.32.1"],\
-          ["@sentry/wizard", "npm:3.23.3"],\
+          ["@sentry/wizard", "npm:3.24.0"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:2.2.2"],\
           ["@supabase/supabase-js", "npm:2.43.5"],\
           ["@types/eslint", "npm:8.56.10"],\
@@ -7867,17 +7867,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/wizard", [\
-      ["npm:3.23.3", {\
-        "packageLocation": "./.yarn/cache/@sentry-wizard-npm-3.23.3-f4a531431c-76a7313012.zip/node_modules/@sentry/wizard/",\
+      ["npm:3.24.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-wizard-npm-3.24.0-0ad80253d8-85eb93488a.zip/node_modules/@sentry/wizard/",\
         "packageDependencies": [\
-          ["@sentry/wizard", "npm:3.23.3"],\
+          ["@sentry/wizard", "npm:3.24.0"],\
           ["@clack/core", "npm:0.3.4"],\
           ["@clack/prompts", "npm:0.7.0"],\
           ["@sentry/cli", "npm:1.77.3"],\
           ["@sentry/node", "npm:7.111.0"],\
           ["axios", "npm:1.6.0"],\
           ["chalk", "npm:2.4.2"],\
-          ["glob", "npm:7.2.3"],\
+          ["glob", "npm:8.1.0"],\
           ["inquirer", "npm:6.5.2"],\
           ["lodash", "npm:4.17.21"],\
           ["magicast", "npm:0.2.11"],\
@@ -13613,6 +13613,18 @@ const RAW_RUNTIME_STATE =
           ["minimatch", "npm:3.1.2"],\
           ["once", "npm:1.4.0"],\
           ["path-is-absolute", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:8.1.0", {\
+        "packageLocation": "./.yarn/cache/glob-npm-8.1.0-65f64af8b1-9aab1c75eb.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:8.1.0"],\
+          ["fs.realpath", "npm:1.0.0"],\
+          ["inflight", "npm:1.0.6"],\
+          ["inherits", "npm:2.0.4"],\
+          ["minimatch", "npm:5.1.6"],\
+          ["once", "npm:1.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20068,7 +20080,7 @@ const RAW_RUNTIME_STATE =
           ["@playwright/test", "npm:1.44.1"],\
           ["@sentry/angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:8.11.0"],\
           ["@sentry/cli", "npm:2.32.1"],\
-          ["@sentry/wizard", "npm:3.23.3"],\
+          ["@sentry/wizard", "npm:3.24.0"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:2.2.2"],\
           ["@supabase/supabase-js", "npm:2.43.5"],\
           ["@types/eslint", "npm:8.56.10"],\
