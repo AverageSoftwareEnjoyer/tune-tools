@@ -51,6 +51,6 @@ jobs:
                   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
             - name: Deploy
-              run: yarn ng deploy --base-href="/tune-tools/"
+              run: yarn ng deploy --base-href="/tune-tools/" --remote origin
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
