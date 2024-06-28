@@ -36,3 +36,11 @@ export const timeRangeGuard =
             `${baseRoute}/${TimeRangeOptions.ShortTerm}`,
         );
     };
+
+/**
+ * Gets an element to be compared and returns `0` to maintain the order of key-value pairs received
+ * from the KeyValuePipe.
+ *
+ * @returns `0` to maintain the order of key-value pairs.
+ */
+export const keepOrder = (): 0 => 0;

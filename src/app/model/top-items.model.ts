@@ -90,7 +90,7 @@ export const TIME_RANGE_MAPPINGS: Record<TimeRangeOptions, TimeRangeNames> = {
     [TimeRangeOptions.ShortTerm]: TimeRangeNames.ShortTerm,
     [TimeRangeOptions.MediumTerm]: TimeRangeNames.MediumTerm,
     [TimeRangeOptions.LongTerm]: TimeRangeNames.LongTerm,
-};
+} as const;
 
 export interface TopItemsParams
     extends Record<string, TimeRangeOptions | number> {
