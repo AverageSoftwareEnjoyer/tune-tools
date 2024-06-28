@@ -4,6 +4,7 @@
     .main-content {
         flex: 1 1 auto;
         position: static;
+        min-height: 100%;
 
         &__sidenav {
             width: 250px;

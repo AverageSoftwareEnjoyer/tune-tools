@@ -166,11 +166,28 @@ $dark-theme: mat.define-theme(
 );
 
 html {
-    @include mat.all-component-themes($light-theme);
-}
+    @include mat.all-component-themes($dark-theme);
 
-html.dark-theme {
-    @include mat.all-component-colors($dark-theme);
+    @media (prefers-color-scheme: dark) {
+        @include mat.tabs-color($dark-theme, $color-variant: primary);
+    }
+
+    @media (prefers-color-scheme: light) {
+        @include mat.all-component-colors($light-theme);
+        @include mat.tabs-color($light-theme, $color-variant: primary);
+    }
+
+    .footer {
+        @media (prefers-color-scheme: dark) {
+            background-color: mat.get-theme-color($dark-theme, neutral, 10);
+            color: mat.get-theme-color($dark-theme, neutral, 90);
+        }
+
+        @media (prefers-color-scheme: light) {
+            background-color: mat.get-theme-color($light-theme, neutral, 100);
+            color: mat.get-theme-color($light-theme, neutral, 40);
+        }
+    }
 }
 
 @include mat.typography-hierarchy($light-theme);
