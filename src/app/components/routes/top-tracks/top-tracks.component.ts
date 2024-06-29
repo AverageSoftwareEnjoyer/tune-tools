@@ -5,13 +5,14 @@ import {
     Input,
     OnChanges,
 } from "@angular/core";
+import { BaseTabsContainerComponent } from "@lib/base-tabs-container/base-tabs-container.component";
 import { TimeRangeOptions } from "@model/top-items.model";
 import { TopItemsStateService } from "@state/top-items-state.service";
 
 @Component({
     selector: "app-top-tracks",
     standalone: true,
-    imports: [],
+    imports: [BaseTabsContainerComponent],
     templateUrl: "./top-tracks.component.html",
     styleUrl: "./top-tracks.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,9 +21,9 @@ export class TopTracksComponent implements OnChanges {
     @Input() protected readonly timeRange: TimeRangeOptions =
         TimeRangeOptions.ShortTerm;
 
-    readonly #topItemsStateService = inject(TopItemsStateService);
+    protected readonly topItemsStateService = inject(TopItemsStateService);
 
     ngOnChanges(): void {
-        this.#topItemsStateService.publishTopTracksTimeRange(this.timeRange);
+        this.topItemsStateService.publishTopTracksTimeRange(this.timeRange);
     }
 }
