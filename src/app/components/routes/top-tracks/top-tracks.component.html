@@ -1,1 +1,4 @@
-<p>top-tracks works!</p>
+<app-base-tabs-container
+    [items]="topItemsStateService.topTracks()"
+    [currentTimeRange]="topItemsStateService.topTracksTimeRange()"
+/>
