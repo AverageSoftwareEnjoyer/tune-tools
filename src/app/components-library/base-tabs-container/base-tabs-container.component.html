@@ -1,0 +1,23 @@
+<mat-card>
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+        @for (
+            mapping of TIME_RANGE_MAPPINGS | keyvalue: keepOrder;
+            track $index
+        ) {
+            <a
+                mat-tab-link
+                [routerLink]="'../' + mapping.key"
+                [active]="currentTimeRange === mapping.key"
+            >
+                {{ mapping.value }}
+            </a>
+        }
+    </nav>
+    <mat-tab-nav-panel #tabPanel>
+        <ol>
+            @for (item of items; track $index) {
+                <li>{{ $index + 1 }} {{ item.name }}</li>
+            }
+        </ol>
+    </mat-tab-nav-panel>
+</mat-card>
