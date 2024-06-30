@@ -12,7 +12,7 @@
     "svg.preview.background": "editor",
     "files.eol": "\n",
     "eslint.nodePath": ".yarn/sdks",
-    "eslint.experimental.useFlatConfig": true,
+    "eslint.useFlatConfig": true,
     "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
     "testing.openTesting": "neverOpen",
     "jest.outputConfig": {
@@ -28,9 +28,5 @@
         "NODE_OPTIONS": "-r ./.pnp.cjs"
     },
     "vs-code-prettier-eslint.prettierLast": false,
-    "eslint.run": "onType",
-    "yaml.schemas": {
-        "file:///home/dsigulski/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
-        "https://json.schemastore.org/github-workflow.json": "file:///d%3A/projects/tune-tools/.github/workflows/deploy.yml"
-    }
+    "eslint.run": "onType"
 }
