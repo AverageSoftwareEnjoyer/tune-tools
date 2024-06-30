@@ -1,5 +1,7 @@
 # TuneTools
 
+[![CodeQL](https://github.com/AverageSoftwareEnjoyer/tune-tools/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/AverageSoftwareEnjoyer/tune-tools/actions/workflows/github-code-scanning/codeql) [![pages-build-deployment](https://github.com/AverageSoftwareEnjoyer/tune-tools/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AverageSoftwareEnjoyer/tune-tools/actions/workflows/pages/pages-build-deployment) [![codecov](https://codecov.io/gh/AverageSoftwareEnjoyer/tune-tools/branch/main/graph/badge.svg?token=XB1944TBI0)](https://codecov.io/gh/AverageSoftwareEnjoyer/tune-tools)
+
 TuneTools is a dynamic web application designed to enrich your Spotify experience. It offers a suite of tools for playlist automation, in-depth listening analytics, and more, all crafted to enhance how you interact with your music on Spotify.
 
 ## Features
