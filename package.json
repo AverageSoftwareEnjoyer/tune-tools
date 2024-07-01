@@ -63,7 +63,7 @@
     "@types/ungap__structured-clone": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
-    "@typescript-eslint/types": "^7.13.1",
+    "@typescript-eslint/types": "^7.15.0",
     "@typescript-eslint/utils": "^7.13.1",
     "@ungap/structured-clone": "^1.2.0",
     "angular-cli-ghpages": "2.0.1",
