@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { mockImage } from "@mocks/top-items.model.mock";
+
+import { ItemImageComponent } from "./item-image.component";
+
+describe("ItemImageComponent", () => {
+    let component: ItemImageComponent;
+    let fixture: ComponentFixture<ItemImageComponent>;
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [ItemImageComponent],
+        });
+
+        fixture = TestBed.createComponent(ItemImageComponent);
+        component = fixture.componentInstance;
+        component.image = mockImage;
+        component.alt = "test";
+        fixture.detectChanges();
+    });
+
+    it("should create", () => {
+        expect(component).toBeTruthy();
+    });
+});

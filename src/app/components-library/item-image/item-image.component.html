@@ -1,0 +1,7 @@
+<img
+    [ngSrc]="image.url"
+    [alt]="alt"
+    [height]="imageSize ? IMAGE_SIZE_MAPPINGS[imageSize] : image.height"
+    [width]="imageSize ? IMAGE_SIZE_MAPPINGS[imageSize] : image.width"
+    priority
+/>
