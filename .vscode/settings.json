@@ -28,5 +28,6 @@
         "NODE_OPTIONS": "-r ./.pnp.cjs"
     },
     "vs-code-prettier-eslint.prettierLast": false,
-    "eslint.run": "onType"
+    "eslint.run": "onType",
+    "jsdoc-generator.includeTypes": false
 }
