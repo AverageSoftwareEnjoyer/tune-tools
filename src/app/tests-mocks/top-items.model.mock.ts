@@ -11,6 +11,8 @@ import {
     TopTracks,
 } from "@model/top-items.model";
 
+export const mockImage = { url: "https://image.url", height: 640, width: 640 };
+
 export const mockSimplifiedArtist: SimplifiedArtist = {
     name: "Artist Name",
     external_urls: { spotify: "https://spotify.com/artist/123" },
