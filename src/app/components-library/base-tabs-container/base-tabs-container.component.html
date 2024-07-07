@@ -14,10 +14,10 @@
         }
     </nav>
     <mat-tab-nav-panel #tabPanel>
-        <ol>
-            @for (item of items; track $index) {
-                <li>{{ $index + 1 }} {{ item.name }}</li>
-            }
-        </ol>
+        <app-base-table
+            [items]="items"
+            [itemsType]="itemsType"
+            [columnsMapping]="columnsMapping"
+        />
     </mat-tab-nav-panel>
 </mat-card>

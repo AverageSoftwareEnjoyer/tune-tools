@@ -147,4 +147,23 @@ export enum TopItemsRoutes {
     TopGenres = "top-genres",
 }
 
+export enum TopItemsColumnsKeys {
+    Index = "index",
+    Image = "image",
+    Name = "name",
+    Artists = "artists",
+    Link = "link",
+    Expand = "expand",
+}
+
+export const TOP_TRACKS_COLUMNS_MAPPINGS = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Album",
+    [TopItemsColumnsKeys.Name]: "Name",
+    [TopItemsColumnsKeys.Artists]: "Artists",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
+export type TopTracksColumnsMappingsType = typeof TOP_TRACKS_COLUMNS_MAPPINGS;
+
 // TODO: Genres
