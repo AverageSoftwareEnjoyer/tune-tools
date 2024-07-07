@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Album: {{ track.album.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="details-content">
+        <section class="details-content__section">
+            <a
+                [href]="track.album.external_urls.spotify"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Listen on Spotify"
+            >
+                <app-item-image
+                    [image]="track.album.images.at(-2)!"
+                    alt="album-cover"
+                    [imageSize]="ImageSizeOptions.Medium"
+                />
+            </a>
+        </section>
+        <section class="details-content__section">
+            <mat-chip-set class="mat-mdc-chip-set-stacked">
+                <mat-chip class="album-detail">
+                    <mat-icon matChipAvatar>album</mat-icon>
+                    Album type:
+                    {{
+                        track.album.album_type === "EP"
+                            ? track.album.album_type
+                            : (track.album.album_type | titlecase)
+                    }}
+                </mat-chip>
+                <mat-chip class="album-detail">
+                    <mat-icon matChipAvatar>format_list_numbered</mat-icon>
+                    Number of tracks: {{ track.album.total_tracks }}
+                </mat-chip>
+                <mat-chip class="album-detail">
+                    <mat-icon matChipAvatar>event</mat-icon>
+                    Release date: {{ track.album.release_date }}
+                </mat-chip>
+            </mat-chip-set>
+        </section>
+    </mat-card-content>
+</mat-card>

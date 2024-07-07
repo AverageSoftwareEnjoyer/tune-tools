@@ -1,0 +1,28 @@
+app-top-tracks-details {
+    width: 100%;
+
+    .mat-mdc-card-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .details-content {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+
+        &__section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .mdc-evolution-chip-set__chips {
+                flex-direction: column;
+
+                .album-detail {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}
