@@ -25,6 +25,11 @@ export interface Album extends Omit<TopItem<"album">, "popularity"> {
 
 export type TopItemsType = "artists" | "tracks";
 
+export interface TopItemsMappings {
+    artists: TopArtistLimited;
+    tracks: TopTrackLimited;
+}
+
 export type ItemType = "artist" | "track" | "album";
 
 export interface TopItem<T extends ItemType> {
@@ -45,7 +50,7 @@ export interface TopArtist extends TopItem<"artist"> {
 
 export interface TopTrack<
     T extends Album | AlbumLimited,
-    U extends TopArtist | TopArtistLimited,
+    U extends SimplifiedArtist | SimplifiedArtistLimited,
 > extends TopItem<"track"> {
     album: T;
     artists: U[];
@@ -60,7 +65,9 @@ export interface TopTrack<
     is_local: boolean;
 }
 
-export interface TopItems<T extends TopTrack<Album, TopArtist> | TopArtist> {
+export interface TopItems<
+    T extends TopTrack<Album, SimplifiedArtist> | TopArtist,
+> {
     href: string;
     limit: number;
     next: string | null;
@@ -123,7 +130,7 @@ export type AlbumLimited = Pick<
 >;
 
 export type TopTrackLimited = Pick<
-    TopTrack<AlbumLimited, TopArtistLimited>,
+    TopTrack<AlbumLimited, SimplifiedArtistLimited>,
     "album" | "external_urls" | "name" | "artists"
 >;
 
@@ -132,10 +139,31 @@ export type TopArtistLimited = Pick<
     "external_urls" | "name" | "images" | "genres"
 >;
 
+export type SimplifiedArtistLimited = Pick<TopArtist, "external_urls" | "name">;
+
 export enum TopItemsRoutes {
     TopTracks = "top-tracks",
     TopArtists = "top-artists",
     TopGenres = "top-genres",
 }
+
+export enum TopItemsColumnsKeys {
+    Index = "index",
+    Image = "image",
+    Name = "name",
+    Artists = "artists",
+    Link = "link",
+    Expand = "expand",
+}
+
+export const TOP_TRACKS_COLUMNS_MAPPINGS = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Album",
+    [TopItemsColumnsKeys.Name]: "Name",
+    [TopItemsColumnsKeys.Artists]: "Artists",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
+export type TopTracksColumnsMappingsType = typeof TOP_TRACKS_COLUMNS_MAPPINGS;
 
 // TODO: Genres

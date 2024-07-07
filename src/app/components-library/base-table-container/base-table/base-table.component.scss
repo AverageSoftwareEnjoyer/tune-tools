@@ -1,0 +1,22 @@
+:host {
+    .table {
+        padding: 0 10px 10px;
+
+        .details-row {
+            height: 0;
+        }
+
+        .item-details {
+            overflow: hidden;
+            display: flex;
+
+            &--expanded {
+                padding: 10px 0;
+            }
+        }
+
+        .item-row {
+            border-bottom-width: 0;
+        }
+    }
+}

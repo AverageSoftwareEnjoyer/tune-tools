@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 import {
     Album,
     AlbumLimited,
+    SimplifiedArtist,
+    SimplifiedArtistLimited,
     TopArtist,
     TopArtistLimited,
     TopTrack,
@@ -19,7 +21,7 @@ export class TopItemsService {
      * @returns An object containing a subset of properties from the original one.
      */
     convertTopTrackToLimited(
-        track: TopTrack<Album, TopArtist>,
+        track: TopTrack<Album, SimplifiedArtist>,
     ): TopTrackLimited {
         const { album, external_urls, name, artists } = structuredClone(track);
         return {
@@ -27,7 +29,7 @@ export class TopItemsService {
             external_urls,
             name,
             artists: artists.map((artist) =>
-                this.convertTopArtistToLimited(artist),
+                this.convertSimplifiedArtistToLimited(artist),
             ),
         };
     }
@@ -58,9 +60,22 @@ export class TopItemsService {
     }
 
     /**
+     * Simplifies the `SimplifiedArtist` by transforming it to include only essential fields.
+     *
+     * @param artist - The object to be converted.
+     * @returns An object containing a subset of properties from the original one.
+     */
+    convertSimplifiedArtistToLimited(
+        artist: SimplifiedArtist,
+    ): SimplifiedArtistLimited {
+        const { external_urls, name } = structuredClone(artist);
+        return { external_urls, name };
+    }
+
+    /**
      * Simplifies the `Artist` by transforming it to include only essential fields.
      *
-     * @param artists - The object to be converted.
+     * @param artist - The object to be converted.
      * @returns An object containing a subset of properties from the original one.
      */
     convertTopArtistToLimited(artist: TopArtist): TopArtistLimited {

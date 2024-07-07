@@ -4,6 +4,8 @@ import { TestBed } from "@angular/core/testing";
 import {
     mockAlbum,
     mockAlbumLimited,
+    mockSimplifiedArtist,
+    mockSimplifiedArtistLimited,
     mockTopArtist,
     mockTopArtistLimited,
     mockTopTrack,
@@ -34,6 +36,14 @@ describe("TopItemsService", () => {
     it("should convert Album to AlbumLimited", () => {
         const result = topItemsService.convertAlbumToLimited(mockAlbum);
         expect(result).toEqual(mockAlbumLimited);
+    });
+
+    it("should convert SimplifiedArtist to SimplifiedArtistLimited", () => {
+        const result =
+            topItemsService.convertSimplifiedArtistToLimited(
+                mockSimplifiedArtist,
+            );
+        expect(result).toEqual(mockSimplifiedArtistLimited);
     });
 
     it("should convert TopArtist to TopArtistLimited", () => {

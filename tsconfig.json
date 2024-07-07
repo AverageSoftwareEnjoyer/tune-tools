@@ -28,23 +28,26 @@
             "@api/*": [
                 "app/api/*"
             ],
-            "@lib/*": [
-                "app/components-library/*"
-            ],
             "@core/*": [
                 "app/core/*"
-            ],
-            "@mocks/*": [
-                "app/tests-mocks/*"
-            ],
-            "@state/*": [
-                "app/state/*"
             ],
             "@env/*": [
                 "environments/*"
             ],
+            "@lib/*": [
+                "app/components-library/*"
+            ],
+            "@mocks/*": [
+                "app/tests-mocks/*"
+            ],
             "@model/*": [
                 "app/model/*"
+            ],
+            "@routes/*": [
+                "app/components/routes/*"
+            ],
+            "@state/*": [
+                "app/state/*"
             ],
         }
     },
@@ -52,7 +55,7 @@
         "enableI18nLegacyMessageIdFormat": false,
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
-        "strictTemplates": true
+        "strictTemplates": true,
     },
     "include": [
         "**/*.d.ts",

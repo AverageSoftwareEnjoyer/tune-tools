@@ -95,8 +95,9 @@ const config: Config = {
         "@core(.*)": "<rootDir>/src/app/core/$1",
         "@env(.*)": "<rootDir>/src/environments/$1",
         "@lib(.*)": "<rootDir>/src/app/components-library/$1",
-        "@model(.*)": "<rootDir>/src/app/model/$1",
         "@mocks(.*)": "<rootDir>/src/app/tests-mocks/$1",
+        "@model(.*)": "<rootDir>/src/app/model/$1",
+        "@routes(.*)": "<rootDir>/src/app/components/routes/$1",
         "@state(.*)": "<rootDir>/src/app/state/$1",
     },
 
