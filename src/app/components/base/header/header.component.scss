@@ -8,6 +8,8 @@
         color: $tertiary-text-color;
         font-weight: 500;
         font-size: calc(1rem / 16 * 20);
+        display: flex;
+        gap: 10px;
 
         &__title {
             margin-right: auto;

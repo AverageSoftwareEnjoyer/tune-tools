@@ -177,7 +177,17 @@ html {
         @include mat.tabs-color($light-theme, $color-variant: primary);
     }
 
-    .footer {
+    .main-content__nav-link--active {
+        @media (prefers-color-scheme: dark) {
+            background-color: mat.get-theme-color($dark-theme, neutral, 40);
+        }
+
+        @media (prefers-color-scheme: light) {
+            background-color: mat.get-theme-color($light-theme, neutral, 80);
+        }
+    }
+
+    app-footer {
         @media (prefers-color-scheme: dark) {
             background-color: mat.get-theme-color($dark-theme, neutral, 10);
             color: mat.get-theme-color($dark-theme, neutral, 90);

@@ -18,13 +18,6 @@
             &-link {
                 border-radius: 4px;
                 padding: 4px 8px;
-
-                &--active {
-                    background-color: rgba(
-                        $color: $dark-background,
-                        $alpha: 0.2
-                    );
-                }
             }
 
             &-item {

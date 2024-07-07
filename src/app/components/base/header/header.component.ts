@@ -6,6 +6,7 @@ import {
     Input,
 } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatRippleModule } from "@angular/material/core";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -17,11 +18,12 @@ import { SidenavService } from "../sidenav.service";
     selector: "app-header",
     standalone: true,
     imports: [
-        MatToolbarModule,
+        AsyncPipe,
         MatButtonModule,
         MatIconModule,
         MatListModule,
-        AsyncPipe,
+        MatRippleModule,
+        MatToolbarModule,
         RouterModule,
     ],
     templateUrl: "./header.component.html",
