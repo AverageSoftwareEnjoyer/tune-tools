@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components-library/base-table-container/base-table/base-table.component.scss"],
+  "sourcesContent": [":host {\n    .table {\n        padding: 0 10px 10px;\n\n        .details-row {\n            height: 0;\n        }\n\n        .item-details {\n            overflow: hidden;\n            display: flex;\n\n            &--expanded {\n                padding: 10px 0;\n            }\n        }\n\n        .item-row {\n            border-bottom-width: 0;\n        }\n    }\n}\n"],
+  "mappings": "AACI,MAAA,CAAA,MAAA,QACI,EAAA,KAAA,KAEA,MAAA,CAHJ,MAGI,CAAA,YACI,OAAA,EAGJ,MAAA,CAPJ,MAOI,CAAA,aACI,SAAA,OACA,QAAA,KAEA,MAAA,CAXR,MAWQ,CAAA,uBAXR,QAYY,KAAA,EAIR,MAAA,CAhBJ,MAgBI,CAAA,SACI,oBAAA",
+  "names": []
+}
