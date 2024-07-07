@@ -3,6 +3,7 @@ import { inject, Injectable } from "@angular/core";
 import { environment } from "@env/environment";
 import {
     Album,
+    SimplifiedArtist,
     TopArtist,
     TopItems,
     TopItemsParams,
@@ -27,7 +28,7 @@ export class TopItemsHTTPService {
      * @returns An observable that emits the fetched top items.
      */
     getTopItems$<
-        T extends TopArtist | TopTrack<Album, TopArtist>,
+        T extends TopArtist | TopTrack<Album, SimplifiedArtist>,
         U extends TopItemsType,
     >(type: U, params: TopItemsParams): Observable<TopItems<T>> {
         return this.#httpClient.get<TopItems<T>>(`${this.#url}/${type}`, {

@@ -1,6 +1,8 @@
 import {
     Album,
     AlbumLimited,
+    SimplifiedArtist,
+    SimplifiedArtistLimited,
     TopArtist,
     TopArtistLimited,
     TopArtists,
@@ -8,8 +10,6 @@ import {
     TopTrackLimited,
     TopTracks,
 } from "@model/top-items.model";
-
-import { SimplifiedArtist } from "./../model/top-items.model";
 
 export const mockSimplifiedArtist: SimplifiedArtist = {
     name: "Artist Name",
@@ -25,7 +25,7 @@ export const mockAlbum: Album = {
     name: "Album Name",
     album_type: "ALBUM",
     total_tracks: 10,
-    images: [{ url: "https://image.url", height: 640, width: 640 }],
+    images: [mockImage, mockImage, mockImage],
     release_date: "2020-01-01",
     available_markets: [],
     release_date_precision: "year",
@@ -47,7 +47,7 @@ export const mockTopArtist: TopArtist = {
         total: 0,
     },
     genres: ["rock"],
-    images: [{ url: "https://image.url", height: 640, width: 640 }],
+    images: [mockImage, mockImage, mockImage],
     href: "",
     id: "",
     popularity: 0,
@@ -85,7 +85,7 @@ export const mockTopTrack: TopTrack<Album, TopArtist> = {
 export const mockAlbumLimited: AlbumLimited = {
     album_type: "ALBUM",
     external_urls: { spotify: "https://spotify.com/album/123" },
-    images: [{ url: "https://image.url", height: 640, width: 640 }],
+    images: [mockImage, mockImage, mockImage],
     name: "Album Name",
     release_date: "2020-01-01",
     total_tracks: 10,
@@ -94,7 +94,12 @@ export const mockAlbumLimited: AlbumLimited = {
 export const mockTopArtistLimited: TopArtistLimited = {
     external_urls: { spotify: "https://spotify.com/artist/123" },
     genres: ["rock"],
-    images: [{ url: "https://image.url", height: 640, width: 640 }],
+    images: [mockImage, mockImage, mockImage],
+    name: "Artist Name",
+};
+
+export const mockSimplifiedArtistLimited: SimplifiedArtistLimited = {
+    external_urls: { spotify: "https://spotify.com/artist/123" },
     name: "Artist Name",
 };
 
@@ -102,7 +107,7 @@ export const mockTopTrackLimited: TopTrackLimited = {
     album: mockAlbumLimited,
     external_urls: { spotify: "https://spotify.com/track/123" },
     name: "Track Name",
-    artists: [mockTopArtistLimited],
+    artists: [mockSimplifiedArtistLimited],
 };
 
 export const mockTopTracks: TopTracks = {

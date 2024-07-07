@@ -3,8 +3,8 @@ import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { TopItemsHTTPService } from "@api/top-items-http.service";
 import {
     Album,
+    SimplifiedArtist,
     TimeRangeOptions,
-    TopArtist,
     TopItemsState,
     TopTrack,
     TopTrackLimited,
@@ -53,11 +53,14 @@ export class TopItemsStateService {
                 return of(topTracksByTimeRange);
             }
             return this.#topItemsHTTPService
-                .getTopItems$<TopTrack<Album, TopArtist>, "tracks">("tracks", {
-                    time_range: timeRange,
-                    limit: 50,
-                    offset: 0,
-                })
+                .getTopItems$<TopTrack<Album, SimplifiedArtist>, "tracks">(
+                    "tracks",
+                    {
+                        time_range: timeRange,
+                        limit: 50,
+                        offset: 0,
+                    },
+                )
                 .pipe(
                     map(({ items }) =>
                         items.map((item) =>
