@@ -1,5 +1,5 @@
 <mat-card>
-    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel" disablePagination="true">
         @for (
             mapping of TIME_RANGE_MAPPINGS | keyvalue: keepOrder;
             track $index
@@ -17,7 +17,8 @@
         <app-base-table
             [items]="items"
             [itemsType]="itemsType"
-            [columnsMapping]="columnsMapping"
+            [columnsMappings]="columnsMappings"
+            [isBelowMediumWidth]="isBelowMediumWidth"
         />
     </mat-tab-nav-panel>
 </mat-card>

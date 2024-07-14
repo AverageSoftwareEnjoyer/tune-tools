@@ -156,6 +156,13 @@ export enum TopItemsColumnsKeys {
     Expand = "expand",
 }
 
+export const TOP_TRACKS_COLUMNS_MAPPINGS_FILTERED = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Album",
+    [TopItemsColumnsKeys.Name]: "Info",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
 export const TOP_TRACKS_COLUMNS_MAPPINGS = {
     [TopItemsColumnsKeys.Index]: "No.",
     [TopItemsColumnsKeys.Image]: "Album",
@@ -165,5 +172,8 @@ export const TOP_TRACKS_COLUMNS_MAPPINGS = {
 } as const;
 
 export type TopTracksColumnsMappingsType = typeof TOP_TRACKS_COLUMNS_MAPPINGS;
+
+export type TopTracksColumnsMappingsFilteredType =
+    typeof TOP_TRACKS_COLUMNS_MAPPINGS_FILTERED;
 
 // TODO: Genres

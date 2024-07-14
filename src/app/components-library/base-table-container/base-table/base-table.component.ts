@@ -9,9 +9,11 @@ import { KeyValuePipe } from "@angular/common";
 import {
     ChangeDetectionStrategy,
     Component,
+    computed,
     Input,
     OnChanges,
-    OnInit,
+    Signal,
+    ViewEncapsulation,
 } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatRippleModule } from "@angular/material/core";
@@ -25,6 +27,7 @@ import {
     TopItemsColumnsKeys,
     TopItemsMappings,
     TopItemsType,
+    TopTracksColumnsMappingsFilteredType,
     TopTracksColumnsMappingsType,
 } from "@model/top-items.model";
 import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details/top-tracks-details.component";
@@ -54,12 +57,16 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
             ),
         ]),
     ],
+    encapsulation: ViewEncapsulation.None,
 })
-export class BaseTableComponent<T extends TopItemsType>
-    implements OnInit, OnChanges {
+export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
     @Input() items!: TopItemsMappings[T][];
     @Input() itemsType!: T;
-    @Input() columnsMapping!: TopTracksColumnsMappingsType;
+    @Input() columnsMappings!: Signal<
+        TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType
+    >;
+
+    @Input() isBelowMediumWidth!: Signal<boolean>;
 
     protected readonly keepOrder = keepOrder;
     protected readonly TopItemsColumnsKeys = TopItemsColumnsKeys;
@@ -67,15 +74,14 @@ export class BaseTableComponent<T extends TopItemsType>
 
     protected expandedItem: TopItemsMappings[T] | null = null;
 
-    protected columns: TopItemsColumnsKeys[] = [];
-    protected columnsWithExpand: TopItemsColumnsKeys[] = [];
+    protected columns = computed(
+        () => Object.keys(this.columnsMappings()) as TopItemsColumnsKeys[],
+    );
 
-    ngOnInit(): void {
-        this.columns = Object.keys(
-            this.columnsMapping,
-        ) as TopItemsColumnsKeys[];
-        this.columnsWithExpand = [...this.columns, TopItemsColumnsKeys.Expand];
-    }
+    protected columnsWithExpand = computed(() => [
+        ...this.columns(),
+        TopItemsColumnsKeys.Expand,
+    ]);
 
     ngOnChanges(): void {
         this.expandedItem = null;

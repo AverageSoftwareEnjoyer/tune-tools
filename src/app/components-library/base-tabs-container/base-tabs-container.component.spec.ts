@@ -1,3 +1,4 @@
+import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { ActivatedRoute } from "@angular/router";
@@ -34,8 +35,9 @@ describe("BaseTabsContainerComponent", () => {
             component = fixture.componentInstance;
             component.items = [mockTopTrackLimited];
             component.itemsType = "tracks";
-            component.columnsMapping = TOP_TRACKS_COLUMNS_MAPPINGS;
+            component.columnsMappings = signal(TOP_TRACKS_COLUMNS_MAPPINGS);
             component.currentTimeRange = TimeRangeOptions.ShortTerm;
+            component.isBelowMediumWidth = signal(false);
             fixture.detectChanges();
         });
 

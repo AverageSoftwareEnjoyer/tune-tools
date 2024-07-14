@@ -1,3 +1,4 @@
+import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { mockTopTrackLimited } from "@mocks/top-items.model.mock";
 
@@ -15,6 +16,7 @@ describe("TopTracksDetailsComponent", () => {
         fixture = TestBed.createComponent(TopTracksDetailsComponent);
         component = fixture.componentInstance;
         component.track = mockTopTrackLimited;
+        component.isBelowMediumWidth = signal(false);
         fixture.detectChanges();
     });
 

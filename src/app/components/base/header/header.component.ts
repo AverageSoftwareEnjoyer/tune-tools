@@ -1,16 +1,12 @@
 import { AsyncPipe } from "@angular/common";
-import {
-    ChangeDetectionStrategy,
-    Component,
-    inject,
-    Input,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatRippleModule } from "@angular/material/core";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { RouterModule } from "@angular/router";
+import { MediaQueriesStateService } from "@state/media-queries-state.service";
 
 import { SidenavService } from "../sidenav.service";
 
@@ -31,9 +27,12 @@ import { SidenavService } from "../sidenav.service";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-    @Input() isBelowMediumWidth!: boolean | null;
-
+    readonly #mediaQueriesStateService = inject(MediaQueriesStateService);
     readonly #sidenavService = inject(SidenavService);
+
+    protected get isBelowMediumWidth(): boolean {
+        return this.#mediaQueriesStateService.isBelowMediumWidth();
+    }
 
     /**
      * Toggles the side navigation's visibility.

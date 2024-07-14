@@ -5,7 +5,6 @@ import {
     ChangeDetectorRef,
     Component,
     inject,
-    Input,
     ViewChild,
 } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
@@ -13,6 +12,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
 import { DestroyClass } from "@core/destroy/destroy.class";
+import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { map } from "rxjs";
 
 import { HeaderComponent } from "../header/header.component";
@@ -37,10 +37,14 @@ export class MainContentComponent
     extends DestroyClass
     implements AfterViewInit {
     @ViewChild("menu") sidenav!: MatSidenav;
-    @Input() isBelowMediumWidth!: boolean | null;
 
-    readonly #sidenavService = inject(SidenavService);
     readonly #changeDetectorRef = inject(ChangeDetectorRef);
+    readonly #mediaQueriesStateService = inject(MediaQueriesStateService);
+    readonly #sidenavService = inject(SidenavService);
+
+    protected get isBelowMediumWidth(): boolean {
+        return this.#mediaQueriesStateService.isBelowMediumWidth();
+    }
 
     ngAfterViewInit(): void {
         this.#sidenavService.toggleSidenav$

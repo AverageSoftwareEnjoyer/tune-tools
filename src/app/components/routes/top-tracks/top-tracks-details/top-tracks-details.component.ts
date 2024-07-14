@@ -3,6 +3,7 @@ import {
     ChangeDetectionStrategy,
     Component,
     Input,
+    Signal,
     ViewEncapsulation,
 } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
@@ -29,6 +30,7 @@ import { TopTrackLimited } from "@model/top-items.model";
 })
 export class TopTracksDetailsComponent {
     @Input() track!: TopTrackLimited;
+    @Input() isBelowMediumWidth!: Signal<boolean>;
 
     protected readonly ImageSizeOptions = ImageSizeOptions;
 }
