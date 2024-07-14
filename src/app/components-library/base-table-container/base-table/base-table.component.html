@@ -101,14 +101,16 @@
                     class="item-details"
                     [class.item-details--expanded]="expandedItem === item"
                     [@detailExpand]="
-                        item === expandedItem ? 'expanded' : 'collapsed'
+                        expandedItem === item ? 'expanded' : 'collapsed'
                     "
                 >
-                    @if (itemsType === "tracks") {
-                        <app-top-tracks-details
-                            [track]="item"
-                            [isBelowMediumWidth]="isBelowMediumWidth"
-                        />
+                    @if (expandedItem === item) {
+                        @if (itemsType === "tracks") {
+                            <app-top-tracks-details
+                                [track]="item"
+                                [isBelowMediumWidth]="isBelowMediumWidth"
+                            />
+                        }
                     }
                 </div>
             </td>
