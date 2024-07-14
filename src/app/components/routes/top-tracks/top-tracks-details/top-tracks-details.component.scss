@@ -1,11 +1,6 @@
 app-top-tracks-details {
     width: 100%;
 
-    .mat-mdc-card-header {
-        display: flex;
-        justify-content: center;
-    }
-
     .details-content {
         display: flex;
         justify-content: center;
@@ -18,9 +13,23 @@ app-top-tracks-details {
 
             .mdc-evolution-chip-set__chips {
                 flex-direction: column;
+                max-width: 100%;
+
+                .mat-mdc-standard-chip .mdc-evolution-chip__cell--primary,
+                .mat-mdc-standard-chip .mdc-evolution-chip__action--primary,
+                .mat-mdc-standard-chip .mat-mdc-chip-action-label {
+                    overflow: hidden;
+                }
 
                 .album-detail {
                     width: 220px;
+
+                    .mdc-evolution-chip__text-label {
+                        white-space: nowrap;
+                        user-select: none;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                 }
             }
         }
