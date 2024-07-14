@@ -1,5 +1,11 @@
 import { KeyValuePipe } from "@angular/common";
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import {
+    ChangeDetectionStrategy,
+    Component,
+    Input,
+    Signal,
+    ViewEncapsulation,
+} from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { MatTabsModule } from "@angular/material/tabs";
 import { RouterModule } from "@angular/router";
@@ -10,6 +16,7 @@ import {
     TimeRangeOptions,
     TopItemsMappings,
     TopItemsType,
+    TopTracksColumnsMappingsFilteredType,
     TopTracksColumnsMappingsType,
 } from "@model/top-items.model";
 
@@ -26,12 +33,17 @@ import {
     templateUrl: "./base-tabs-container.component.html",
     styleUrl: "./base-tabs-container.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
 })
 export class BaseTabsContainerComponent<T extends TopItemsType> {
     @Input() items!: TopItemsMappings[T][];
     @Input() itemsType!: T;
-    @Input() columnsMapping!: TopTracksColumnsMappingsType;
+    @Input() columnsMappings!: Signal<
+        TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType
+    >;
+
     @Input() currentTimeRange!: TimeRangeOptions;
+    @Input() isBelowMediumWidth!: Signal<boolean>;
 
     protected readonly TIME_RANGE_MAPPINGS = TIME_RANGE_MAPPINGS;
     protected readonly keepOrder = keepOrder;

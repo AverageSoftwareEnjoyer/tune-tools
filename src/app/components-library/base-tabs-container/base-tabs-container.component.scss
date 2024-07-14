@@ -1,0 +1,9 @@
+app-base-tabs-container {
+    .mat-mdc-tab-link-container {
+        overflow-x: auto;
+    }
+
+    .mdc-tab {
+        padding: 0 5px;
+    }
+}
