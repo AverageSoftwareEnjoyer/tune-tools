@@ -4,14 +4,15 @@ import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
+    DestroyRef,
     inject,
     ViewChild,
 } from "@angular/core";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
-import { DestroyClass } from "@core/destroy/destroy.class";
 import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { map } from "rxjs";
 
@@ -33,12 +34,11 @@ import { SidenavService } from "../sidenav.service";
     styleUrl: "./main-content.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainContentComponent
-    extends DestroyClass
-    implements AfterViewInit {
+export class MainContentComponent implements AfterViewInit {
     @ViewChild("menu") sidenav!: MatSidenav;
 
     readonly #changeDetectorRef = inject(ChangeDetectorRef);
+    readonly #destroyRef = inject(DestroyRef);
     readonly #mediaQueriesStateService = inject(MediaQueriesStateService);
     readonly #sidenavService = inject(SidenavService);
 
@@ -49,8 +49,8 @@ export class MainContentComponent
     ngAfterViewInit(): void {
         this.#sidenavService.toggleSidenav$
             .pipe(
-                this.untilDestroyed(),
                 map(() => this.sidenav.toggle()),
+                takeUntilDestroyed(this.#destroyRef),
             )
             .subscribe(() => {
                 this.#changeDetectorRef.markForCheck();
