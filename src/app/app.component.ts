@@ -1,8 +1,6 @@
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { AsyncPipe } from "@angular/common";
-import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { map, Observable, shareReplay } from "rxjs";
 
 import { FooterComponent } from "./components/base/footer/footer.component";
 import { HeaderComponent } from "./components/base/header/header.component";
@@ -22,17 +20,4 @@ import { MainContentComponent } from "./components/base/main-content/main-conten
     styleUrl: "./app.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-    protected isBelowMediumWidth$: Observable<boolean>;
-
-    readonly #breakpointObserver = inject(BreakpointObserver);
-
-    constructor() {
-        this.isBelowMediumWidth$ = this.#breakpointObserver
-            .observe([Breakpoints.XSmall, Breakpoints.Small])
-            .pipe(
-                map(({ matches }) => matches),
-                shareReplay(),
-            );
-    }
-}
+export class AppComponent {}

@@ -1,11 +1,13 @@
 import { HarnessLoader } from "@angular/cdk/testing";
 import { TestbedHarnessEnvironment } from "@angular/cdk/testing/testbed";
+import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatSidenavHarness } from "@angular/material/sidenav/testing";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
+import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { Observable, Subject } from "rxjs";
 
 import { SidenavService } from "../sidenav.service";
@@ -14,6 +16,7 @@ import { MainContentComponent } from "./main-content.component";
 describe("MainContentComponent", () => {
     let component: MainContentComponent;
     let fixture: ComponentFixture<MainContentComponent>;
+    let mediaQueriesStateService: MediaQueriesStateService;
     let toggleSidenavSubject: Subject<void>;
     let mockSidenavService: {
         toggleSidenav$: Observable<void>;
@@ -38,10 +41,10 @@ describe("MainContentComponent", () => {
             ],
         });
 
+        mediaQueriesStateService = TestBed.inject(MediaQueriesStateService);
+        mediaQueriesStateService.isBelowMediumWidth = signal(true);
         fixture = TestBed.createComponent(MainContentComponent);
         component = fixture.componentInstance;
-
-        component.isBelowMediumWidth = true;
         fixture.detectChanges();
         loader = TestbedHarnessEnvironment.loader(fixture);
     });

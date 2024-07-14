@@ -53,6 +53,7 @@ module.exports = [
             /** Stylistic rules */
             "@stylistic/arrow-parens": ["error", "always"],
             "@stylistic/arrow-spacing": "error",
+            "@stylistic/indent-binary-ops": ["error", 4],
             "@stylistic/brace-style": ["error", "1tbs"],
             "@stylistic/comma-dangle": "off",
             "@stylistic/dot-location": ["error", "property"],
