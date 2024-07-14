@@ -1,22 +1,47 @@
-:host {
-    .table {
-        padding: 0 10px 10px;
+app-base-table {
+    .table-container {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
 
-        .details-row {
-            height: 0;
-        }
+        .table {
+            padding: 0 10px 10px;
 
-        .item-details {
-            overflow: hidden;
-            display: flex;
-
-            &--expanded {
-                padding: 10px 0;
+            .mdc-data-table__header-cell {
+                padding: 0 2px;
             }
-        }
 
-        .item-row {
-            border-bottom-width: 0;
+            .mdc-data-table__cell:not(.mat-column-expandedDetail) {
+                padding: 2px;
+            }
+
+            .details-row {
+                height: 0;
+            }
+
+            .item-details {
+                overflow: hidden;
+                display: flex;
+
+                &--expanded {
+                    padding: 10px 0;
+                }
+            }
+
+            .item-info-container {
+                display: flex;
+                flex-direction: column;
+
+                &__line {
+                    &--bold {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .item-row {
+                border-bottom-width: 0;
+            }
         }
     }
 }

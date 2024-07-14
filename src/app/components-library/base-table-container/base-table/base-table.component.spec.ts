@@ -1,3 +1,4 @@
+import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { mockTopTrackLimited } from "@mocks/top-items.model.mock";
@@ -19,7 +20,8 @@ describe("BaseTableComponent", () => {
             component = fixture.componentInstance;
             component.items = [mockTopTrackLimited];
             component.itemsType = "tracks";
-            component.columnsMapping = TOP_TRACKS_COLUMNS_MAPPINGS;
+            component.columnsMappings = signal(TOP_TRACKS_COLUMNS_MAPPINGS);
+            component.isBelowMediumWidth = signal(false);
             fixture.detectChanges();
         });
 
