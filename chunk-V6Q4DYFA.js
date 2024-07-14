@@ -1,0 +1,2 @@
+import{Cb as a,Db as i,Vb as r,Zb as c,la as o}from"./chunk-VQU5OLAI.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-home"]],standalone:!0,features:[c],decls:2,vars:0,template:function(n,m){n&1&&(a(0,"p"),r(1,"home works!"),i())},changeDetection:0});let t=e;return t})();export{d as HomeComponent};
+//# sourceMappingURL=chunk-V6Q4DYFA.js.map

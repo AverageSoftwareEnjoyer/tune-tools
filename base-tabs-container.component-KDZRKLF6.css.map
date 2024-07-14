@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components-library/base-tabs-container/base-tabs-container.component.scss"],
+  "sourcesContent": ["app-base-tabs-container {\n    .mat-mdc-tab-link-container {\n        overflow-x: auto;\n    }\n\n    .mdc-tab {\n        padding: 0 5px;\n    }\n}\n"],
+  "mappings": "AACI,wBAAA,CAAA,2BACI,WAAA,KAGJ,wBAAA,CAAA,QAJA,QAKI,EAAA",
+  "names": []
+}
