@@ -5,11 +5,12 @@ import {
     transition,
     trigger,
 } from "@angular/animations";
-import { KeyValuePipe } from "@angular/common";
+import { KeyValuePipe, TitleCasePipe } from "@angular/common";
 import {
     ChangeDetectionStrategy,
     Component,
     computed,
+    inject,
     Input,
     OnChanges,
     Signal,
@@ -25,10 +26,9 @@ import { ImageSizeOptions } from "@model/image.model";
 import {
     TopArtistLimited,
     TopItemsColumnsKeys,
+    TopItemsColumnsMappings,
     TopItemsMappings,
     TopItemsType,
-    TopTracksColumnsMappingsFilteredType,
-    TopTracksColumnsMappingsType,
 } from "@model/top-items.model";
 import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details/top-tracks-details.component";
 
@@ -44,6 +44,7 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
         MatTableModule,
         TopTracksDetailsComponent,
     ],
+    providers: [TitleCasePipe],
     templateUrl: "./base-table.component.html",
     styleUrl: "./base-table.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -62,9 +63,7 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
 export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
     @Input() items!: TopItemsMappings[T][];
     @Input() itemsType!: T;
-    @Input() columnsMappings!: Signal<
-        TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType
-    >;
+    @Input() columnsMappings!: Signal<TopItemsColumnsMappings[T]>;
 
     @Input() isBelowMediumWidth!: Signal<boolean>;
 
@@ -80,8 +79,10 @@ export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
 
     protected columnsWithExpand = computed(() => [
         ...this.columns(),
-        TopItemsColumnsKeys.Expand,
+        ...(this.itemsType === "tracks" ? [TopItemsColumnsKeys.Expand] : []),
     ]);
+
+    readonly #titleCasePipe = inject(TitleCasePipe);
 
     ngOnChanges(): void {
         this.expandedItem = null;
@@ -97,5 +98,22 @@ export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
      */
     protected getArtistsNames(artists: TopArtistLimited[]): string {
         return artists.map(({ name }) => name).join(", ");
+    }
+
+    /**
+     * Converts an array of genres into a comma separated string containing their names, with each
+     * genre name being transformed to TitleCase. IF there are no genres to be converted, "Unknown"
+     * is returned instead.
+     *
+     * @protected
+     * @param genres - The list of genres to be converted into a string.
+     * @returns A string containing comma separated genres.
+     */
+    protected getGenresNames(genres: string[]): string {
+        return genres.length ?
+            genres
+                  .map((genre) => this.#titleCasePipe.transform(genre))
+                  .join(", ") :
+            "Unknown";
     }
 }

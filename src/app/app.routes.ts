@@ -17,53 +17,47 @@ export const routes: Routes = [
     {
         path: "auth-callback",
         loadComponent: () =>
-            import(
-                "./components/routes/auth-callback/auth-callback.component"
-            ).then((component) => component.AuthCallbackComponent),
+            import("@routes/auth-callback/auth-callback.component").then(
+                (component) => component.AuthCallbackComponent,
+            ),
     },
     {
         path: "home",
         loadComponent: () =>
-            import("./components/routes/home/home.component").then(
+            import("@routes/home/home.component").then(
                 (component) => component.HomeComponent,
             ),
     },
     {
         path: "top-tracks",
-        loadChildren: () =>
-            import("./components/routes/top-tracks/top-tracks.routes"),
+        loadChildren: () => import("@routes/top-tracks/top-tracks.routes"),
         canActivate: [authGuard],
     },
     {
         path: "top-artists",
-        loadChildren: () =>
-            import("./components/routes/top-artists/top-artists.routes"),
+        loadChildren: () => import("@routes/top-artists/top-artists.routes"),
         canActivate: [authGuard],
     },
     {
         path: "top-genres",
-        loadChildren: () =>
-            import("./components/routes/top-genres/top-genres.routes"),
+        loadChildren: () => import("@routes/top-genres/top-genres.routes"),
         canActivate: [authGuard],
     },
     {
         path: "recently-played",
         loadChildren: () =>
-            import(
-                "./components/routes/recently-played/recently-played.routes"
-            ),
+            import("@routes/recently-played/recently-played.routes"),
         canActivate: [authGuard],
     },
     {
         path: "playlists",
-        loadChildren: () =>
-            import("./components/routes/playlists/playlists.routes"),
+        loadChildren: () => import("@routes/playlists/playlists.routes"),
         canActivate: [authGuard],
     },
     {
         path: "settings",
         loadComponent: () =>
-            import("./components/routes/settings/settings.component").then(
+            import("@routes/settings/settings.component").then(
                 (component) => component.SettingsComponent,
             ),
         canActivate: [authGuard],

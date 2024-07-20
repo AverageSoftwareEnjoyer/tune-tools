@@ -154,14 +154,8 @@ export enum TopItemsColumnsKeys {
     Artists = "artists",
     Link = "link",
     Expand = "expand",
+    Genres = "genres",
 }
-
-export const TOP_TRACKS_COLUMNS_MAPPINGS_FILTERED = {
-    [TopItemsColumnsKeys.Index]: "No.",
-    [TopItemsColumnsKeys.Image]: "Album",
-    [TopItemsColumnsKeys.Name]: "Info",
-    [TopItemsColumnsKeys.Link]: "Link",
-} as const;
 
 export const TOP_TRACKS_COLUMNS_MAPPINGS = {
     [TopItemsColumnsKeys.Index]: "No.",
@@ -171,9 +165,43 @@ export const TOP_TRACKS_COLUMNS_MAPPINGS = {
     [TopItemsColumnsKeys.Link]: "Link",
 } as const;
 
+export const TOP_TRACKS_COLUMNS_MAPPINGS_FILTERED = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Album",
+    [TopItemsColumnsKeys.Name]: "Info",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
 export type TopTracksColumnsMappingsType = typeof TOP_TRACKS_COLUMNS_MAPPINGS;
 
 export type TopTracksColumnsMappingsFilteredType =
     typeof TOP_TRACKS_COLUMNS_MAPPINGS_FILTERED;
+
+export const TOP_ARTISTS_COLUMNS_MAPPINGS = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Image",
+    [TopItemsColumnsKeys.Name]: "Name",
+    [TopItemsColumnsKeys.Genres]: "Genres",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
+export const TOP_ARTISTS_COLUMNS_MAPPINGS_FILTERED = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Image]: "Image",
+    [TopItemsColumnsKeys.Name]: "Info",
+    [TopItemsColumnsKeys.Link]: "Link",
+} as const;
+
+export type TopArtistsColumnsMappingsType = typeof TOP_ARTISTS_COLUMNS_MAPPINGS;
+
+export type TopArtistsColumnsMappingsFilteredType =
+    typeof TOP_ARTISTS_COLUMNS_MAPPINGS_FILTERED;
+
+export interface TopItemsColumnsMappings {
+    artists:
+        | TopArtistsColumnsMappingsType
+        | TopArtistsColumnsMappingsFilteredType;
+    tracks: TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType;
+}
 
 // TODO: Genres

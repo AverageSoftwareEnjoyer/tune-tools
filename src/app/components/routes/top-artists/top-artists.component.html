@@ -1,1 +1,7 @@
-<p>top-artists works!</p>
+<app-base-tabs-container
+    [items]="topItemsStateService.topArtists()"
+    itemsType="artists"
+    [columnsMappings]="columnsMappings"
+    [currentTimeRange]="topItemsStateService.topArtistsTimeRange()"
+    [isBelowMediumWidth]="isBelowMediumWidth"
+/>

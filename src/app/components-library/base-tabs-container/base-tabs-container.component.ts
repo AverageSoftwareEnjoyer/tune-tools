@@ -14,10 +14,9 @@ import { BaseTableComponent } from "@lib/base-table-container/base-table/base-ta
 import {
     TIME_RANGE_MAPPINGS,
     TimeRangeOptions,
+    TopItemsColumnsMappings,
     TopItemsMappings,
     TopItemsType,
-    TopTracksColumnsMappingsFilteredType,
-    TopTracksColumnsMappingsType,
 } from "@model/top-items.model";
 
 @Component({
@@ -38,9 +37,7 @@ import {
 export class BaseTabsContainerComponent<T extends TopItemsType> {
     @Input() items!: TopItemsMappings[T][];
     @Input() itemsType!: T;
-    @Input() columnsMappings!: Signal<
-        TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType
-    >;
+    @Input() columnsMappings!: Signal<TopItemsColumnsMappings[T]>;
 
     @Input() currentTimeRange!: TimeRangeOptions;
     @Input() isBelowMediumWidth!: Signal<boolean>;
