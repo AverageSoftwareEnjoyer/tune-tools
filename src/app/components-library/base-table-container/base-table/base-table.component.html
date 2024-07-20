@@ -67,29 +67,96 @@
                     }
                 </ng-container>
             }
-        }
-
-        <ng-container matColumnDef="expand">
-            <th mat-header-cell *matHeaderCellDef aria-label="row actions">
-                &nbsp;
-            </th>
-            <td mat-cell *matCellDef="let item">
-                <button
-                    mat-icon-button
-                    aria-label="expand row"
-                    (click)="
-                        expandedItem = expandedItem === item ? null : item;
-                        $event.stopPropagation()
-                    "
-                >
-                    @if (expandedItem === item) {
-                        <mat-icon>keyboard_arrow_up</mat-icon>
-                    } @else {
-                        <mat-icon>keyboard_arrow_down</mat-icon>
+            <ng-container matColumnDef="expand">
+                <th mat-header-cell *matHeaderCellDef aria-label="row actions">
+                    &nbsp;
+                </th>
+                <td mat-cell *matCellDef="let item">
+                    <button
+                        mat-icon-button
+                        aria-label="expand row"
+                        (click)="
+                            expandedItem = expandedItem === item ? null : item;
+                            $event.stopPropagation()
+                        "
+                    >
+                        @if (expandedItem === item) {
+                            <mat-icon>keyboard_arrow_up</mat-icon>
+                        } @else {
+                            <mat-icon>keyboard_arrow_down</mat-icon>
+                        }
+                    </button>
+                </td>
+            </ng-container>
+        } @else if (itemsType === "artists") {
+            @for (
+                column of columnsMappings() | keyvalue: keepOrder;
+                track column
+            ) {
+                <ng-container [matColumnDef]="column.key">
+                    <th mat-header-cell *matHeaderCellDef>
+                        {{ column.value }}
+                    </th>
+                    @if (column.key === TopItemsColumnsKeys.Index) {
+                        <td mat-cell *matCellDef="let dataIndex = dataIndex">
+                            {{ dataIndex + 1 }}.
+                        </td>
+                    } @else if (column.key === TopItemsColumnsKeys.Name) {
+                        @if (isBelowMediumWidth()) {
+                            <td mat-cell *matCellDef="let item">
+                                <div class="item-info-container">
+                                    <span
+                                        class="item-info-container__line item-info-container__line--bold"
+                                        >{{ item.name }}</span
+                                    >
+                                    <span class="item-info-container__line"
+                                        >Genres:
+                                        {{ getGenresNames(item.genres) }}</span
+                                    >
+                                </div>
+                            </td>
+                        } @else {
+                            <td mat-cell *matCellDef="let item">
+                                {{ item.name }}
+                            </td>
+                        }
+                    } @else if (column.key === TopItemsColumnsKeys.Image) {
+                        <td mat-cell *matCellDef="let item">
+                            <a
+                                [href]="item.external_urls.spotify"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                (click)="$event.stopPropagation()"
+                                aria-label="Listen on Spotify"
+                            >
+                                <app-item-image
+                                    [image]="item.images.at(-1)"
+                                    alt="Artist picture"
+                                    [imageSize]="ImageSizeOptions.Small"
+                                />
+                            </a>
+                        </td>
+                    } @else if (column.key === TopItemsColumnsKeys.Genres) {
+                        <td mat-cell *matCellDef="let item">
+                            Genres: {{ getGenresNames(item.genres) }}
+                        </td>
+                    } @else if (column.key === TopItemsColumnsKeys.Link) {
+                        <td mat-cell *matCellDef="let item">
+                            <a
+                                mat-icon-button
+                                [href]="item.external_urls.spotify"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                (click)="$event.stopPropagation()"
+                                aria-label="Listen on Spotify"
+                            >
+                                <mat-icon>library_music</mat-icon>
+                            </a>
+                        </td>
                     }
-                </button>
-            </td>
-        </ng-container>
+                </ng-container>
+            }
+        }
 
         <ng-container matColumnDef="expandedDetail">
             <td
@@ -124,10 +191,12 @@
             (click)="expandedItem = expandedItem === item ? null : item"
             (keydown)="$event.stopPropagation()"
         ></tr>
-        <tr
-            mat-row
-            *matRowDef="let row; columns: ['expandedDetail']"
-            class="details-row"
-        ></tr>
+        @if (itemsType === "tracks") {
+            <tr
+                mat-row
+                *matRowDef="let row; columns: ['expandedDetail']"
+                class="details-row"
+            ></tr>
+        }
     </table>
 </div>

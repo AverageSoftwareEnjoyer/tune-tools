@@ -5,6 +5,8 @@ import {
     Album,
     SimplifiedArtist,
     TimeRangeOptions,
+    TopArtist,
+    TopArtistLimited,
     TopItemsState,
     TopTrack,
     TopTrackLimited,
@@ -28,6 +30,15 @@ export class TopItemsStateService {
         currentTimeRange: TimeRangeOptions.ShortTerm,
     });
 
+    readonly #topArtistsState = signal<TopItemsState<TopArtistLimited>>({
+        itemsByTimeRange: {
+            [TimeRangeOptions.ShortTerm]: [],
+            [TimeRangeOptions.MediumTerm]: [],
+            [TimeRangeOptions.LongTerm]: [],
+        },
+        currentTimeRange: TimeRangeOptions.ShortTerm,
+    });
+
     // #region selectors
     topTracks = computed(
         () =>
@@ -38,6 +49,17 @@ export class TopItemsStateService {
 
     topTracksTimeRange = computed(
         () => this.#topTracksState().currentTimeRange,
+    );
+
+    topArtists = computed(
+        () =>
+            this.#topArtistsState().itemsByTimeRange[
+                this.#topArtistsState().currentTimeRange
+            ],
+    );
+
+    topArtistsTimeRange = computed(
+        () => this.#topArtistsState().currentTimeRange,
     );
     // #endregion
 
@@ -71,6 +93,33 @@ export class TopItemsStateService {
                 );
         }),
     );
+
+    readonly #topArtistsTimeRange$ = new Subject<TimeRangeOptions>();
+
+    readonly #topArtists$ = this.#topArtistsTimeRange$.pipe(
+        switchMap((timeRange) => {
+            const topArtistsByTimeRange =
+                this.#topArtistsState().itemsByTimeRange[timeRange];
+            if (topArtistsByTimeRange.length) {
+                return of(topArtistsByTimeRange);
+            }
+            return this.#topItemsHTTPService
+                .getTopItems$<TopArtist, "artists">("artists", {
+                    time_range: timeRange,
+                    limit: 50,
+                    offset: 0,
+                })
+                .pipe(
+                    map(({ items }) =>
+                        items.map((item) =>
+                            this.#topItemsService.convertTopArtistToLimited(
+                                item,
+                            ),
+                        ),
+                    ),
+                );
+        }),
+    );
     // #endregion
 
     constructor() {
@@ -97,16 +146,49 @@ export class TopItemsStateService {
                 }),
             ),
         );
+
+        this.#topArtistsTimeRange$
+            .pipe(takeUntilDestroyed())
+            .subscribe((timeRange) => {
+                this.#topArtistsState.update(
+                    (state): TopItemsState<TopArtistLimited> => ({
+                        ...state,
+                        currentTimeRange: timeRange,
+                    }),
+                );
+            });
+
+        this.#topArtists$.pipe(takeUntilDestroyed()).subscribe((artists) =>
+            this.#topArtistsState.update(
+                (state): TopItemsState<TopArtistLimited> => ({
+                    ...state,
+                    itemsByTimeRange: {
+                        ...state.itemsByTimeRange,
+                        [state.currentTimeRange]: artists,
+                    },
+                }),
+            ),
+        );
         // #endregion
     }
 
     /**
-     * Publishes a new time range to the `topTracksTimeRange$` subject, updating the current time
+     * Publishes a new time range to the `#topTracksTimeRange$` subject, updating the current time
      * range for top tracks.
      *
      * @param timeRange - The new time range to be published.
      */
     publishTopTracksTimeRange(timeRange: TimeRangeOptions): void {
         this.#topTracksTimeRange$.next(timeRange);
+    }
+
+    /**
+     * Publishes a new time range to the `#topArtistsTimeRange$` subject, updating the current time
+     * range for top artists.
+     *
+     * @param timeRange - The new time range to be published.
+     */
+    publishTopArtistsTimeRange(timeRange: TimeRangeOptions): void {
+        this.#topArtistsTimeRange$.next(timeRange);
     }
 }
