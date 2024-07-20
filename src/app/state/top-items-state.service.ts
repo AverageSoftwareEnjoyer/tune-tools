@@ -9,9 +9,8 @@ import {
     TopTrack,
     TopTrackLimited,
 } from "@model/top-items.model";
+import { TopItemsService } from "@routes/top-items.service";
 import { map, of, Subject, switchMap } from "rxjs";
-
-import { TopItemsService } from "../components/routes/top-items.service";
 
 @Injectable({
     providedIn: "root",
