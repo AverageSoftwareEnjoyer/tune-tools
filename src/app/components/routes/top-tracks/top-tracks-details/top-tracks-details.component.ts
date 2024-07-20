@@ -9,6 +9,7 @@ import {
 import { MatCardModule } from "@angular/material/card";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatIconModule } from "@angular/material/icon";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { ItemImageComponent } from "@lib/item-image/item-image.component";
 import { ImageSizeOptions } from "@model/image.model";
 import { TopTrackLimited } from "@model/top-items.model";
@@ -21,6 +22,7 @@ import { TopTrackLimited } from "@model/top-items.model";
         MatCardModule,
         MatChipsModule,
         MatIconModule,
+        MatTooltipModule,
         TitleCasePipe,
     ],
     templateUrl: "./top-tracks-details.component.html",

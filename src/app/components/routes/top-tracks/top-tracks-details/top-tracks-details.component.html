@@ -18,7 +18,7 @@
         }
         <section class="details-content__section">
             <mat-chip-set class="mat-mdc-chip-set-stacked">
-                <mat-chip class="album-detail">
+                <mat-chip class="album-detail" [matTooltip]="track.album.name">
                     <mat-icon matChipAvatar>title</mat-icon>
                     {{ track.album.name }}
                 </mat-chip>
