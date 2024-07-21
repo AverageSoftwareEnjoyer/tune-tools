@@ -1,6 +1,6 @@
 <div class="table-container">
-    <table mat-table [dataSource]="items" multiTemplateDataRows class="table">
-        @if (itemsType === "tracks") {
+    <table mat-table [dataSource]="items()" multiTemplateDataRows class="table">
+        @if (itemsType() === "tracks") {
             @for (
                 column of columnsMappings() | keyvalue: keepOrder;
                 track column
@@ -88,7 +88,7 @@
                     </button>
                 </td>
             </ng-container>
-        } @else if (itemsType === "artists") {
+        } @else if (itemsType() === "artists") {
             @for (
                 column of columnsMappings() | keyvalue: keepOrder;
                 track column
@@ -172,10 +172,10 @@
                     "
                 >
                     @if (expandedItem === item) {
-                        @if (itemsType === "tracks") {
+                        @if (itemsType() === "tracks") {
                             <app-top-tracks-details
                                 [track]="item"
-                                [isBelowMediumWidth]="isBelowMediumWidth"
+                                [isBelowMediumWidth]="isBelowMediumWidth()"
                             />
                         }
                     }
@@ -191,7 +191,7 @@
             (click)="expandedItem = expandedItem === item ? null : item"
             (keydown)="$event.stopPropagation()"
         ></tr>
-        @if (itemsType === "tracks") {
+        @if (itemsType() === "tracks") {
             <tr
                 mat-row
                 *matRowDef="let row; columns: ['expandedDetail']"

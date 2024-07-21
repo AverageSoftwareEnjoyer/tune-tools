@@ -1,7 +1,7 @@
 <app-base-tabs-container
     [items]="topItemsStateService.topArtists()"
     itemsType="artists"
-    [columnsMappings]="columnsMappings"
+    [columnsMappings]="columnsMappings()"
     [currentTimeRange]="topItemsStateService.topArtistsTimeRange()"
-    [isBelowMediumWidth]="isBelowMediumWidth"
+    [isBelowMediumWidth]="isBelowMediumWidth()"
 />

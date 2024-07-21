@@ -1,4 +1,3 @@
-import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
@@ -25,10 +24,13 @@ describe("BaseTableComponent", () => {
 
             fixture = TestBed.createComponent(BaseTableComponent<"tracks">);
             component = fixture.componentInstance;
-            component.items = [mockTopTrackLimited];
-            component.itemsType = "tracks";
-            component.columnsMappings = signal(TOP_TRACKS_COLUMNS_MAPPINGS);
-            component.isBelowMediumWidth = signal(false);
+            fixture.componentRef.setInput("items", [mockTopTrackLimited]);
+            fixture.componentRef.setInput("itemsType", "tracks");
+            fixture.componentRef.setInput(
+                "columnsMappings",
+                TOP_TRACKS_COLUMNS_MAPPINGS,
+            );
+            fixture.componentRef.setInput("isBelowMediumWidth", false);
             fixture.detectChanges();
         });
 
@@ -48,10 +50,13 @@ describe("BaseTableComponent", () => {
 
             fixture = TestBed.createComponent(BaseTableComponent<"artists">);
             component = fixture.componentInstance;
-            component.items = [mockTopArtistLimited];
-            component.itemsType = "artists";
-            component.columnsMappings = signal(TOP_ARTISTS_COLUMNS_MAPPINGS);
-            component.isBelowMediumWidth = signal(false);
+            fixture.componentRef.setInput("items", [mockTopArtistLimited]);
+            fixture.componentRef.setInput("itemsType", "artists");
+            fixture.componentRef.setInput(
+                "columnsMappings",
+                TOP_ARTISTS_COLUMNS_MAPPINGS,
+            );
+            fixture.componentRef.setInput("isBelowMediumWidth", false);
         });
 
         it("should create", () => {
@@ -61,7 +66,9 @@ describe("BaseTableComponent", () => {
         });
 
         it("should correctly handle the lack of genres", () => {
-            component.items = [{ ...mockTopArtistLimited, genres: [] }];
+            fixture.componentRef.setInput("items", [
+                { ...mockTopArtistLimited, genres: [] },
+            ]);
             fixture.detectChanges();
 
             const { debugElement } = fixture;

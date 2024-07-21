@@ -38,6 +38,7 @@ describe("TopTracksComponent", () => {
         mediaQueriesStateService.isBelowMediumWidth = signal(true);
         fixture = TestBed.createComponent(TopTracksComponent);
         component = fixture.componentInstance;
+        fixture.componentRef.setInput("timeRange", TimeRangeOptions.ShortTerm);
     });
 
     it("should create", () => {

@@ -1,4 +1,3 @@
-import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { ActivatedRoute } from "@angular/router";
@@ -33,11 +32,17 @@ describe("BaseTabsContainerComponent", () => {
                 BaseTabsContainerComponent<"tracks">,
             );
             component = fixture.componentInstance;
-            component.items = [mockTopTrackLimited];
-            component.itemsType = "tracks";
-            component.columnsMappings = signal(TOP_TRACKS_COLUMNS_MAPPINGS);
-            component.currentTimeRange = TimeRangeOptions.ShortTerm;
-            component.isBelowMediumWidth = signal(false);
+            fixture.componentRef.setInput("items", [mockTopTrackLimited]);
+            fixture.componentRef.setInput("itemsType", "tracks");
+            fixture.componentRef.setInput(
+                "columnsMappings",
+                TOP_TRACKS_COLUMNS_MAPPINGS,
+            );
+            fixture.componentRef.setInput(
+                "currentTimeRange",
+                TimeRangeOptions.ShortTerm,
+            );
+            fixture.componentRef.setInput("isBelowMediumWidth", false);
             fixture.detectChanges();
         });
 
@@ -49,12 +54,12 @@ describe("BaseTabsContainerComponent", () => {
             const mockItems: TopTrackLimited[] = [mockTopTrackLimited];
             const mockTimeRange = TimeRangeOptions.ShortTerm;
 
-            component.items = mockItems;
-            component.currentTimeRange = mockTimeRange;
+            fixture.componentRef.setInput("items", mockItems);
+            fixture.componentRef.setInput("currentTimeRange", mockTimeRange);
             fixture.detectChanges();
 
-            expect(component.items).toBe(mockItems);
-            expect(component.currentTimeRange).toBe(mockTimeRange);
+            expect(component.items()).toBe(mockItems);
+            expect(component.currentTimeRange()).toBe(mockTimeRange);
         });
     });
 });

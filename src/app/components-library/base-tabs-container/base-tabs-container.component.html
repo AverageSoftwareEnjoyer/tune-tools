@@ -7,7 +7,7 @@
             <a
                 mat-tab-link
                 [routerLink]="'../' + mapping.key"
-                [active]="currentTimeRange === mapping.key"
+                [active]="currentTimeRange() === mapping.key"
             >
                 {{ mapping.value }}
             </a>
@@ -15,10 +15,10 @@
     </nav>
     <mat-tab-nav-panel #tabPanel>
         <app-base-table
-            [items]="items"
-            [itemsType]="itemsType"
-            [columnsMappings]="columnsMappings"
-            [isBelowMediumWidth]="isBelowMediumWidth"
+            [items]="items()"
+            [itemsType]="itemsType()"
+            [columnsMappings]="columnsMappings()"
+            [isBelowMediumWidth]="isBelowMediumWidth()"
         />
     </mat-tab-nav-panel>
 </mat-card>

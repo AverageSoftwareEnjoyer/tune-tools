@@ -1,7 +1,7 @@
 <app-base-tabs-container
     [items]="topItemsStateService.topTracks()"
     itemsType="tracks"
-    [columnsMappings]="columnsMappings"
+    [columnsMappings]="columnsMappings()"
     [currentTimeRange]="topItemsStateService.topTracksTimeRange()"
-    [isBelowMediumWidth]="isBelowMediumWidth"
+    [isBelowMediumWidth]="isBelowMediumWidth()"
 />
