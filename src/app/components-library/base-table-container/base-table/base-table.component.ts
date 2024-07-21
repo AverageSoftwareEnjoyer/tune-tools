@@ -11,9 +11,8 @@ import {
     Component,
     computed,
     inject,
-    Input,
+    input,
     OnChanges,
-    Signal,
     ViewEncapsulation,
 } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
@@ -61,11 +60,11 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
     encapsulation: ViewEncapsulation.None,
 })
 export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
-    @Input() items!: TopItemsMappings[T][];
-    @Input() itemsType!: T;
-    @Input() columnsMappings!: Signal<TopItemsColumnsMappings[T]>;
+    items = input.required<TopItemsMappings[T][]>();
+    itemsType = input.required<T>();
+    columnsMappings = input.required<TopItemsColumnsMappings[T]>();
 
-    @Input() isBelowMediumWidth!: Signal<boolean>;
+    isBelowMediumWidth = input.required<boolean>();
 
     protected readonly keepOrder = keepOrder;
     protected readonly TopItemsColumnsKeys = TopItemsColumnsKeys;
@@ -79,7 +78,7 @@ export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
 
     protected columnsWithExpand = computed(() => [
         ...this.columns(),
-        ...(this.itemsType === "tracks" ? [TopItemsColumnsKeys.Expand] : []),
+        ...(this.itemsType() === "tracks" ? [TopItemsColumnsKeys.Expand] : []),
     ]);
 
     readonly #titleCasePipe = inject(TitleCasePipe);

@@ -2,8 +2,7 @@ import { KeyValuePipe } from "@angular/common";
 import {
     ChangeDetectionStrategy,
     Component,
-    Input,
-    Signal,
+    input,
     ViewEncapsulation,
 } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
@@ -35,12 +34,12 @@ import {
     encapsulation: ViewEncapsulation.None,
 })
 export class BaseTabsContainerComponent<T extends TopItemsType> {
-    @Input() items!: TopItemsMappings[T][];
-    @Input() itemsType!: T;
-    @Input() columnsMappings!: Signal<TopItemsColumnsMappings[T]>;
+    items = input.required<TopItemsMappings[T][]>();
+    itemsType = input.required<T>();
+    columnsMappings = input.required<TopItemsColumnsMappings[T]>();
 
-    @Input() currentTimeRange!: TimeRangeOptions;
-    @Input() isBelowMediumWidth!: Signal<boolean>;
+    currentTimeRange = input.required<TimeRangeOptions>();
+    isBelowMediumWidth = input.required<boolean>();
 
     protected readonly TIME_RANGE_MAPPINGS = TIME_RANGE_MAPPINGS;
     protected readonly keepOrder = keepOrder;

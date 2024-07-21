@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from "@angular/common";
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { IMAGE_SIZE_MAPPINGS, ImageSizeOptions } from "@model/image.model";
 import { Image } from "@model/user.model";
 
@@ -12,9 +12,9 @@ import { Image } from "@model/user.model";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemImageComponent {
-    @Input() image!: Image;
-    @Input() alt!: string;
-    @Input() imageSize: ImageSizeOptions | null = null;
+    image = input.required<Image>();
+    alt = input.required<string>();
+    imageSize = input<ImageSizeOptions | null>(null);
 
     protected readonly IMAGE_SIZE_MAPPINGS = IMAGE_SIZE_MAPPINGS;
 }

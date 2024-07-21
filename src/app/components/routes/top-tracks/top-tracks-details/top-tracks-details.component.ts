@@ -2,8 +2,7 @@ import { TitleCasePipe } from "@angular/common";
 import {
     ChangeDetectionStrategy,
     Component,
-    Input,
-    Signal,
+    input,
     ViewEncapsulation,
 } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
@@ -31,8 +30,9 @@ import { TopTrackLimited } from "@model/top-items.model";
     encapsulation: ViewEncapsulation.None,
 })
 export class TopTracksDetailsComponent {
-    @Input() track!: TopTrackLimited;
-    @Input() isBelowMediumWidth!: Signal<boolean>;
+    track = input.required<TopTrackLimited>();
+
+    isBelowMediumWidth = input.required<boolean>();
 
     protected readonly ImageSizeOptions = ImageSizeOptions;
 }

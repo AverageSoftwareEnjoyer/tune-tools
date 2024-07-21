@@ -3,13 +3,13 @@
         @if (!isBelowMediumWidth()) {
             <section class="details-content__section">
                 <a
-                    [href]="track.album.external_urls.spotify"
+                    [href]="track().album.external_urls.spotify"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="Listen on Spotify"
                 >
                     <app-item-image
-                        [image]="track.album.images.at(-2)!"
+                        [image]="track().album.images.at(-2)!"
                         alt="album-cover"
                         [imageSize]="ImageSizeOptions.Medium"
                     />
@@ -18,26 +18,29 @@
         }
         <section class="details-content__section">
             <mat-chip-set class="mat-mdc-chip-set-stacked">
-                <mat-chip class="album-detail" [matTooltip]="track.album.name">
+                <mat-chip
+                    class="album-detail"
+                    [matTooltip]="track().album.name"
+                >
                     <mat-icon matChipAvatar>title</mat-icon>
-                    {{ track.album.name }}
+                    {{ track().album.name }}
                 </mat-chip>
                 <mat-chip class="album-detail">
                     <mat-icon matChipAvatar>album</mat-icon>
                     Album type:
                     {{
-                        track.album.album_type === "EP"
-                            ? track.album.album_type
-                            : (track.album.album_type | titlecase)
+                        track().album.album_type === "EP"
+                            ? track().album.album_type
+                            : (track().album.album_type | titlecase)
                     }}
                 </mat-chip>
                 <mat-chip class="album-detail">
                     <mat-icon matChipAvatar>format_list_numbered</mat-icon>
-                    Number of tracks: {{ track.album.total_tracks }}
+                    Number of tracks: {{ track().album.total_tracks }}
                 </mat-chip>
                 <mat-chip class="album-detail">
                     <mat-icon matChipAvatar>event</mat-icon>
-                    Release date: {{ track.album.release_date }}
+                    Release date: {{ track().album.release_date }}
                 </mat-chip>
             </mat-chip-set>
         </section>

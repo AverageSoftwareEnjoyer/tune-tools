@@ -3,7 +3,7 @@ import {
     Component,
     computed,
     inject,
-    Input,
+    input,
     OnChanges,
     Signal,
 } from "@angular/core";
@@ -25,8 +25,7 @@ import { TopItemsStateService } from "@state/top-items-state.service";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopTracksComponent implements OnChanges {
-    @Input() protected readonly timeRange: TimeRangeOptions =
-        TimeRangeOptions.ShortTerm;
+    timeRange = input.required<TimeRangeOptions>();
 
     readonly #mediaQueriesStateService = inject(MediaQueriesStateService);
 
@@ -44,6 +43,6 @@ export class TopTracksComponent implements OnChanges {
     }
 
     ngOnChanges(): void {
-        this.topItemsStateService.publishTopTracksTimeRange(this.timeRange);
+        this.topItemsStateService.publishTopTracksTimeRange(this.timeRange());
     }
 }
