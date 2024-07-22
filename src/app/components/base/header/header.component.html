@@ -34,42 +34,44 @@
                         <span>Top artists</span>
                     </a>
                 </li>
-                <li
-                    class="header__nav-link"
-                    [routerLinkActive]="'header__nav-link--active'"
-                    matRipple
-                >
-                    <a routerLink="/top-genres">
-                        <span>Top genres</span>
-                    </a>
-                </li>
-                <li
-                    class="header__nav-link"
-                    [routerLinkActive]="'header__nav-link--active'"
-                    matRipple
-                >
-                    <a routerLink="/recently-played">
-                        <span>Recently played</span>
-                    </a>
-                </li>
-                <li
-                    class="header__nav-link"
-                    [routerLinkActive]="'header__nav-link--active'"
-                    matRipple
-                >
-                    <a routerLink="/playlists">
-                        <span>Playlists</span>
-                    </a>
-                </li>
-                <li
-                    class="header__nav-link"
-                    [routerLinkActive]="'header__nav-link--active'"
-                    matRipple
-                >
-                    <a routerLink="/settings">
-                        <span>Settings</span>
-                    </a>
-                </li>
+                @if (false) {
+                    <li
+                        class="header__nav-link"
+                        [routerLinkActive]="'header__nav-link--active'"
+                        matRipple
+                    >
+                        <a routerLink="/top-genres">
+                            <span>Top genres</span>
+                        </a>
+                    </li>
+                    <li
+                        class="header__nav-link"
+                        [routerLinkActive]="'header__nav-link--active'"
+                        matRipple
+                    >
+                        <a routerLink="/recently-played">
+                            <span>Recently played</span>
+                        </a>
+                    </li>
+                    <li
+                        class="header__nav-link"
+                        [routerLinkActive]="'header__nav-link--active'"
+                        matRipple
+                    >
+                        <a routerLink="/playlists">
+                            <span>Playlists</span>
+                        </a>
+                    </li>
+                    <li
+                        class="header__nav-link"
+                        [routerLinkActive]="'header__nav-link--active'"
+                        matRipple
+                    >
+                        <a routerLink="/settings">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                }
             </ul>
         </nav>
     }
