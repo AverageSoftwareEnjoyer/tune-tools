@@ -50,4 +50,47 @@ describe("TopItemsService", () => {
         const result = topItemsService.convertTopArtistToLimited(mockTopArtist);
         expect(result).toEqual(mockTopArtistLimited);
     });
+
+    test("should return an empty array when no artists are provided", () => {
+        const result = topItemsService.convertTopArtistsToTopGenres([]);
+
+        expect(result).toEqual([]);
+    });
+
+    test("should return an empty array when artists have no genres", () => {
+        const result = topItemsService.convertTopArtistsToTopGenres([
+            { ...mockTopArtist, genres: [] },
+            { ...mockTopArtist, genres: [] },
+        ]);
+
+        expect(result).toEqual([]);
+    });
+
+    test("should return correct scores for genres when genres are shared among artists", () => {
+        const artistsWithSharedGenres = [
+            mockTopArtist,
+            { ...mockTopArtist, genres: ["rock", "pop"] },
+            { ...mockTopArtist, genres: ["pop"] },
+        ];
+
+        const result = topItemsService.convertTopArtistsToTopGenres(
+            artistsWithSharedGenres,
+        );
+
+        expect(result).toEqual([
+            { name: "rock", score: 2 },
+            { name: "pop", score: 2 },
+        ]);
+    });
+
+    test("should filter out genres with a score of 1", () => {
+        const result = topItemsService.convertTopArtistsToTopGenres([
+            mockTopArtist,
+            { ...mockTopArtist, genres: ["rock", "pop"] },
+        ]);
+        const expectedScores = result.map((genre) => genre.score);
+        expectedScores.forEach((score) => {
+            expect(score).toBeGreaterThan(1);
+        });
+    });
 });
