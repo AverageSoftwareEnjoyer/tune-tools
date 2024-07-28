@@ -1,1 +1,7 @@
-<p>top-genres works!</p>
+<app-base-tabs-container
+    [items]="topItemsStateService.topGenres()"
+    itemsType="genres"
+    [columnsMappings]="columnsMappings()"
+    [currentTimeRange]="topItemsStateService.topGenresTimeRange()"
+    [isBelowMediumWidth]="false"
+/>

@@ -177,13 +177,23 @@ html {
         @include mat.tabs-color($light-theme, $color-variant: primary);
     }
 
-    .main-content__nav-link--active {
+    app-main-content.main-content__nav-link--active {
         @media (prefers-color-scheme: dark) {
             background-color: mat.get-theme-color($dark-theme, neutral, 40);
         }
 
         @media (prefers-color-scheme: light) {
             background-color: mat.get-theme-color($light-theme, neutral, 80);
+        }
+    }
+
+    app-base-table .score-bar {
+        @media (prefers-color-scheme: dark) {
+            background-color: mat.get-theme-color($dark-theme, tertiary, 90);
+        }
+
+        @media (prefers-color-scheme: light) {
+            background-color: mat.get-theme-color($light-theme, tertiary, 25);
         }
     }
 

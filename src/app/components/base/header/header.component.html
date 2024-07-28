@@ -34,16 +34,16 @@
                         <span>Top artists</span>
                     </a>
                 </li>
+                <li
+                    class="header__nav-link"
+                    [routerLinkActive]="'header__nav-link--active'"
+                    matRipple
+                >
+                    <a routerLink="/top-genres">
+                        <span>Top genres</span>
+                    </a>
+                </li>
                 @if (false) {
-                    <li
-                        class="header__nav-link"
-                        [routerLinkActive]="'header__nav-link--active'"
-                        matRipple
-                    >
-                        <a routerLink="/top-genres">
-                            <span>Top genres</span>
-                        </a>
-                    </li>
                     <li
                         class="header__nav-link"
                         [routerLinkActive]="'header__nav-link--active'"

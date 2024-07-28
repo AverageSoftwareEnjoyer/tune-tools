@@ -3,10 +3,12 @@ import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import {
     mockTopArtistLimited,
+    mockTopGenreLimited,
     mockTopTrackLimited,
 } from "@mocks/top-items.model.mock";
 import {
     TOP_ARTISTS_COLUMNS_MAPPINGS,
+    TOP_GENRES_COLUMNS_MAPPINGS_FILTERED,
     TOP_TRACKS_COLUMNS_MAPPINGS,
 } from "@model/top-items.model";
 
@@ -77,6 +79,57 @@ describe("BaseTableComponent", () => {
             expect((genreCell.nativeElement as HTMLElement).textContent).toBe(
                 " Genres: Unknown ",
             );
+        });
+    });
+
+    describe("genres", () => {
+        let component: BaseTableComponent<"genres">;
+        let fixture: ComponentFixture<BaseTableComponent<"genres">>;
+
+        beforeEach(() => {
+            TestBed.configureTestingModule({
+                imports: [BaseTableComponent, NoopAnimationsModule],
+            });
+
+            fixture = TestBed.createComponent(BaseTableComponent<"genres">);
+            component = fixture.componentInstance;
+            fixture.componentRef.setInput("items", [
+                mockTopGenreLimited,
+                mockTopGenreLimited,
+            ]);
+            fixture.componentRef.setInput("itemsType", "genres");
+            fixture.componentRef.setInput(
+                "columnsMappings",
+                TOP_GENRES_COLUMNS_MAPPINGS_FILTERED,
+            );
+            fixture.componentRef.setInput("isBelowMediumWidth", false);
+        });
+
+        it("should create", () => {
+            fixture.detectChanges();
+
+            expect(component).toBeTruthy();
+        });
+
+        it("should correctly normalize the score", () => {
+            fixture.detectChanges();
+
+            const { debugElement } = fixture;
+            const scoreBarCell = debugElement.query(By.css(".score-bar"));
+
+            expect(
+                (scoreBarCell.nativeElement as HTMLElement).style.width,
+            ).toBe("50%");
+        });
+
+        it("should correctly handle an empty array of items", () => {
+            fixture.componentRef.setInput("items", []);
+            fixture.detectChanges();
+
+            const { debugElement } = fixture;
+            const scoreBarCell = debugElement.query(By.css(".score-bar"));
+
+            expect(scoreBarCell).toBeNull();
         });
     });
 });

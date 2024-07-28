@@ -39,6 +39,21 @@ app-base-table {
                 }
             }
 
+            .mat-column-index {
+                width: 5%;
+            }
+
+            .mat-column-genre {
+                width: 40%;
+            }
+
+            .score-bar {
+                height: 24px;
+                border-radius: 0 0.25rem 0.25rem 0;
+                position: relative;
+                overflow: hidden;
+            }
+
             .item-row {
                 border-bottom-width: 0;
             }

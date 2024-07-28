@@ -6,6 +6,7 @@ import {
     TopArtist,
     TopArtistLimited,
     TopArtists,
+    TopGenreLimited,
     TopTrack,
     TopTrackLimited,
     TopTracks,
@@ -110,6 +111,11 @@ export const mockTopTrackLimited: TopTrackLimited = {
     external_urls: { spotify: "https://spotify.com/track/123" },
     name: "Track Name",
     artists: [mockSimplifiedArtistLimited],
+};
+
+export const mockTopGenreLimited: TopGenreLimited = {
+    name: "rock",
+    score: 2,
 };
 
 export const mockTopTracks: TopTracks = {

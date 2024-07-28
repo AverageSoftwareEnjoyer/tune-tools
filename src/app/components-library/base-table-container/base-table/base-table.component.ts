@@ -5,7 +5,7 @@ import {
     transition,
     trigger,
 } from "@angular/animations";
-import { KeyValuePipe, TitleCasePipe } from "@angular/common";
+import { KeyValuePipe, NgStyle, TitleCasePipe } from "@angular/common";
 import {
     ChangeDetectionStrategy,
     Component,
@@ -13,6 +13,8 @@ import {
     inject,
     input,
     OnChanges,
+    OnInit,
+    signal,
     ViewEncapsulation,
 } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
@@ -27,7 +29,7 @@ import {
     TopItemsColumnsKeys,
     TopItemsColumnsMappings,
     TopItemsMappings,
-    TopItemsType,
+    TopItemsTypeExtended,
 } from "@model/top-items.model";
 import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details/top-tracks-details.component";
 
@@ -41,6 +43,8 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
         MatIconModule,
         MatRippleModule,
         MatTableModule,
+        NgStyle,
+        TitleCasePipe,
         TopTracksDetailsComponent,
     ],
     providers: [TitleCasePipe],
@@ -59,7 +63,8 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
     ],
     encapsulation: ViewEncapsulation.None,
 })
-export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
+export class BaseTableComponent<T extends TopItemsTypeExtended>
+    implements OnChanges, OnInit {
     items = input.required<TopItemsMappings[T][]>();
     itemsType = input.required<T>();
     columnsMappings = input.required<TopItemsColumnsMappings[T]>();
@@ -81,7 +86,17 @@ export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
         ...(this.itemsType() === "tracks" ? [TopItemsColumnsKeys.Expand] : []),
     ]);
 
+    #genresMaxScore = signal(0).asReadonly();
+
     readonly #titleCasePipe = inject(TitleCasePipe);
+
+    ngOnInit(): void {
+        if (this.itemsType() === "genres") {
+            this.#genresMaxScore = computed(
+                () => (this.items() as TopItemsMappings["genres"][])[0].score,
+            );
+        }
+    }
 
     ngOnChanges(): void {
         this.expandedItem = null;
@@ -114,5 +129,16 @@ export class BaseTableComponent<T extends TopItemsType> implements OnChanges {
                   .map((genre) => this.#titleCasePipe.transform(genre))
                   .join(", ") :
             "Unknown";
+    }
+
+    /**
+     * Normalizes genre score based on the maximum score in the current array of genres.
+     *
+     * @protected
+     * @param score - Genre score to normalize.
+     * @returns A normalized genre score.
+     */
+    protected normalizeGenreScore(score: number): number {
+        return (score / (this.#genresMaxScore() + 2)) * 100;
     }
 }

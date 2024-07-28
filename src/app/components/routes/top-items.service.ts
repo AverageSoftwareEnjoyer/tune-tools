@@ -6,6 +6,7 @@ import {
     SimplifiedArtistLimited,
     TopArtist,
     TopArtistLimited,
+    TopGenreLimited,
     TopTrack,
     TopTrackLimited,
 } from "@model/top-items.model";
@@ -81,5 +82,25 @@ export class TopItemsService {
     convertTopArtistToLimited(artist: TopArtist): TopArtistLimited {
         const { external_urls, name, images, genres } = structuredClone(artist);
         return { external_urls, name, images, genres };
+    }
+
+    /**
+     * Converts an array of `TopArtist` objects to `GenresLimited`.
+     *
+     * @param artist - The array of objects to be converted.
+     * @returns An array containing genres with their names and scores
+     */
+    convertTopArtistsToTopGenres(artists: TopArtist[]): TopGenreLimited[] {
+        return Array.from(
+            artists
+                .flatMap(({ genres }) => genres)
+                .reduce(
+                    (acc, curr) => acc.set(curr, (acc.get(curr) ?? 0) + 1),
+                    new Map<string, number>(),
+                ),
+        )
+            .map(([key, value]) => ({ name: key, score: value }))
+            .filter(({ score }) => score > 1)
+            .sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
     }
 }

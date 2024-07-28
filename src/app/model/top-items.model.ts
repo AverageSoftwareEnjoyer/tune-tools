@@ -25,9 +25,12 @@ export interface Album extends Omit<TopItem<"album">, "popularity"> {
 
 export type TopItemsType = "artists" | "tracks";
 
+export type TopItemsTypeExtended = TopItemsType | "genres";
+
 export interface TopItemsMappings {
     artists: TopArtistLimited;
     tracks: TopTrackLimited;
+    genres: TopGenreLimited;
 }
 
 export type ItemType = "artist" | "track" | "album";
@@ -107,14 +110,16 @@ export interface TopItemsParams
 }
 
 export interface TopItemsByTimeRange<
-    T extends TopTrackLimited | TopArtistLimited,
+    T extends TopTrackLimited | TopArtistLimited | TopGenreLimited,
 > {
     [TimeRangeOptions.ShortTerm]: T[];
     [TimeRangeOptions.MediumTerm]: T[];
     [TimeRangeOptions.LongTerm]: T[];
 }
 
-export interface TopItemsState<T extends TopTrackLimited | TopArtistLimited> {
+export interface TopItemsState<
+    T extends TopTrackLimited | TopArtistLimited | TopGenreLimited,
+> {
     itemsByTimeRange: TopItemsByTimeRange<T>;
     currentTimeRange: TimeRangeOptions;
 }
@@ -139,6 +144,11 @@ export type TopArtistLimited = Pick<
     "external_urls" | "name" | "images" | "genres"
 >;
 
+export interface TopGenreLimited {
+    name: string;
+    score: number;
+}
+
 export type SimplifiedArtistLimited = Pick<TopArtist, "external_urls" | "name">;
 
 export enum TopItemsRoutes {
@@ -155,6 +165,8 @@ export enum TopItemsColumnsKeys {
     Link = "link",
     Expand = "expand",
     Genres = "genres",
+    Genre = "genre",
+    Score = "score",
 }
 
 export const TOP_TRACKS_COLUMNS_MAPPINGS = {
@@ -197,11 +209,19 @@ export type TopArtistsColumnsMappingsType = typeof TOP_ARTISTS_COLUMNS_MAPPINGS;
 export type TopArtistsColumnsMappingsFilteredType =
     typeof TOP_ARTISTS_COLUMNS_MAPPINGS_FILTERED;
 
+export const TOP_GENRES_COLUMNS_MAPPINGS_FILTERED = {
+    [TopItemsColumnsKeys.Index]: "No.",
+    [TopItemsColumnsKeys.Genre]: "Genre",
+    [TopItemsColumnsKeys.Score]: "Score",
+} as const;
+
+export type TopGenresColumnsMappingsType =
+    typeof TOP_GENRES_COLUMNS_MAPPINGS_FILTERED;
+
 export interface TopItemsColumnsMappings {
     artists:
         | TopArtistsColumnsMappingsType
         | TopArtistsColumnsMappingsFilteredType;
     tracks: TopTracksColumnsMappingsType | TopTracksColumnsMappingsFilteredType;
+    genres: TopGenresColumnsMappingsType;
 }
-
-// TODO: Genres
