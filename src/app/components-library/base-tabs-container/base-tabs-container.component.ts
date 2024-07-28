@@ -15,7 +15,7 @@ import {
     TimeRangeOptions,
     TopItemsColumnsMappings,
     TopItemsMappings,
-    TopItemsType,
+    TopItemsTypeExtended,
 } from "@model/top-items.model";
 
 @Component({
@@ -33,7 +33,7 @@ import {
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
 })
-export class BaseTabsContainerComponent<T extends TopItemsType> {
+export class BaseTabsContainerComponent<T extends TopItemsTypeExtended> {
     items = input.required<TopItemsMappings[T][]>();
     itemsType = input.required<T>();
     columnsMappings = input.required<TopItemsColumnsMappings[T]>();
