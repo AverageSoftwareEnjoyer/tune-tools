@@ -59,26 +59,24 @@
                         <span class="main-content__link-text">Top artists</span>
                     </span>
                 </a>
+                <a
+                    mat-list-item
+                    routerLink="/top-genres"
+                    class="main-content__nav-link"
+                    [routerLinkActive]="'main-content__nav-link--active'"
+                    (click)="menu.toggle()"
+                >
+                    <span class="main-content__nav-item">
+                        <mat-icon
+                            aria-hidden="false"
+                            aria-label="Category icon"
+                            class="main-content__icon"
+                            >category</mat-icon
+                        >
+                        <span class="main-content__link-text">Top genres</span>
+                    </span>
+                </a>
                 @if (false) {
-                    <a
-                        mat-list-item
-                        routerLink="/top-genres"
-                        class="main-content__nav-link"
-                        [routerLinkActive]="'main-content__nav-link--active'"
-                        (click)="menu.toggle()"
-                    >
-                        <span class="main-content__nav-item">
-                            <mat-icon
-                                aria-hidden="false"
-                                aria-label="Category icon"
-                                class="main-content__icon"
-                                >category</mat-icon
-                            >
-                            <span class="main-content__link-text"
-                                >Top genres</span
-                            >
-                        </span>
-                    </a>
                     <a
                         mat-list-item
                         routerLink="/recently-played"
