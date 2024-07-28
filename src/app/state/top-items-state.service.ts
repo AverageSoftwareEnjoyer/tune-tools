@@ -7,12 +7,14 @@ import {
     TimeRangeOptions,
     TopArtist,
     TopArtistLimited,
+    TopGenreLimited,
+    TopItemsByTimeRange,
     TopItemsState,
     TopTrack,
     TopTrackLimited,
 } from "@model/top-items.model";
 import { TopItemsService } from "@routes/top-items.service";
-import { map, of, Subject, switchMap } from "rxjs";
+import { EMPTY, map, Observable, of, Subject, switchMap, tap } from "rxjs";
 
 @Injectable({
     providedIn: "root",
@@ -39,6 +41,21 @@ export class TopItemsStateService {
         currentTimeRange: TimeRangeOptions.ShortTerm,
     });
 
+    readonly #topGenresState = signal<TopItemsState<TopGenreLimited>>({
+        itemsByTimeRange: {
+            [TimeRangeOptions.ShortTerm]: [],
+            [TimeRangeOptions.MediumTerm]: [],
+            [TimeRangeOptions.LongTerm]: [],
+        },
+        currentTimeRange: TimeRangeOptions.ShortTerm,
+    });
+
+    readonly #topArtistsCacheState = signal<TopItemsByTimeRange<TopArtist>>({
+        [TimeRangeOptions.ShortTerm]: [],
+        [TimeRangeOptions.MediumTerm]: [],
+        [TimeRangeOptions.LongTerm]: [],
+    });
+
     // #region selectors
     topTracks = computed(
         () =>
@@ -61,63 +78,141 @@ export class TopItemsStateService {
     topArtistsTimeRange = computed(
         () => this.#topArtistsState().currentTimeRange,
     );
+
+    topGenres = computed(
+        () =>
+            this.#topGenresState().itemsByTimeRange[
+                this.#topGenresState().currentTimeRange
+            ],
+    );
+
+    topGenresTimeRange = computed(
+        () => this.#topGenresState().currentTimeRange,
+    );
     // #endregion
 
     // #region sources
     readonly #topTracksTimeRange$ = new Subject<TimeRangeOptions>();
 
-    readonly #topTracks$ = this.#topTracksTimeRange$.pipe(
-        switchMap((timeRange) => {
-            const topTracksByTimeRange =
-                this.#topTracksState().itemsByTimeRange[timeRange];
-            if (topTracksByTimeRange.length) {
-                return of(topTracksByTimeRange);
-            }
-            return this.#topItemsHTTPService
-                .getTopItems$<TopTrack<Album, SimplifiedArtist>, "tracks">(
-                    "tracks",
-                    {
-                        time_range: timeRange,
-                        limit: 50,
-                        offset: 0,
-                    },
-                )
-                .pipe(
-                    map(({ items }) =>
-                        items.map((item) =>
-                            this.#topItemsService.convertTopTrackToLimited(
-                                item,
+    readonly #topTracks$: Observable<TopTrackLimited[]> =
+        this.#topTracksTimeRange$.pipe(
+            switchMap((timeRange) => {
+                const topTracksByTimeRange =
+                    this.#topTracksState().itemsByTimeRange[timeRange];
+                if (topTracksByTimeRange.length) {
+                    return EMPTY;
+                }
+                return this.#topItemsHTTPService
+                    .getTopItems$<TopTrack<Album, SimplifiedArtist>, "tracks">(
+                        "tracks",
+                        {
+                            time_range: timeRange,
+                            limit: 50,
+                            offset: 0,
+                        },
+                    )
+                    .pipe(
+                        map(({ items }) =>
+                            items.map((item) =>
+                                this.#topItemsService.convertTopTrackToLimited(
+                                    item,
+                                ),
                             ),
                         ),
-                    ),
-                );
-        }),
-    );
+                    );
+            }),
+        );
 
     readonly #topArtistsTimeRange$ = new Subject<TimeRangeOptions>();
 
-    readonly #topArtists$ = this.#topArtistsTimeRange$.pipe(
+    readonly #topArtists$: Observable<TopArtistLimited[]> =
+        this.#topArtistsTimeRange$.pipe(
+            switchMap((timeRange) => {
+                const topArtistsByTimeRange =
+                    this.#topArtistsState().itemsByTimeRange[timeRange];
+                if (topArtistsByTimeRange.length) {
+                    return EMPTY;
+                }
+                const topArtistsCacheByTimeRange =
+                    this.#topArtistsCacheState()[timeRange];
+                return topArtistsCacheByTimeRange.length ?
+                    of(topArtistsCacheByTimeRange).pipe(
+                          map((items) =>
+                              items.map((item) =>
+                                  this.#topItemsService.convertTopArtistToLimited(
+                                      item,
+                                  ),
+                              ),
+                          ),
+                      ) :
+                    this.#topItemsHTTPService
+                          .getTopItems$<TopArtist, "artists">("artists", {
+                              time_range: timeRange,
+                              limit: 50,
+                              offset: 0,
+                          })
+                          .pipe(
+                              tap(({ items }) => {
+                                  this.#topArtistsCacheState.update(
+                                      (
+                                          state,
+                                      ): TopItemsByTimeRange<TopArtist> => ({
+                                          ...state,
+                                          [timeRange]: items,
+                                      }),
+                                  );
+                              }),
+                              map(({ items }) =>
+                                  items.map((item) =>
+                                      this.#topItemsService.convertTopArtistToLimited(
+                                          item,
+                                      ),
+                                  ),
+                              ),
+                          );
+            }),
+        );
+
+    readonly #topGenresTimeRange$ = new Subject<TimeRangeOptions>();
+
+    readonly #topGenres$ = this.#topGenresTimeRange$.pipe(
         switchMap((timeRange) => {
-            const topArtistsByTimeRange =
-                this.#topArtistsState().itemsByTimeRange[timeRange];
-            if (topArtistsByTimeRange.length) {
-                return of(topArtistsByTimeRange);
+            const topGenresByTimeRange =
+                this.#topGenresState().itemsByTimeRange[timeRange];
+            if (topGenresByTimeRange.length) {
+                return EMPTY;
             }
-            return this.#topItemsHTTPService
-                .getTopItems$<TopArtist, "artists">("artists", {
-                    time_range: timeRange,
-                    limit: 50,
-                    offset: 0,
-                })
-                .pipe(
-                    map(({ items }) =>
-                        items.map((item) =>
-                            this.#topItemsService.convertTopArtistToLimited(
-                                item,
-                            ),
-                        ),
-                    ),
-                );
+            const topArtistsCacheByTimeRange =
+                this.#topArtistsCacheState()[timeRange];
+            return topArtistsCacheByTimeRange.length ?
+                of(topArtistsCacheByTimeRange).pipe(
+                      map((items) =>
+                          this.#topItemsService.convertTopArtistsToTopGenres(
+                              items,
+                          ),
+                      ),
+                  ) :
+                this.#topItemsHTTPService
+                      .getTopItems$<TopArtist, "artists">("artists", {
+                          time_range: timeRange,
+                          limit: 50,
+                          offset: 0,
+                      })
+                      .pipe(
+                          tap(({ items }) => {
+                              this.#topArtistsCacheState.update(
+                                  (state): TopItemsByTimeRange<TopArtist> => ({
+                                      ...state,
+                                      [timeRange]: items,
+                                  }),
+                              );
+                          }),
+                          map(({ items }) =>
+                              this.#topItemsService.convertTopArtistsToTopGenres(
+                                  items,
+                              ),
+                          ),
+                      );
         }),
     );
     // #endregion
@@ -158,17 +253,44 @@ export class TopItemsStateService {
                 );
             });
 
-        this.#topArtists$.pipe(takeUntilDestroyed()).subscribe((artists) =>
-            this.#topArtistsState.update(
-                (state): TopItemsState<TopArtistLimited> => ({
-                    ...state,
-                    itemsByTimeRange: {
-                        ...state.itemsByTimeRange,
-                        [state.currentTimeRange]: artists,
-                    },
-                }),
-            ),
-        );
+        this.#topArtists$
+            .pipe(takeUntilDestroyed())
+            .subscribe((artists: TopArtistLimited[]) =>
+                this.#topArtistsState.update(
+                    (state): TopItemsState<TopArtistLimited> => ({
+                        ...state,
+                        itemsByTimeRange: {
+                            ...state.itemsByTimeRange,
+                            [state.currentTimeRange]: artists,
+                        },
+                    }),
+                ),
+            );
+
+        this.#topGenresTimeRange$
+            .pipe(takeUntilDestroyed())
+            .subscribe((timeRange) => {
+                this.#topGenresState.update(
+                    (state): TopItemsState<TopGenreLimited> => ({
+                        ...state,
+                        currentTimeRange: timeRange,
+                    }),
+                );
+            });
+
+        this.#topGenres$
+            .pipe(takeUntilDestroyed())
+            .subscribe((genres: TopGenreLimited[]) =>
+                this.#topGenresState.update(
+                    (state): TopItemsState<TopGenreLimited> => ({
+                        ...state,
+                        itemsByTimeRange: {
+                            ...state.itemsByTimeRange,
+                            [state.currentTimeRange]: genres,
+                        },
+                    }),
+                ),
+            );
         // #endregion
     }
 
@@ -190,5 +312,15 @@ export class TopItemsStateService {
      */
     publishTopArtistsTimeRange(timeRange: TimeRangeOptions): void {
         this.#topArtistsTimeRange$.next(timeRange);
+    }
+
+    /**
+     * Publishes a new time range to the `#topGenresTimeRange$` subject, updating the current time
+     * range for top genres.
+     *
+     * @param timeRange - The new time range to be published.
+     */
+    publishTopGenresTimeRange(timeRange: TimeRangeOptions): void {
+        this.#topGenresTimeRange$.next(timeRange);
     }
 }
