@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@angular-devkit/architect", "npm:0.1801.0"],\
           ["@angular-devkit/build-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.2"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/builder", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
@@ -325,6 +325,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:18.1.2", {\
+        "packageLocation": "./.yarn/cache/@angular-devkit-core-npm-18.1.2-8e1f3cdd1a-6c4f68c236.zip/node_modules/@angular-devkit/core/",\
+        "packageDependencies": [\
+          ["@angular-devkit/core", "npm:18.1.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0", {\
         "packageLocation": "./.yarn/__virtual__/@angular-devkit-core-virtual-a994431c8a/0/cache/@angular-devkit-core-npm-18.1.0-989bc71630-566ff6fba0.zip/node_modules/@angular-devkit/core/",\
         "packageDependencies": [\
@@ -353,6 +360,25 @@ const RAW_RUNTIME_STATE =
           ["ajv-formats", "virtual:24606dd764e1770ba7c06252e562bb77196df698e048156e37fb7a8cc08de50153611d65689ce94f608a46f8040bb902001682586d72a1ac8e27e380fd7510e2#npm:3.0.1"],\
           ["chokidar", null],\
           ["jsonc-parser", "npm:3.2.1"],\
+          ["picomatch", "npm:4.0.2"],\
+          ["rxjs", "npm:7.8.1"],\
+          ["source-map", "npm:0.7.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/chokidar",\
+          "chokidar"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.2", {\
+        "packageLocation": "./.yarn/__virtual__/@angular-devkit-core-virtual-009ada006d/0/cache/@angular-devkit-core-npm-18.1.2-8e1f3cdd1a-6c4f68c236.zip/node_modules/@angular-devkit/core/",\
+        "packageDependencies": [\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.2"],\
+          ["@types/chokidar", null],\
+          ["ajv", "npm:8.16.0"],\
+          ["ajv-formats", "virtual:a994431c8a6f0cf0fc1e1a48d347316f942d5fa0631c723df6436ded4f0ee86a9de420852527066e37d8afed2b052e7914599a24f3cf4ed3a41ace26fb3fe263#npm:3.0.1"],\
+          ["chokidar", null],\
+          ["jsonc-parser", "npm:3.3.1"],\
           ["picomatch", "npm:4.0.2"],\
           ["rxjs", "npm:7.8.1"],\
           ["source-map", "npm:0.7.4"]\
@@ -553,7 +579,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@angular-eslint-schematics-virtual-80072aaffe/0/cache/@angular-eslint-schematics-npm-18.1.0-16719ed10f-6c1ad7761f.zip/node_modules/@angular-eslint/schematics/",\
         "packageDependencies": [\
           ["@angular-eslint/schematics", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.2"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:80072aaffe8e799d98a41f5a701278b5ec1cd788ab94f7d9d2b7f1faf2761596b28459dbc32efc9870c3995e50a90bbbc1878d641a2b08153b53215ecc2bf567#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin-template", "virtual:80072aaffe8e799d98a41f5a701278b5ec1cd788ab94f7d9d2b7f1faf2761596b28459dbc32efc9870c3995e50a90bbbc1878d641a2b08153b53215ecc2bf567#npm:18.1.0"],\
@@ -19997,7 +20023,7 @@ const RAW_RUNTIME_STATE =
           ["tune-tools", "workspace:."],\
           ["@angular-devkit/architect", "npm:0.1801.0"],\
           ["@angular-devkit/build-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.2"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/builder", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
