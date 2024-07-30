@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components-library/scroll-to-top-button/scroll-to-top-button.component.scss"],
+  "sourcesContent": [".scroll-to-top {\n    position: fixed;\n    bottom: 1.5rem;\n    right: 1.5rem;\n    transition: all 0.2s ease-in-out;\n}\n"],
+  "mappings": "AAAA,CAAA,cACI,SAAA,MACA,OAAA,OACA,MAAA,OACA,WAAA,IAAA,IAAA",
+  "names": []
+}
