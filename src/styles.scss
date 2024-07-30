@@ -177,7 +177,7 @@ html {
         @include mat.tabs-color($light-theme, $color-variant: primary);
     }
 
-    app-main-content.main-content__nav-link--active {
+    app-main-content .main-content__nav-link--active {
         @media (prefers-color-scheme: dark) {
             background-color: mat.get-theme-color($dark-theme, neutral, 40);
         }
