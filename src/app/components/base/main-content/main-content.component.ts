@@ -13,6 +13,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
+import { ScrollToTopButtonComponent } from "@lib/scroll-to-top-button/scroll-to-top-button.component";
 import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { map } from "rxjs";
 
@@ -23,12 +24,13 @@ import { SidenavService } from "../sidenav.service";
     selector: "app-main-content",
     standalone: true,
     imports: [
-        RouterModule,
-        MatSidenavModule,
+        AsyncPipe,
+        HeaderComponent,
         MatIconModule,
         MatListModule,
-        HeaderComponent,
-        AsyncPipe,
+        MatSidenavModule,
+        RouterModule,
+        ScrollToTopButtonComponent,
     ],
     templateUrl: "./main-content.component.html",
     styleUrl: "./main-content.component.scss",
