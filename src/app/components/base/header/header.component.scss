@@ -1,5 +1,4 @@
 @use "@angular/material" as mat;
-
 @use "../../../styles/variables" as *;
 
 :host {
@@ -37,7 +36,7 @@
                     &:hover {
                         background-color: rgba(
                             $color: $dark-background,
-                            $alpha: 0.2
+                            $alpha: 0.6
                         );
                     }
                 }

@@ -19,7 +19,7 @@ $_palettes: (
         40: #006e2c,
         50: #008a3a,
         60: #00a747,
-        70: $primary-color,
+        70: #30c45d,
         80: #54e076,
         90: #72fe8f,
         95: #c6ffc7,
@@ -198,6 +198,12 @@ html {
     @media (prefers-color-scheme: light) {
         @include mat.all-component-colors($light-theme);
         @include mat.tabs-color($light-theme, $color-variant: primary);
+    }
+
+    app-header {
+        .header__menu-btn {
+            color: mat.get-theme-color($light-theme, neutral, 100);
+        }
     }
 
     app-main-content .main-content__nav-link--active {
