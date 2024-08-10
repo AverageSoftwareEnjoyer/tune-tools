@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/base/main-content/main-content.component.scss"],
+  "sourcesContent": ["@use \"../../../styles/variables\" as *;\n\n:host {\n    .main-content {\n        $block: &;\n        flex: 1 1 auto;\n        position: static;\n        min-height: 100%;\n\n        &__sidenav {\n            width: 250px;\n        }\n\n        &__area {\n            height: 100%;\n\n            @at-root #{ $block }__container {\n                display: flex;\n                justify-content: center;\n                flex-direction: column;\n\n                & > * {\n                    flex: 1 1 auto;\n                }\n            }\n        }\n\n        &__nav {\n            &-link {\n                border-radius: 4px;\n                padding: 4px 8px;\n            }\n\n            &-item {\n                display: flex;\n                align-items: center;\n                gap: 10px;\n            }\n        }\n    }\n}\n"],
+  "mappings": "AAGI,MAAA,CAAA,aAEI,KAAA,EAAA,EAAA,KACA,SAAA,OACA,WAAA,KAEA,MAAA,CAAA,sBACI,MAAA,MAGJ,MAAA,CAAA,mBACI,OAAA,KAES,MAAA,CAAA,wBACL,QAAA,KACA,gBAAA,OACA,eAAA,OAEA,MAAA,CALK,uBAKL,CAAA,EACI,KAAA,EAAA,EAAA,KAMR,MAAA,CAAA,uBAzBR,cA0BY,IA1BZ,QA2BY,IAAA,IAGJ,MAAA,CAAA,uBACI,QAAA,KACA,YAAA,OACA,IAAA",
+  "names": []
+}
