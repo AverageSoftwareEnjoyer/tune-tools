@@ -1,8 +1,40 @@
-@use "../../../styles/variables" as *;
-
 :host {
     .footer {
+        $block: &;
         text-align: center;
         font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @at-root #{ $block }__icon {
+                height: 1.5rem;
+                width: 1.5rem;
+
+                &:hover {
+                    animation: upAndRotate 1s ease-in;
+                }
+
+                @keyframes upAndRotate {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: rotate(180deg) translateY(100%);
+                    }
+
+                    100% {
+                        transform: rotate(-180deg) translateY(0);
+                    }
+                }
+            }
+        }
     }
 }

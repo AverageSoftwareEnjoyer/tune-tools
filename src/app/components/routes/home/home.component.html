@@ -1,1 +1,89 @@
-<p>home works!</p>
+<div class="sections__container">
+    <article class="sections__article">
+        <section class="header__section">
+            @if (!isBelowMediumWidth) {
+                <div>
+                    <h2>Unlock your Spotify Insights</h2>
+                    <p>
+                        Discover your music trends and personalize your
+                        playlists
+                    </p>
+                </div>
+            } @else {
+                <h3>Unlock your Spotify insights</h3>
+            }
+            <picture>
+                <source
+                    srcset="../../../../public/images/dark.png"
+                    media="(prefers-color-scheme: dark)"
+                />
+                <img
+                    class="header__image"
+                    src="../../../../public/images/light.png"
+                    alt="TuneTools top track view"
+                    height="300"
+                    width="300"
+                />
+            </picture>
+        </section>
+        @if (!isUserAuthenticated) {
+            <section>
+                <button
+                    mat-flat-button
+                    id="cta-1"
+                    (click)="handleSpotifyConnection()"
+                >
+                    Connect to Spotify
+                </button>
+            </section>
+        }
+        <section>
+            <h3>Features</h3>
+            <div class="features__container">
+                @for (feature of FEATURES; track feature) {
+                    <mat-card matRipple>
+                        <mat-card-title>
+                            {{ feature.title }}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{ feature.comingSoon ? "(Coming Soon)" : "" }}
+                        </mat-card-subtitle>
+                        <mat-card-content>
+                            <div class="feature-info__container">
+                                <mat-icon>{{ feature.icon }}</mat-icon>
+                                {{ feature.description }}
+                            </div>
+                        </mat-card-content>
+                        <mat-card-footer></mat-card-footer>
+                    </mat-card>
+                }
+            </div>
+        </section>
+        <section class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <mat-accordion>
+                @for (faq of FAQS; track faq) {
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{ faq.question }}</mat-panel-title
+                            >
+                        </mat-expansion-panel-header>
+                        <p>{{ faq.answer }}</p>
+                    </mat-expansion-panel>
+                }
+            </mat-accordion>
+        </section>
+        @if (!isUserAuthenticated) {
+            <section>
+                <button
+                    mat-flat-button
+                    id="cta-2"
+                    (click)="handleSpotifyConnection()"
+                >
+                    Try now!
+                </button>
+            </section>
+        }
+    </article>
+</div>

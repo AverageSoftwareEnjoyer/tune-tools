@@ -2,6 +2,7 @@
 
 :host {
     .main-content {
+        $block: &;
         flex: 1 1 auto;
         position: static;
         min-height: 100%;
@@ -12,6 +13,16 @@
 
         &__area {
             height: 100%;
+
+            @at-root #{ $block }__container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                & > * {
+                    flex: 1 1 auto;
+                }
+            }
         }
 
         &__nav {
