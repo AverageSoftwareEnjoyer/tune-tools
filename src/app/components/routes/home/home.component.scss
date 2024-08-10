@@ -1,0 +1,77 @@
+app-home {
+    .sections__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .sections__article {
+            max-width: 40rem;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            section {
+                text-align: center;
+                margin-bottom: 1.25rem;
+            }
+
+            .header__section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                @media (max-width: 959.98px) {
+                    flex-direction: column;
+                }
+
+                .header__image {
+                    border-radius: 0.5rem;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+            }
+
+            .features__container {
+                display: grid;
+                gap: 1rem;
+
+                @media (max-width: 959.98px) {
+                    grid-template-columns: 1fr;
+                }
+
+                grid-template-columns: 1fr 1fr;
+
+                mat-card {
+                    padding: 1rem 1rem 1rem 0;
+
+                    .feature-info__container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        .mat-icon {
+                            @media (max-width: 959.98px) {
+                                font-size: 2rem;
+                                height: 2rem;
+                                width: 2rem;
+                            }
+
+                            font-size: 2.5rem;
+                            height: 2.5rem;
+                            width: 32.5rem;
+                        }
+                    }
+                }
+            }
+
+            .mat-expansion-panel-header-title {
+                text-align: left;
+            }
+        }
+    }
+}
