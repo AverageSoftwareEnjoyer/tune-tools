@@ -43,9 +43,43 @@ app-base-table {
                 width: 5%;
             }
 
+            .mat-column-image {
+                width: 10%;
+            }
+
+            .mat-column-name {
+                @media (max-width: 959.98px) {
+                    width: 40%;
+                }
+
+                width: 30%;
+            }
+
+            .mat-column-artists {
+                width: 30%;
+            }
+
+            .mat-column-link {
+                width: 10%;
+            }
+
+            .mat-column-expand {
+                width: 5%;
+            }
+
+            .mat-column-genres {
+                width: 30%;
+            }
+
             .mat-column-genre {
                 width: 40%;
             }
+
+            .mat-column-score {
+                width: 55%;
+            }
+
+            // TODO 2: Add percentages for all columns
 
             .score-bar {
                 height: 24px;
