@@ -28,7 +28,10 @@ export class ScrollToTopButtonComponent {
         const currentScroll = window.scrollY;
         if (currentScroll > 0) {
             window.requestAnimationFrame(this.scrollToTop.bind(this));
-            window.scrollTo(0, currentScroll - currentScroll / 8);
+            window.scrollTo(
+                0,
+                currentScroll > 5 ? currentScroll - currentScroll / 8 : 0,
+            );
         }
     }
 }

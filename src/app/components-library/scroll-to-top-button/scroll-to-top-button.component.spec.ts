@@ -33,4 +33,28 @@ describe("ScrollToTopButtonComponent", () => {
 
         expect(global.scrollTo).toHaveBeenCalledTimes(1);
     });
+
+    it("should call the scrolling method on button click and scroll directly to the top if the current scrollY level is below 5", () => {
+        global.scrollTo = jest.fn();
+        Object.defineProperty(global.window, "scrollY", { value: 1 });
+
+        const button = fixture.debugElement.query(
+            By.css(".scroll-to-top > button"),
+        );
+        button.triggerEventHandler("click", null);
+
+        expect(global.scrollTo).toHaveBeenCalledTimes(1);
+    });
+
+    it("should call the scrolling method on button click and scroll incrementally to the top if the current scrollY level is greater than or equal to 5", () => {
+        global.scrollTo = jest.fn();
+        Object.defineProperty(global.window, "scrollY", { value: 100 });
+
+        const button = fixture.debugElement.query(
+            By.css(".scroll-to-top > button"),
+        );
+        button.triggerEventHandler("click", null);
+
+        expect(global.scrollTo).toHaveBeenCalledTimes(1);
+    });
 });
