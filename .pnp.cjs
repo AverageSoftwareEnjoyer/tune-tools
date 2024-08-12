@@ -62,7 +62,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ungap__structured-clone", "npm:1.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
-          ["@typescript-eslint/types", "npm:7.16.0"],\
+          ["@typescript-eslint/types", "npm:8.1.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
           ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.1"],\
@@ -8675,6 +8675,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@typescript-eslint-types-npm-7.16.0-11f01089f2-0813d9eb15.zip/node_modules/@typescript-eslint/types/",\
         "packageDependencies": [\
           ["@typescript-eslint/types", "npm:7.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:8.1.0", {\
+        "packageLocation": "./.yarn/cache/@typescript-eslint-types-npm-8.1.0-ecf8b6c6d3-fca0aff60f.zip/node_modules/@typescript-eslint/types/",\
+        "packageDependencies": [\
+          ["@typescript-eslint/types", "npm:8.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20031,7 +20038,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ungap__structured-clone", "npm:1.2.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
           ["@typescript-eslint/parser", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
-          ["@typescript-eslint/types", "npm:7.16.0"],\
+          ["@typescript-eslint/types", "npm:8.1.0"],\
           ["@typescript-eslint/utils", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:7.16.0"],\
           ["@ungap/structured-clone", "npm:1.2.0"],\
           ["angular-cli-ghpages", "npm:2.0.1"],\
