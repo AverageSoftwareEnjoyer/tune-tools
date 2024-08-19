@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@angular-devkit/architect", "npm:0.1801.0"],\
           ["@angular-devkit/build-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.0"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/builder", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
@@ -325,6 +325,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:18.2.0", {\
+        "packageLocation": "./.yarn/cache/@angular-devkit-core-npm-18.2.0-178f98760b-62f5165ff7.zip/node_modules/@angular-devkit/core/",\
+        "packageDependencies": [\
+          ["@angular-devkit/core", "npm:18.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0", {\
         "packageLocation": "./.yarn/__virtual__/@angular-devkit-core-virtual-a994431c8a/0/cache/@angular-devkit-core-npm-18.1.0-989bc71630-566ff6fba0.zip/node_modules/@angular-devkit/core/",\
         "packageDependencies": [\
@@ -353,6 +360,25 @@ const RAW_RUNTIME_STATE =
           ["ajv-formats", "virtual:24606dd764e1770ba7c06252e562bb77196df698e048156e37fb7a8cc08de50153611d65689ce94f608a46f8040bb902001682586d72a1ac8e27e380fd7510e2#npm:3.0.1"],\
           ["chokidar", null],\
           ["jsonc-parser", "npm:3.2.1"],\
+          ["picomatch", "npm:4.0.2"],\
+          ["rxjs", "npm:7.8.1"],\
+          ["source-map", "npm:0.7.4"]\
+        ],\
+        "packagePeers": [\
+          "@types/chokidar",\
+          "chokidar"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/@angular-devkit-core-virtual-4a3a57f85b/0/cache/@angular-devkit-core-npm-18.2.0-178f98760b-62f5165ff7.zip/node_modules/@angular-devkit/core/",\
+        "packageDependencies": [\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.0"],\
+          ["@types/chokidar", null],\
+          ["ajv", "npm:8.17.1"],\
+          ["ajv-formats", "virtual:4a3a57f85b07193043e594e693550d20a6483f6ff0a8d5446bc2f51c9e2cbde9bea478d9be8500b71f4ad5cab89b981fd495b3d37dde2101394ac5c554922566#npm:3.0.1"],\
+          ["chokidar", null],\
+          ["jsonc-parser", "npm:3.3.1"],\
           ["picomatch", "npm:4.0.2"],\
           ["rxjs", "npm:7.8.1"],\
           ["source-map", "npm:0.7.4"]\
@@ -553,7 +579,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@angular-eslint-schematics-virtual-80072aaffe/0/cache/@angular-eslint-schematics-npm-18.1.0-16719ed10f-6c1ad7761f.zip/node_modules/@angular-eslint/schematics/",\
         "packageDependencies": [\
           ["@angular-eslint/schematics", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.0"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:80072aaffe8e799d98a41f5a701278b5ec1cd788ab94f7d9d2b7f1faf2761596b28459dbc32efc9870c3995e50a90bbbc1878d641a2b08153b53215ecc2bf567#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin-template", "virtual:80072aaffe8e799d98a41f5a701278b5ec1cd788ab94f7d9d2b7f1faf2761596b28459dbc32efc9870c3995e50a90bbbc1878d641a2b08153b53215ecc2bf567#npm:18.1.0"],\
@@ -9367,6 +9393,17 @@ const RAW_RUNTIME_STATE =
           ["uri-js", "npm:4.4.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:8.17.1", {\
+        "packageLocation": "./.yarn/cache/ajv-npm-8.17.1-12ade7edc6-ee3c62162c.zip/node_modules/ajv/",\
+        "packageDependencies": [\
+          ["ajv", "npm:8.17.1"],\
+          ["fast-deep-equal", "npm:3.1.3"],\
+          ["fast-uri", "npm:3.0.1"],\
+          ["json-schema-traverse", "npm:1.0.0"],\
+          ["require-from-string", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["ajv-formats", [\
@@ -9390,6 +9427,19 @@ const RAW_RUNTIME_STATE =
           ["ajv-formats", "virtual:24606dd764e1770ba7c06252e562bb77196df698e048156e37fb7a8cc08de50153611d65689ce94f608a46f8040bb902001682586d72a1ac8e27e380fd7510e2#npm:3.0.1"],\
           ["@types/ajv", null],\
           ["ajv", "npm:8.13.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/ajv",\
+          "ajv"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:4a3a57f85b07193043e594e693550d20a6483f6ff0a8d5446bc2f51c9e2cbde9bea478d9be8500b71f4ad5cab89b981fd495b3d37dde2101394ac5c554922566#npm:3.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/ajv-formats-virtual-ab43a5db8a/0/cache/ajv-formats-npm-3.0.1-2662cf5b12-5679b9f9ce.zip/node_modules/ajv-formats/",\
+        "packageDependencies": [\
+          ["ajv-formats", "virtual:4a3a57f85b07193043e594e693550d20a6483f6ff0a8d5446bc2f51c9e2cbde9bea478d9be8500b71f4ad5cab89b981fd495b3d37dde2101394ac5c554922566#npm:3.0.1"],\
+          ["@types/ajv", null],\
+          ["ajv", "npm:8.17.1"]\
         ],\
         "packagePeers": [\
           "@types/ajv",\
@@ -12977,6 +13027,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/fast-levenshtein-npm-2.0.6-fcd74b8df5-eb7e220ecf.zip/node_modules/fast-levenshtein/",\
         "packageDependencies": [\
           ["fast-levenshtein", "npm:2.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["fast-uri", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/fast-uri-npm-3.0.1-20477a5d16-e8ee471227.zip/node_modules/fast-uri/",\
+        "packageDependencies": [\
+          ["fast-uri", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19997,7 +20056,7 @@ const RAW_RUNTIME_STATE =
           ["tune-tools", "workspace:."],\
           ["@angular-devkit/architect", "npm:0.1801.0"],\
           ["@angular-devkit/build-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
-          ["@angular-devkit/core", "virtual:2352fd9bad455d36df8edb9c4fbcd773c3a101b79c73cdfccf4e76b43f0fb1077c9f06a3170e50e3271c625e621ef05c34740cb9913b6c9efeec4060c3497a46#npm:18.1.0"],\
+          ["@angular-devkit/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.0"],\
           ["@angular-devkit/schematics", "npm:18.1.0"],\
           ["@angular-eslint/builder", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
           ["@angular-eslint/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.1.0"],\
