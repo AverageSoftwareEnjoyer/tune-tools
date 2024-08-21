@@ -1,7 +1,6 @@
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { inject, Injectable, signal } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { shareReplay } from "rxjs";
 
 @Injectable({
     providedIn: "root",
@@ -14,7 +13,7 @@ export class MediaQueriesStateService {
     constructor() {
         this.#breakpointObserver
             .observe([Breakpoints.XSmall, Breakpoints.Small])
-            .pipe(shareReplay(), takeUntilDestroyed())
+            .pipe(takeUntilDestroyed())
             .subscribe(({ matches }) => {
                 this.isBelowMediumWidth.update(() => matches);
             });

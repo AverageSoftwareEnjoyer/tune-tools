@@ -57,36 +57,36 @@ export class TopItemsStateService {
     });
 
     // #region selectors
-    topTracks = computed(
+    readonly topTracks = computed(
         () =>
             this.#topTracksState().itemsByTimeRange[
                 this.#topTracksState().currentTimeRange
             ],
     );
 
-    topTracksTimeRange = computed(
+    readonly topTracksTimeRange = computed(
         () => this.#topTracksState().currentTimeRange,
     );
 
-    topArtists = computed(
+    readonly topArtists = computed(
         () =>
             this.#topArtistsState().itemsByTimeRange[
                 this.#topArtistsState().currentTimeRange
             ],
     );
 
-    topArtistsTimeRange = computed(
+    readonly topArtistsTimeRange = computed(
         () => this.#topArtistsState().currentTimeRange,
     );
 
-    topGenres = computed(
+    readonly topGenres = computed(
         () =>
             this.#topGenresState().itemsByTimeRange[
                 this.#topGenresState().currentTimeRange
             ],
     );
 
-    topGenresTimeRange = computed(
+    readonly topGenresTimeRange = computed(
         () => this.#topGenresState().currentTimeRange,
     );
     // #endregion
@@ -135,8 +135,8 @@ export class TopItemsStateService {
                 }
                 const topArtistsCacheByTimeRange =
                     this.#topArtistsCacheState()[timeRange];
-                return topArtistsCacheByTimeRange.length ?
-                    of(topArtistsCacheByTimeRange).pipe(
+                return topArtistsCacheByTimeRange.length
+                    ? of(topArtistsCacheByTimeRange).pipe(
                           map((items) =>
                               items.map((item) =>
                                   this.#topItemsService.convertTopArtistToLimited(
@@ -144,8 +144,8 @@ export class TopItemsStateService {
                                   ),
                               ),
                           ),
-                      ) :
-                    this.#topItemsHTTPService
+                      )
+                    : this.#topItemsHTTPService
                           .getTopItems$<TopArtist, "artists">("artists", {
                               time_range: timeRange,
                               limit: 50,
@@ -184,15 +184,15 @@ export class TopItemsStateService {
             }
             const topArtistsCacheByTimeRange =
                 this.#topArtistsCacheState()[timeRange];
-            return topArtistsCacheByTimeRange.length ?
-                of(topArtistsCacheByTimeRange).pipe(
+            return topArtistsCacheByTimeRange.length
+                ? of(topArtistsCacheByTimeRange).pipe(
                       map((items) =>
                           this.#topItemsService.convertTopArtistsToTopGenres(
                               items,
                           ),
                       ),
-                  ) :
-                this.#topItemsHTTPService
+                  )
+                : this.#topItemsHTTPService
                       .getTopItems$<TopArtist, "artists">("artists", {
                           time_range: timeRange,
                           limit: 50,

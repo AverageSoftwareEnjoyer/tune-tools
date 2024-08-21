@@ -9,7 +9,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatTabsModule } from "@angular/material/tabs";
 import { RouterModule } from "@angular/router";
 import { keepOrder } from "@core/helpers";
-import { BaseTableComponent } from "@lib/base-table-container/base-table/base-table.component";
+import { BaseTableComponent } from "@lib/base-table/base-table.component";
 import {
     TIME_RANGE_MAPPINGS,
     TimeRangeOptions,

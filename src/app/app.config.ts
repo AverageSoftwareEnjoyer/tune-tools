@@ -4,6 +4,7 @@ import {
     ApplicationConfig,
     ErrorHandler,
 } from "@angular/core";
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from "@angular/material/snack-bar";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import {
     provideRouter,
@@ -12,6 +13,7 @@ import {
 } from "@angular/router";
 import { authInterceptor } from "@core/auth/auth.interceptor";
 import { LocalStorageService } from "@core/auth/local-storage.service";
+import { requestsInterceptor } from "@core/requests/requests.interceptor";
 import * as Sentry from "@sentry/angular";
 import { AuthStateService } from "@state/auth-state.service";
 
@@ -27,7 +29,9 @@ export const appConfig: ApplicationConfig = {
                 scrollPositionRestoration: "enabled",
             }),
         ),
-        provideHttpClient(withInterceptors([authInterceptor])),
+        provideHttpClient(
+            withInterceptors([requestsInterceptor, authInterceptor]),
+        ),
         provideAnimationsAsync(),
         {
             provide: ErrorHandler,
@@ -49,12 +53,16 @@ export const appConfig: ApplicationConfig = {
                     localStorageService: LocalStorageService,
                     authStateService: AuthStateService,
                 ) =>
-                    () => {
-                        authStateService.isUserAuthenticated =
+                () => {
+                    authStateService.isUserAuthenticated =
                         !!localStorageService.getItem("access_token");
-                    },
+                },
             deps: [LocalStorageService, AuthStateService],
             multi: true,
+        },
+        {
+            provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+            useValue: { duration: 3000 },
         },
     ],
 };

@@ -1,0 +1,9 @@
+@if (loadingStateService.isLoading()) {
+    <div class="spinner-container">
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+        @let message = loadingStateService.loadingMessage();
+        @if (message) {
+            <span>{{ message }}</span>
+        }
+    </div>
+}

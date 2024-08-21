@@ -15,7 +15,7 @@ describe("ItemImageComponent", () => {
         fixture = TestBed.createComponent(ItemImageComponent);
         component = fixture.componentInstance;
         fixture.componentRef.setInput("image", mockImage);
-        fixture.componentRef.setInput("component", test);
+        fixture.componentRef.setInput("alt", test);
     });
 
     it("should create", () => {
