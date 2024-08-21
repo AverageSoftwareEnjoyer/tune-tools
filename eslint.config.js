@@ -74,7 +74,7 @@ module.exports = [
                 },
             ],
             "@stylistic/no-confusing-arrow": "warn",
-            "@stylistic/operator-linebreak": ["error", "after"],
+            "@stylistic/operator-linebreak": "off",
             "@stylistic/promise-function-async": "off",
             "@stylistic/quotes": ["error", "double"],
             "@stylistic/quote-props": "off",
