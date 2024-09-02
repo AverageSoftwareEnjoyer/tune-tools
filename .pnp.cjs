@@ -54,7 +54,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/cli", "npm:2.32.1"],\
           ["@sentry/wizard", "npm:3.25.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:2.3.0"],\
-          ["@supabase/supabase-js", "npm:2.44.3"],\
+          ["@supabase/supabase-js", "npm:2.45.3"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -7915,10 +7915,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@supabase/auth-js", [\
-      ["npm:2.64.2", {\
-        "packageLocation": "./.yarn/cache/@supabase-auth-js-npm-2.64.2-c04a29b67b-41ca58a34a.zip/node_modules/@supabase/auth-js/",\
+      ["npm:2.65.0", {\
+        "packageLocation": "./.yarn/cache/@supabase-auth-js-npm-2.65.0-9cf126a97a-6cf6971787.zip/node_modules/@supabase/auth-js/",\
         "packageDependencies": [\
-          ["@supabase/auth-js", "npm:2.64.2"],\
+          ["@supabase/auth-js", "npm:2.65.0"],\
           ["@supabase/node-fetch", "npm:2.6.15"]\
         ],\
         "linkType": "HARD"\
@@ -7968,26 +7968,26 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@supabase/storage-js", [\
-      ["npm:2.6.0", {\
-        "packageLocation": "./.yarn/cache/@supabase-storage-js-npm-2.6.0-c5a8c93ac0-ce777266ce.zip/node_modules/@supabase/storage-js/",\
+      ["npm:2.7.0", {\
+        "packageLocation": "./.yarn/cache/@supabase-storage-js-npm-2.7.0-887fb796f3-3c4c256225.zip/node_modules/@supabase/storage-js/",\
         "packageDependencies": [\
-          ["@supabase/storage-js", "npm:2.6.0"],\
+          ["@supabase/storage-js", "npm:2.7.0"],\
           ["@supabase/node-fetch", "npm:2.6.15"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@supabase/supabase-js", [\
-      ["npm:2.44.3", {\
-        "packageLocation": "./.yarn/cache/@supabase-supabase-js-npm-2.44.3-2da2add833-dd27cde4f0.zip/node_modules/@supabase/supabase-js/",\
+      ["npm:2.45.3", {\
+        "packageLocation": "./.yarn/cache/@supabase-supabase-js-npm-2.45.3-4bbaf164bc-20a00fe465.zip/node_modules/@supabase/supabase-js/",\
         "packageDependencies": [\
-          ["@supabase/supabase-js", "npm:2.44.3"],\
-          ["@supabase/auth-js", "npm:2.64.2"],\
+          ["@supabase/supabase-js", "npm:2.45.3"],\
+          ["@supabase/auth-js", "npm:2.65.0"],\
           ["@supabase/functions-js", "npm:2.4.1"],\
           ["@supabase/node-fetch", "npm:2.6.15"],\
           ["@supabase/postgrest-js", "npm:1.15.8"],\
           ["@supabase/realtime-js", "npm:2.10.2"],\
-          ["@supabase/storage-js", "npm:2.6.0"]\
+          ["@supabase/storage-js", "npm:2.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20023,7 +20023,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/cli", "npm:2.32.1"],\
           ["@sentry/wizard", "npm:3.25.1"],\
           ["@stylistic/eslint-plugin", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:2.3.0"],\
-          ["@supabase/supabase-js", "npm:2.44.3"],\
+          ["@supabase/supabase-js", "npm:2.45.3"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/eslint__js", "npm:8.42.3"],\
           ["@types/jest", "npm:29.5.12"],\
