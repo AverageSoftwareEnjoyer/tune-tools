@@ -6195,10 +6195,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:7.16.0, @typescript-eslint/types@npm:^7.16.0":
+"@typescript-eslint/types@npm:7.16.0":
   version: 7.16.0
   resolution: "@typescript-eslint/types@npm:7.16.0"
   checksum: 10/0813d9eb158f984b9d7e9e83961533ddc1e8c8815ca9059dab820df276b1e537b183f4c83cc4fe79ab3865cde1a64f2ec3f7fffe7209872d7d404636299f630b
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:^8.4.0":
+  version: 8.4.0
+  resolution: "@typescript-eslint/types@npm:8.4.0"
+  checksum: 10/962eb0b45ca7634264698086dadb917d96684bd8a88926026e0c314984e68d14e1f30e0291f196408935a507aa9e9976ec4d27fc6aa632d34295059b4e436bae
   languageName: node
   linkType: hard
 
@@ -16154,7 +16161,7 @@ __metadata:
     "@types/ungap__structured-clone": "npm:^1.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^7.16.0"
     "@typescript-eslint/parser": "npm:^7.16.0"
-    "@typescript-eslint/types": "npm:^7.16.0"
+    "@typescript-eslint/types": "npm:^8.4.0"
     "@typescript-eslint/utils": "npm:^7.16.0"
     "@ungap/structured-clone": "npm:^1.2.0"
     angular-cli-ghpages: "npm:2.0.1"
