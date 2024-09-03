@@ -1,25 +1,18 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
 // @ts-check
 
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const jest = require("eslint-plugin-jest");
-const playwright = require("eslint-plugin-playwright");
-const prettierConfig = require("eslint-config-prettier");
-const angularEslint = require("@angular-eslint/eslint-plugin");
-const angularEslintTemplate = require("@angular-eslint/eslint-plugin-template");
-const stylisticEslint = require("@stylistic/eslint-plugin");
-const typescriptParser = require("@typescript-eslint/parser");
-const angularTemplateParser = require("@angular-eslint/template-parser");
-const simpleImportSort = require("eslint-plugin-simple-import-sort");
-const jsdoc = require("eslint-plugin-jsdoc");
+import angularEslint from "@angular-eslint/eslint-plugin";
+import angularEslintTemplate from "@angular-eslint/eslint-plugin-template";
+import angularTemplateParser from "@angular-eslint/template-parser";
+import eslint from "@eslint/js";
+import jest from "eslint-plugin-jest";
+import jsdoc from "eslint-plugin-jsdoc";
+import playwright from "eslint-plugin-playwright";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import tseslint from "typescript-eslint";
 
-module.exports = [
+export default tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
-    stylisticEslint.configs["recommended-flat"],
     {
         ignores: [".pnp.cjs"],
         plugins: {
@@ -50,46 +43,14 @@ module.exports = [
             "prefer-const": "error",
             "prefer-spread": "error",
 
-            /** Stylistic rules */
-            "@stylistic/arrow-parens": ["error", "always"],
-            "@stylistic/arrow-spacing": "error",
-            "@stylistic/indent-binary-ops": ["error", 4],
-            "@stylistic/brace-style": ["error", "1tbs"],
-            "@stylistic/comma-dangle": "off",
-            "@stylistic/dot-location": ["error", "property"],
-            "@stylistic/indent": ["off"],
-            "@stylistic/linebreak-style": ["error", "unix"],
-            "@stylistic/member-delimiter-style": [
-                "error",
-                {
-                    multiline: {
-                        delimiter: "semi",
-                        requireLast: true,
-                    },
-                    singleline: {
-                        delimiter: "semi",
-                        requireLast: false,
-                    },
-                    multilineDetection: "brackets",
-                },
-            ],
-            "@stylistic/no-confusing-arrow": "warn",
-            "@stylistic/operator-linebreak": "off",
-            "@stylistic/promise-function-async": "off",
-            "@stylistic/quotes": ["error", "double"],
-            "@stylistic/quote-props": "off",
-            "@stylistic/restrict-template-expressions": "off",
-            "@stylistic/semi": ["error", "always"],
-            "@stylistic/spaced-comment": "error",
-
             /** Simple-import-sort rules */
             "simple-import-sort/imports": "error",
             "simple-import-sort/exports": "error",
         },
         languageOptions: {
-            parser: typescriptParser,
             parserOptions: {
-                project: true,
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
             },
         },
     },
@@ -140,7 +101,6 @@ module.exports = [
 
             /** Typescript rules */
             "@typescript-eslint/array-type": "error",
-            "@typescript-eslint/ban-types": "error",
             "@typescript-eslint/consistent-type-assertions": [
                 "error",
                 {
@@ -212,5 +172,4 @@ module.exports = [
         },
         plugins: ["@angular-eslint/template"],
     },
-    prettierConfig,
-];
+);
