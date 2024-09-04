@@ -193,9 +193,9 @@ export class AuthService {
             return from(this.#router.navigateByUrl("")).pipe(map(() => false));
         } else if (new Date() > new Date(parseInt(expiry))) {
             return this.#authHTTPService.refreshAccessToken$(refreshToken).pipe(
-                tap(({ access_token, refresh_token }) =>
-                    this.#handleAuthentication(access_token, refresh_token),
-                ),
+                tap(({ access_token, refresh_token }) => {
+                    this.#handleAuthentication(access_token, refresh_token);
+                }),
                 map(() => true),
             );
         }

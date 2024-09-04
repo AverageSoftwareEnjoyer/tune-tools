@@ -7,9 +7,9 @@ const authGuard: CanActivateFn = () => {
     const authService = inject(AuthService);
     const authStateService = inject(AuthStateService);
 
-    return authStateService.isUserAuthenticated ?
-        true :
-        authService.redirectToAuthCodeFlow$();
+    return authStateService.isUserAuthenticated
+        ? true
+        : authService.redirectToAuthCodeFlow$();
 };
 
 export const routes: Routes = [

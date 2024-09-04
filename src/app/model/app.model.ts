@@ -40,7 +40,7 @@ export interface Faq {
 export const FAQS: Faq[] = [
     {
         question: "How do I connect my Spotify account?",
-        answer: "Simply click on the \"Connect to Spotify\" button and follow the prompts.",
+        answer: 'Simply click on the "Connect to Spotify" button and follow the prompts.',
     },
     {
         question: "Is this service free?",
