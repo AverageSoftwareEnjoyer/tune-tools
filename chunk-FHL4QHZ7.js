@@ -1,2 +1,0 @@
-import{p as m,q as r}from"./chunk-PK5LSSKH.js";import{b as f}from"./chunk-PWZNXOFX.js";import{d as s,da as c,e as a,f as n,ja as l,tb as p}from"./chunk-R2BZJTIW.js";var B=(()=>{var e;let t=class t{constructor(){a(this,e);this.isBelowMediumWidth=p(!1),n(this,e,l(m)),s(this,e).observe([r.XSmall,r.Small]).pipe(f()).subscribe(({matches:o})=>{this.isBelowMediumWidth.update(()=>o)})}};e=new WeakMap,t.\u0275fac=function(b){return new(b||t)},t.\u0275prov=c({token:t,factory:t.\u0275fac,providedIn:"root"});let i=t;return i})();export{B as a};
-//# sourceMappingURL=chunk-FHL4QHZ7.js.map
