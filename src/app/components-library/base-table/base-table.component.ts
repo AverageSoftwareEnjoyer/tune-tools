@@ -64,7 +64,8 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
     encapsulation: ViewEncapsulation.None,
 })
 export class BaseTableComponent<T extends TopItemsTypeExtended>
-    implements OnChanges, OnInit {
+    implements OnChanges, OnInit
+{
     items = input.required<TopItemsMappings[T][]>();
     itemsType = input.required<T>();
     columnsMappings = input.required<TopItemsColumnsMappings[T]>();
@@ -124,11 +125,11 @@ export class BaseTableComponent<T extends TopItemsTypeExtended>
      * @returns A string containing comma separated genres.
      */
     protected getGenresNames(genres: string[]): string {
-        return genres.length ?
-            genres
+        return genres.length
+            ? genres
                   .map((genre) => this.#titleCasePipe.transform(genre))
-                  .join(", ") :
-            "Unknown";
+                  .join(", ")
+            : "Unknown";
     }
 
     /**

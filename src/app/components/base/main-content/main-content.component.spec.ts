@@ -1,15 +1,18 @@
 import { HarnessLoader } from "@angular/cdk/testing";
 import { TestbedHarnessEnvironment } from "@angular/cdk/testing/testbed";
+import { provideHttpClient } from "@angular/common/http";
+import { provideHttpClientTesting } from "@angular/common/http/testing";
 import { signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatSidenavHarness } from "@angular/material/sidenav/testing";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
-import { RouterModule } from "@angular/router";
+import { provideRouter } from "@angular/router";
 import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { Observable, Subject } from "rxjs";
 
+import { routes } from "../../../app.routes";
 import { SidenavService } from "../sidenav.service";
 import { MainContentComponent } from "./main-content.component";
 
@@ -34,9 +37,11 @@ describe("MainContentComponent", () => {
                 MainContentComponent,
                 NoopAnimationsModule,
                 MatSidenavModule,
-                RouterModule.forRoot([]),
             ],
             providers: [
+                provideRouter(routes),
+                provideHttpClient(),
+                provideHttpClientTesting(),
                 { provide: SidenavService, useValue: mockSidenavService },
             ],
         });

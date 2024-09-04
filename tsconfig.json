@@ -61,6 +61,7 @@
         "**/*.d.ts",
         "**/*.ts",
         "**/*.html",
-        "**/*.js"
+        "**/*.js",
+        "eslint.config.mjs"
     ]
 }
