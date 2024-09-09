@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/cli", "npm:18.2.2"],\
           ["@angular/common", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/compiler", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/forms", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/material", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
@@ -160,7 +160,7 @@ const RAW_RUNTIME_STATE =
           ["@angular-devkit/build-webpack", "virtual:39d394d98106da627cae554cc5e3dee83e31ed66988382d8cb0176acb8616468dd9805c796a79ef9e0124ceb4013c431d173ad89b4051dcacf4ad824954e214d#npm:0.1802.2"],\
           ["@angular-devkit/core", "virtual:1bbd1954a15d70959691f8ed57761e8bc3c1975926c28dec951b05aaafe951a4042a28fb25853c80215fe347e275f036ad4fc9b27dcabcfd63d629332160e5c3#npm:18.2.2"],\
           ["@angular/build", "virtual:39d394d98106da627cae554cc5e3dee83e31ed66988382d8cb0176acb8616468dd9805c796a79ef9e0124ceb4013c431d173ad89b4051dcacf4ad824954e214d#npm:18.2.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/localize", null],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/service-worker", null],\
@@ -682,7 +682,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/build", "virtual:39d394d98106da627cae554cc5e3dee83e31ed66988382d8cb0176acb8616468dd9805c796a79ef9e0124ceb4013c431d173ad89b4051dcacf4ad824954e214d#npm:18.2.2"],\
           ["@ampproject/remapping", "npm:2.3.0"],\
           ["@angular-devkit/architect", "npm:0.1802.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/localize", null],\
           ["@angular/platform-server", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/service-worker", null],\
@@ -852,17 +852,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@angular/compiler-cli", [\
-      ["npm:18.2.2", {\
-        "packageLocation": "./.yarn/cache/@angular-compiler-cli-npm-18.2.2-bf9c4fc6ce-527be654bb.zip/node_modules/@angular/compiler-cli/",\
+      ["npm:18.2.3", {\
+        "packageLocation": "./.yarn/cache/@angular-compiler-cli-npm-18.2.3-1392862e18-fdd8003964.zip/node_modules/@angular/compiler-cli/",\
         "packageDependencies": [\
-          ["@angular/compiler-cli", "npm:18.2.2"]\
+          ["@angular/compiler-cli", "npm:18.2.3"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2", {\
-        "packageLocation": "./.yarn/__virtual__/@angular-compiler-cli-virtual-de9747f5c5/0/cache/@angular-compiler-cli-npm-18.2.2-bf9c4fc6ce-527be654bb.zip/node_modules/@angular/compiler-cli/",\
+      ["virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3", {\
+        "packageLocation": "./.yarn/__virtual__/@angular-compiler-cli-virtual-1d366d769a/0/cache/@angular-compiler-cli-npm-18.2.3-1392862e18-fdd8003964.zip/node_modules/@angular/compiler-cli/",\
         "packageDependencies": [\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/compiler", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@babel/core", "npm:7.25.2"],\
           ["@jridgewell/sourcemap-codec", "npm:1.4.15"],\
@@ -6460,7 +6460,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ngtools-webpack-virtual-1ca5aae119/0/cache/@ngtools-webpack-npm-18.2.2-df6de8187a-2bc93a544d.zip/node_modules/@ngtools/webpack/",\
         "packageDependencies": [\
           ["@ngtools/webpack", "virtual:39d394d98106da627cae554cc5e3dee83e31ed66988382d8cb0176acb8616468dd9805c796a79ef9e0124ceb4013c431d173ad89b4051dcacf4ad824954e214d#npm:18.2.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@types/angular__compiler-cli", null],\
           ["@types/typescript", null],\
           ["@types/webpack", null],\
@@ -13710,7 +13710,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["jest-preset-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:14.2.2"],\
           ["@angular-devkit/build-angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/platform-browser-dynamic", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@types/angular-devkit__build-angular", null],\
@@ -18269,7 +18269,7 @@ const RAW_RUNTIME_STATE =
           ["@angular/cli", "npm:18.2.2"],\
           ["@angular/common", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/compiler", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
-          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
+          ["@angular/compiler-cli", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.3"],\
           ["@angular/core", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/forms", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
           ["@angular/material", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:18.2.2"],\
