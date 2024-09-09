@@ -53,7 +53,7 @@ const RAW_RUNTIME_STATE =
           ["@playwright/test", "npm:1.46.1"],\
           ["@sentry/angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:8.28.0"],\
           ["@sentry/cli", "npm:2.34.1"],\
-          ["@sentry/wizard", "npm:3.27.0"],\
+          ["@sentry/wizard", "npm:3.28.0"],\
           ["@supabase/supabase-js", "npm:2.45.3"],\
           ["@types/eslint", "npm:9.6.1"],\
           ["@types/eslint__js", "npm:8.42.3"],\
@@ -7212,10 +7212,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/wizard", [\
-      ["npm:3.27.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-wizard-npm-3.27.0-f63540cdce-eea1242171.zip/node_modules/@sentry/wizard/",\
+      ["npm:3.28.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-wizard-npm-3.28.0-52017dbe98-ba1f9003ed.zip/node_modules/@sentry/wizard/",\
         "packageDependencies": [\
-          ["@sentry/wizard", "npm:3.27.0"],\
+          ["@sentry/wizard", "npm:3.28.0"],\
           ["@clack/core", "npm:0.3.4"],\
           ["@clack/prompts", "npm:0.7.0"],\
           ["@sentry/cli", "npm:1.77.3"],\
@@ -18281,7 +18281,7 @@ const RAW_RUNTIME_STATE =
           ["@playwright/test", "npm:1.46.1"],\
           ["@sentry/angular", "virtual:fa311eab453e9bfd59f0bcac352b6228ba3825a66945efb097961d7ad83e547aeb4241d6c2c6e18e7b4282ae5fbb819b6f2dd4bcf68767f556a481333413b4b2#npm:8.28.0"],\
           ["@sentry/cli", "npm:2.34.1"],\
-          ["@sentry/wizard", "npm:3.27.0"],\
+          ["@sentry/wizard", "npm:3.28.0"],\
           ["@supabase/supabase-js", "npm:2.45.3"],\
           ["@types/eslint", "npm:9.6.1"],\
           ["@types/eslint__js", "npm:8.42.3"],\

@@ -4927,9 +4927,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/wizard@npm:^3.27.0":
-  version: 3.27.0
-  resolution: "@sentry/wizard@npm:3.27.0"
+"@sentry/wizard@npm:^3.28.0":
+  version: 3.28.0
+  resolution: "@sentry/wizard@npm:3.28.0"
   dependencies:
     "@clack/core": "npm:^0.3.4"
     "@clack/prompts": "npm:0.7.0"
@@ -4951,7 +4951,7 @@ __metadata:
     yargs: "npm:^16.2.0"
   bin:
     sentry-wizard: dist/bin.js
-  checksum: 10/eea1242171d1ffb2233ca3b1f2a5fadd9541e74f50547363af0ce4e820dfba04fb4c62460517e6f6a5b15a75b0a6c9c91f73e8f3b85522e916f9c94014e56d48
+  checksum: 10/ba1f9003ed46c397589b9e820a55bd4e8e2a322539ceba22ab8c58f5073da142ce0d1901be0ac75aab093e96cb3131a1f50e27d721746e813e0604d8e53fdf73
   languageName: node
   linkType: hard
 
@@ -14655,7 +14655,7 @@ __metadata:
     "@playwright/test": "npm:^1.46.1"
     "@sentry/angular": "npm:^8.28.0"
     "@sentry/cli": "npm:^2.34.1"
-    "@sentry/wizard": "npm:^3.27.0"
+    "@sentry/wizard": "npm:^3.28.0"
     "@supabase/supabase-js": "npm:^2.45.3"
     "@types/eslint": "npm:^9.6.1"
     "@types/eslint__js": "npm:^8.42.3"
