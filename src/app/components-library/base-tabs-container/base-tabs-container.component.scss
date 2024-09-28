@@ -1,9 +1,19 @@
 app-base-tabs-container {
-    .mat-mdc-tab-link-container {
-        overflow-x: auto;
-    }
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 
-    .mdc-tab {
-        padding: 0 5px;
+    .tabs__container {
+        min-height: 100%;
+        flex: 1;
+        margin: 0rem 0.5rem 1rem 0.5rem;
+
+        .mat-mdc-tab-link-container {
+            overflow-x: auto;
+        }
+
+        .mdc-tab {
+            padding: 0 0.25rem;
+        }
     }
 }
