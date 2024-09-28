@@ -11,7 +11,7 @@ test.describe("Header Component", () => {
         await page.goto("/");
         await page.setViewportSize({ width: 1280, height: 720 });
         const navLinks = page.locator(".header__nav-links a");
-        await expect(navLinks).toHaveCount(4);
+        await expect(navLinks).toHaveCount(5);
         await expect(navLinks.first()).toHaveText("TuneTools");
     });
 
@@ -36,7 +36,7 @@ test.describe("Main Content Component", () => {
         const navLinks = page.locator(
             ".main-content__sidenav .main-content__nav-link",
         );
-        await expect(navLinks).toHaveCount(4);
+        await expect(navLinks).toHaveCount(5);
         await expect(navLinks.first()).toContainText("Home");
     });
 });
