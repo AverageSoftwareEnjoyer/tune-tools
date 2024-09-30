@@ -13,14 +13,14 @@ export interface Followers {
 }
 
 export interface Image {
-    url: string;
+    url: string | null;
     height: number | null;
     width: number | null;
 }
 
 export interface UserInfo {
     country: string;
-    display_name: string;
+    display_name: string | null;
     email: string;
     explicit_content: ExplicitContent;
     external_urls: ExternalUrls;
@@ -32,3 +32,8 @@ export interface UserInfo {
     type: string;
     uri: string;
 }
+
+export type UserInfoLimited = Pick<
+    UserInfo,
+    "country" | "display_name" | "external_urls" | "id" | "images"
+>;

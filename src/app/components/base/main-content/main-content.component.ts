@@ -7,6 +7,7 @@ import {
     DestroyRef,
     inject,
     ViewChild,
+    ViewEncapsulation,
 } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { MatIconModule } from "@angular/material/icon";
@@ -35,6 +36,7 @@ import { SidenavService } from "../sidenav.service";
     templateUrl: "./main-content.component.html",
     styleUrl: "./main-content.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
 })
 export class MainContentComponent implements AfterViewInit {
     @ViewChild("menu") sidenav!: MatSidenav;

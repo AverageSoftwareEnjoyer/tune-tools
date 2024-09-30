@@ -1,7 +1,8 @@
 <img
-    [ngSrc]="image().url"
+    [ngSrc]="imageUrl() ?? PLACEHOLDER_URL"
     [alt]="alt()"
     [height]="imageSize() ? IMAGE_SIZE_MAPPINGS[imageSize()!] : image().height"
     [width]="imageSize() ? IMAGE_SIZE_MAPPINGS[imageSize()!] : image().width"
     priority
+    (error)="handleImageError()"
 />

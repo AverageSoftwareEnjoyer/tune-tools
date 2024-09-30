@@ -68,7 +68,7 @@ describe("TopItemsStateService", () => {
             expect(topItemsHTTPService.getTopItems$).toHaveBeenCalledTimes(1);
         }));
 
-        it("should fetch data again if data for the specified time range has not been loaded yed", fakeAsync(() => {
+        it("should fetch data again if data for the specified time range has not been loaded yet", fakeAsync(() => {
             jest.spyOn(topItemsHTTPService, "getTopItems$");
 
             topItemsStateService.publishTopTracksTimeRange(
@@ -145,7 +145,7 @@ describe("TopItemsStateService", () => {
             expect(topItemsHTTPService.getTopItems$).toHaveBeenCalledTimes(1);
         }));
 
-        it("should fetch data again if data for the specified time range has not been loaded yed", fakeAsync(() => {
+        it("should fetch data again if data for the specified time range has not been loaded yet", fakeAsync(() => {
             jest.spyOn(topItemsHTTPService, "getTopItems$");
 
             topItemsStateService.publishTopArtistsTimeRange(
@@ -245,7 +245,7 @@ describe("TopItemsStateService", () => {
             expect(topItemsHTTPService.getTopItems$).toHaveBeenCalledTimes(1);
         }));
 
-        it("should fetch data again if data for the specified time range has not been loaded yed", fakeAsync(() => {
+        it("should fetch data again if data for the specified time range has not been loaded yet", fakeAsync(() => {
             jest.spyOn(topItemsHTTPService, "getTopItems$");
 
             topItemsStateService.publishTopGenresTimeRange(

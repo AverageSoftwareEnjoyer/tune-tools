@@ -28,7 +28,7 @@ export const FEATURES: Feature[] = [
         title: "Your Spotify Profile",
         icon: "account_circle",
         description: "Quickly check your profile info",
-        comingSoon: true,
+        comingSoon: false,
     },
 ] as const;
 
