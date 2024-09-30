@@ -191,6 +191,16 @@ a {
 html {
     @include mat.all-component-themes($dark-theme);
 
+    .mat-color-error {
+        @media (prefers-color-scheme: dark) {
+            @include mat.button-color($dark-theme, $color-variant: error);
+        }
+
+        @media (prefers-color-scheme: light) {
+            @include mat.button-color($light-theme, $color-variant: error);
+        }
+    }
+
     @media (prefers-color-scheme: dark) {
         @include mat.tabs-color($dark-theme, $color-variant: primary);
     }
