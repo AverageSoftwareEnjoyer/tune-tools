@@ -1,1 +1,42 @@
-<p>settings works!</p>
+<mat-card class="user__card">
+    <mat-card-content class="user__card-content">
+        <section class="user__info">
+            @if (image) {
+                <app-item-image
+                    [image]="image"
+                    alt="Country flag"
+                    [imageSize]="ImageSizeOptions.Small"
+                />
+            }
+            <div class="user__name">
+                <h3>{{ displayName }}</h3>
+                <h6>Username: {{ id }}</h6>
+            </div>
+        </section>
+        <app-item-image
+            [image]="countryImage"
+            alt="Country flag"
+            [imageSize]="ImageSizeOptions.Small"
+        />
+        <section class="user__section">
+            <h6>(Coming soon)</h6>
+            <mat-slide-toggle disabled> Toggle dark mode </mat-slide-toggle>
+        </section>
+        <section class="user__section">
+            <button mat-button class="mat-color-error">
+                <mat-icon>logout</mat-icon>
+                Log out
+            </button>
+            <a
+                mat-flat-button
+                [href]="url"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="View your profile on Spotify"
+            >
+                <mat-icon>account_circle</mat-icon>
+                View your profile on Spotify
+            </a>
+        </section>
+    </mat-card-content>
+</mat-card>
