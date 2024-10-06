@@ -78,7 +78,7 @@
                 </a>
                 <a
                     mat-list-item
-                    routerLink="/recently-played"
+                    routerLink="/settings"
                     class="main-content__nav-link"
                     [routerLinkActive]="'main-content__nav-link--active'"
                     (click)="menu.toggle()"
@@ -86,16 +86,33 @@
                     <span class="main-content__nav-item">
                         <mat-icon
                             aria-hidden="false"
-                            aria-label="History icon"
+                            aria-label="Settings icon"
                             class="main-content__icon"
-                            >history</mat-icon
+                            >settings</mat-icon
                         >
-                        <span class="main-content__link-text"
-                            >Recently played</span
-                        >
+                        <span class="main-content__link-text">Settings</span>
                     </span>
                 </a>
                 @if (false) {
+                    <a
+                        mat-list-item
+                        routerLink="/recently-played"
+                        class="main-content__nav-link"
+                        [routerLinkActive]="'main-content__nav-link--active'"
+                        (click)="menu.toggle()"
+                    >
+                        <span class="main-content__nav-item">
+                            <mat-icon
+                                aria-hidden="false"
+                                aria-label="History icon"
+                                class="main-content__icon"
+                                >history</mat-icon
+                            >
+                            <span class="main-content__link-text"
+                                >Recently played</span
+                            >
+                        </span>
+                    </a>
                     <a
                         mat-list-item
                         routerLink="/playlists"
@@ -112,25 +129,6 @@
                             >
                             <span class="main-content__link-text"
                                 >Playlists</span
-                            >
-                        </span>
-                    </a>
-                    <a
-                        mat-list-item
-                        routerLink="/settings"
-                        class="main-content__nav-link"
-                        [routerLinkActive]="'main-content__nav-link--active'"
-                        (click)="menu.toggle()"
-                    >
-                        <span class="main-content__nav-item">
-                            <mat-icon
-                                aria-hidden="false"
-                                aria-label="Settings icon"
-                                class="main-content__icon"
-                                >settings</mat-icon
-                            >
-                            <span class="main-content__link-text"
-                                >Settings</span
                             >
                         </span>
                     </a>

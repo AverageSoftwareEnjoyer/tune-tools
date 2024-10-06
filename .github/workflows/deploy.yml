@@ -40,6 +40,9 @@ jobs:
             - name: Install dependencies
               run: yarn install --immutable
 
+            - name: Create prod env file
+              run: echo "${{ secrets.SPOTIFY_API_CONFIG }}" | base64 -d > ./src/environments/environment.ts
+
             - name: Build the app
               run: yarn build --base-href "https://averagesoftwareenjoyer.github.io/tune-tools/"
 
