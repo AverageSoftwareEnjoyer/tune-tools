@@ -36,6 +36,9 @@ jobs:
                   yarn format
                   yarn lint
 
+            - name: Create dev env file
+              run: echo "${{ secrets.SPOTIFY_API_CONFIG }}" | base64 -d > ./src/environments/environment.development.ts
+
             - name: Run unit tests
               run: yarn test:coverage
             - name: Upload coverage reports to Codecov

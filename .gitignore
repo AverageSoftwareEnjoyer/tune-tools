@@ -53,3 +53,6 @@ Thumbs.db
 
 # Sentry Config File
 .sentryclirc
+
+# Dev env config
+**/environment.development.ts
