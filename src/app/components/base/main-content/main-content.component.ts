@@ -15,6 +15,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
 import { RouterModule } from "@angular/router";
 import { ScrollToTopButtonComponent } from "@lib/scroll-to-top-button/scroll-to-top-button.component";
+import { SpinnerComponent } from "@lib/spinner/spinner.component";
 import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { map } from "rxjs";
 
@@ -32,6 +33,7 @@ import { SidenavService } from "../sidenav.service";
         MatSidenavModule,
         RouterModule,
         ScrollToTopButtonComponent,
+        SpinnerComponent,
     ],
     templateUrl: "./main-content.component.html",
     styleUrl: "./main-content.component.scss",
