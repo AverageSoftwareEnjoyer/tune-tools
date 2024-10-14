@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/base/main-content/main-content.component.scss"],
+  "sourcesContent": ["@use \"../../../styles/variables\" as *;\n\napp-main-content {\n    .main-content {\n        $block: &;\n        flex: 1 1 auto;\n        position: static;\n        min-height: 100%;\n\n        &__sidenav {\n            width: 250px;\n        }\n\n        &__area {\n            height: 100%;\n            display: flex;\n            flex-direction: column;\n            position: relative;\n\n            @at-root #{ $block }__container {\n                display: flex;\n                flex-direction: column;\n                min-height: 100%;\n\n                > *:not(router-outlet) {\n                    flex: 1 1 auto;\n                    min-height: 100%;\n                }\n            }\n        }\n\n        &__nav {\n            &-link {\n                border-radius: 4px;\n                padding: 4px 8px;\n            }\n\n            &-item {\n                display: flex;\n                align-items: center;\n                gap: 10px;\n            }\n        }\n    }\n}\n"],
+  "mappings": "AAGI,iBAAA,CAAA,aAEI,KAAA,EAAA,EAAA,KACA,SAAA,OACA,WAAA,KAEA,iBAAA,CAAA,sBACI,MAAA,MAGJ,iBAAA,CAAA,mBACI,OAAA,KACA,QAAA,KACA,eAAA,OACA,SAAA,SAES,iBAAA,CAAA,wBACL,QAAA,KACA,eAAA,OACA,WAAA,KAEA,iBAAA,CALK,uBAKL,CAAA,CAAA,KAAA,eACI,KAAA,EAAA,EAAA,KACA,WAAA,KAMR,iBAAA,CAAA,uBA7BR,cA8BY,IA9BZ,QA+BY,IAAA,IAGJ,iBAAA,CAAA,uBACI,QAAA,KACA,YAAA,OACA,IAAA",
+  "names": []
+}

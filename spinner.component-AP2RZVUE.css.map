@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components-library/spinner/spinner.component.scss"],
+  "sourcesContent": [":host {\n    .spinner-container {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        z-index: 1000;\n        opacity: 1;\n        background-color: #80808050;\n    }\n}\n"],
+  "mappings": "AACI,MAAA,CAAA,kBACI,QAAA,KACA,gBAAA,OACA,YAAA,OACA,SAAA,SACA,IAAA,EACA,KAAA,EACA,MAAA,KACA,OAAA,KACA,QAAA,KACA,QAAA,EACA,iBAAA",
+  "names": []
+}
