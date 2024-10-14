@@ -150,19 +150,13 @@ export class AuthService {
     getAccessTokenWrapper$(code: string): Observable<boolean> {
         const verifier = this.#localStorageService.getItem("verifier");
         if (!verifier) {
-            this.#authStateService.isUserAuthenticated = false;
-            this.#localStorageService.clearLocalStorageItems();
-            return from(this.#router.navigateByUrl(""));
+            return this.logoutAndRedirect$();
         }
 
         return this.#authHTTPService.getAccessToken$(verifier, code).pipe(
-            catchError(() => {
-                this.#authStateService.isUserAuthenticated = false;
-                this.#localStorageService.clearLocalStorageItems();
-                return from(this.#router.navigateByUrl("")).pipe(
-                    switchMap(() => EMPTY),
-                );
-            }),
+            catchError(() =>
+                this.logoutAndRedirect$().pipe(switchMap(() => EMPTY)),
+            ),
             tap(({ access_token, refresh_token }) => {
                 this.#handleAuthentication(access_token, refresh_token);
                 this.#localStorageService.removeItem("verifier");
@@ -188,9 +182,7 @@ export class AuthService {
         const expiry = this.#localStorageService.getItem("token_expiry");
 
         if (!accessToken || !refreshToken || !expiry) {
-            this.#authStateService.isUserAuthenticated = false;
-            this.#localStorageService.clearLocalStorageItems();
-            return from(this.#router.navigateByUrl("")).pipe(map(() => false));
+            return this.logoutAndRedirect$().pipe(map(() => false));
         } else if (new Date() > new Date(parseInt(expiry))) {
             return this.#authHTTPService.refreshAccessToken$(refreshToken).pipe(
                 tap(({ access_token, refresh_token }) => {
@@ -200,6 +192,18 @@ export class AuthService {
             );
         }
         return of(true);
+    }
+
+    /**
+     * Logs the user out by setting the `isUserAuthenticated` state to `false` and clearing the
+     * local storage, and redirects the user to the home page.
+     *
+     * @returns An Observable that emits a boolean representing the result of the redirection.
+     */
+    logoutAndRedirect$(): Observable<boolean> {
+        this.#authStateService.isUserAuthenticated = false;
+        this.#localStorageService.clearLocalStorageItems();
+        return from(this.#router.navigateByUrl(""));
     }
 
     /**

@@ -1,8 +1,15 @@
-import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import {
+    ChangeDetectionStrategy,
+    Component,
+    DestroyRef,
+    inject,
+} from "@angular/core";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { AuthService } from "@core/auth/auth.service";
 import { ItemImageComponent } from "@lib/item-image/item-image.component";
 import { ImageSizeOptions } from "@model/image.model";
 import { Image } from "@model/user.model";
@@ -25,6 +32,8 @@ import { UserStateService } from "@state/user-state.service";
 export class SettingsComponent {
     protected readonly ImageSizeOptions = ImageSizeOptions;
 
+    readonly #authService = inject(AuthService);
+    readonly #destroyRef = inject(DestroyRef);
     readonly #userStateService = inject(UserStateService);
 
     constructor() {
@@ -51,5 +60,15 @@ export class SettingsComponent {
 
     get url(): string | null {
         return this.#userStateService.url();
+    }
+
+    /**
+     * Logs the current user out.
+     */
+    protected logout(): void {
+        this.#authService
+            .logoutAndRedirect$()
+            .pipe(takeUntilDestroyed(this.#destroyRef))
+            .subscribe();
     }
 }
