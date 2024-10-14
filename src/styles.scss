@@ -232,7 +232,7 @@ html {
         }
 
         @media (prefers-color-scheme: light) {
-            background-color: mat.get-theme-color($light-theme, tertiary, 25);
+            background-color: mat.get-theme-color($light-theme, tertiary, 35);
         }
     }
 
