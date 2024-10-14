@@ -1,4 +1,5 @@
 import {
+    HttpHeaders,
     HttpInterceptorFn,
     HttpRequest,
     HttpResponse,
@@ -58,22 +59,25 @@ describe("requestsInterceptor", () => {
         });
     });
 
-    it("should display a snackbar if an HTTP error occurs", () => {
+    it("should display a snackbar if an HTTP error occurs", async () => {
         const openErrorSnackbarSpy = jest.spyOn(
             errorsService,
             "openErrorSnackbar",
         );
         const httpRequest = new HttpRequest("GET", url);
-        const httpHandler = jest
-            .fn()
-            .mockReturnValue(
-                throwError(() => ({ error: { message: "test-error" } })),
-            );
+        const httpHandler = jest.fn().mockReturnValue(
+            throwError(() => ({
+                status: 400,
+            })),
+        );
 
-        interceptor(httpRequest, httpHandler).subscribe(() =>
-            expect(openErrorSnackbarSpy).toHaveBeenCalledWith(
-                ErrorMessages.Default,
-            ),
+        await firstValueFrom(interceptor(httpRequest, httpHandler)).then(
+            undefined,
+            () => {
+                expect(openErrorSnackbarSpy).toHaveBeenCalledWith(
+                    ErrorMessages.Default,
+                );
+            },
         );
     });
 
@@ -85,7 +89,7 @@ describe("requestsInterceptor", () => {
         const httpRequest = new HttpRequest("GET", url);
         const httpHandler = jest
             .fn()
-            .mockReturnValue(timer(6000).pipe(map(() => new HttpResponse())));
+            .mockReturnValue(timer(4000).pipe(map(() => new HttpResponse())));
 
         interceptor(httpRequest, httpHandler).subscribe(() => {
             expect(openErrorSnackbarSpy).toHaveBeenCalledWith(
@@ -93,6 +97,29 @@ describe("requestsInterceptor", () => {
             );
         });
 
-        tick(7000);
+        tick(5000);
     }));
+
+    it("should retry 3 times with the exponential back-off strategy and eventually display a snackbar if the API returns status 429", async () => {
+        const openErrorSnackbarSpy = jest.spyOn(
+            errorsService,
+            "openErrorSnackbar",
+        );
+        const httpRequest = new HttpRequest("GET", url);
+        const httpHandler = jest.fn().mockReturnValue(
+            throwError(() => ({
+                status: 429,
+                headers: new HttpHeaders({ retryAfter: 20 }),
+            })),
+        );
+
+        await firstValueFrom(interceptor(httpRequest, httpHandler)).then(
+            undefined,
+            () => {
+                expect(openErrorSnackbarSpy).toHaveBeenCalledWith(
+                    ErrorMessages.Default,
+                );
+            },
+        );
+    });
 });

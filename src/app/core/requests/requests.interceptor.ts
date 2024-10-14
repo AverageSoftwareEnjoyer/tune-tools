@@ -2,7 +2,15 @@ import { HttpErrorResponse, HttpInterceptorFn } from "@angular/common/http";
 import { inject } from "@angular/core";
 import { ErrorMessages } from "@model/requests-state.model";
 import { LoadingStateService } from "@state/loading-state.service";
-import { catchError, EMPTY, finalize, timeout, TimeoutError } from "rxjs";
+import {
+    catchError,
+    EMPTY,
+    finalize,
+    retry,
+    timeout,
+    TimeoutError,
+    timer,
+} from "rxjs";
 
 import { ErrorsService } from "./errors.service";
 
@@ -24,7 +32,19 @@ export const requestsInterceptor: HttpInterceptorFn = (req, next) => {
     });
 
     return next(req).pipe(
-        timeout(5000),
+        retry({
+            count: 3,
+            delay(error: HttpErrorResponse, retryCount) {
+                if (error.status === 429) {
+                    const retryAfter = Number(error.headers.get("retryAfter"));
+                    if (retryAfter) {
+                        return timer(retryAfter);
+                    }
+                }
+                return timer(2 ** (retryCount - 1) * 100);
+            },
+        }),
+        timeout(3000),
         catchError((error: HttpErrorResponse) => {
             errorsService.openErrorSnackbar(
                 error instanceof TimeoutError
