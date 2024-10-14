@@ -50,7 +50,7 @@ export class UserStateService {
     // #endregion
 
     constructor() {
-        // #reducers
+        // #region reducers
         this.#userInfo$.pipe(takeUntilDestroyed()).subscribe((userInfo) => {
             this.#userInfoState.set(userInfo);
         });
