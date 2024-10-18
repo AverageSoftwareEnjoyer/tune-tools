@@ -53,7 +53,7 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
         trigger("detailExpand", [
-            state("collapsed,void", style({ height: "0px", minHeight: "0" })),
+            state("collapsed,void", style({ height: "0", minHeight: "0" })),
             state("expanded", style({ height: "*" })),
             transition(
                 "expanded <=> collapsed",
