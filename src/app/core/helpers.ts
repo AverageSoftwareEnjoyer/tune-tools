@@ -1,6 +1,5 @@
 import { inject } from "@angular/core";
 import { CanActivateFn, Router } from "@angular/router";
-import { TimeRangeOptions, TopItemsRoutes } from "@model/top-items.model";
 
 /**
  * Checks if the provided value is a valid member of the specified enum-like object.
@@ -17,24 +16,29 @@ export const isAnEnum =
         Object.values(enumObject).includes(maybeEnum as T[keyof T]);
 
 /**
- * Creates a route guard function to validate `timeRange` parameters against the `TimeRangeOptions`
- * enum.
- * If the `timeRange` parameter is valid, the navigation proceeds; otherwise, it redirects to a
- * default route.
+ * Creates a route guard function to validate a given URL parameter against a provided constant object or enum.
+ * If the parameter is valid, navigation continues; otherwise, the user is redirected to the specified route.
  *
- * @param baseRoute - The base route to which the user should be redirected if `timeRange` is
- * invalid.
- * @returns A route guard function that checks the validity of the `timeRange` route parameter.
+ * @template T - An object or enum with string values.
+ * @param baseRoute - The base route to redirect to if the URL parameter is invalid.
+ * @param enumToCheck - The object or enum to validate the URL parameter against.
+ * @param paramName - The name of the URL parameter to check.
+ * @param redirectRoute - The route to redirect the user to if validation fails.
+ * @returns A route guard function that checks if the given URL parameter is valid. If valid, navigation proceeds;
+ * otherwise, it redirects to the default route.
  */
-export const timeRangeGuard =
-    (baseRoute: TopItemsRoutes): CanActivateFn =>
+export const routeParamGuard =
+    <T extends Record<string, string>>(
+        baseRoute: string,
+        enumToCheck: T,
+        paramName: string,
+        redirectRoute: ValueOf<T>,
+    ): CanActivateFn =>
     (route) => {
-        if (isAnEnum(TimeRangeOptions)(route.params["timeRange"])) {
+        if (isAnEnum(enumToCheck)(route.params[paramName])) {
             return true;
         }
-        return inject(Router).parseUrl(
-            `${baseRoute}/${TimeRangeOptions.ShortTerm}`,
-        );
+        return inject(Router).parseUrl(`${baseRoute}/${redirectRoute}`);
     };
 
 /**
@@ -44,3 +48,5 @@ export const timeRangeGuard =
  * @returns `0` to maintain the order of key-value pairs.
  */
 export const keepOrder = (): 0 => 0;
+
+export type ValueOf<T> = T[keyof T];
