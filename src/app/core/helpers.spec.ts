@@ -7,7 +7,7 @@ import {
 } from "@angular/router";
 import { TimeRangeOptions, TopItemsRoutes } from "@model/top-items.model";
 
-import { timeRangeGuard } from "./helpers";
+import { routeParamGuard } from "./helpers";
 
 describe("timeRangeGuard", () => {
     let router: Router;
@@ -16,7 +16,12 @@ describe("timeRangeGuard", () => {
     beforeEach(() => {
         TestBed.configureTestingModule({});
 
-        guard = timeRangeGuard(TopItemsRoutes.TopTracks);
+        guard = routeParamGuard(
+            TopItemsRoutes.TopTracks,
+            TimeRangeOptions,
+            "timeRange",
+            TimeRangeOptions.ShortTerm,
+        );
         router = TestBed.inject(Router);
     });
 

@@ -29,9 +29,7 @@ export class TopItemsService {
             album: this.convertAlbumToLimited(album),
             external_urls,
             name,
-            artists: artists.map((artist) =>
-                this.convertSimplifiedArtistToLimited(artist),
-            ),
+            artists: artists.map(({ name }) => name).join(","),
         };
     }
 
@@ -91,7 +89,7 @@ export class TopItemsService {
      * @returns An array containing genres with their names and scores
      */
     convertTopArtistsToTopGenres(artists: TopArtist[]): TopGenreLimited[] {
-        return Array.from(
+        const convertedAndSorted = Array.from(
             artists
                 .flatMap(({ genres }) => genres)
                 .reduce(
@@ -102,5 +100,21 @@ export class TopItemsService {
             .map(([key, value]) => ({ name: key, score: value }))
             .filter(({ score }) => score > 1)
             .sort(({ score: scoreA }, { score: scoreB }) => scoreB - scoreA);
+        const maxScore = convertedAndSorted[0]?.score ?? 0;
+        return convertedAndSorted.map(({ name, score }) => ({
+            name,
+            score: this.#normalizeGenreScore(score, maxScore),
+        }));
+    }
+
+    /**
+     * Normalizes genre score based on the maximum score in the current array of genres.
+     *
+     * @param score - Genre score to normalize.
+     * @param maxScore - The highest score in the array that is to be normalized.
+     * @returns A normalized genre score.
+     */
+    #normalizeGenreScore(score: number, maxScore: number): number {
+        return (score / (maxScore + 2)) * 100;
     }
 }

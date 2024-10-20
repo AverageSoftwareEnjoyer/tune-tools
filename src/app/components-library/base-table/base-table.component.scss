@@ -8,11 +8,11 @@ app-base-table {
             padding: 0 0.5rem 0.5rem;
 
             .mdc-data-table__header-cell {
-                padding: 0 2px;
+                padding: 0 0.125rem;
             }
 
             .mdc-data-table__cell:not(.mat-column-expandedDetail) {
-                padding: 2px;
+                padding: 0.125rem;
             }
 
             .details-row {
@@ -24,7 +24,7 @@ app-base-table {
                 display: flex;
 
                 &--expanded {
-                    padding: 10px 0;
+                    padding: 0.5rem 0;
                 }
             }
 
@@ -80,7 +80,7 @@ app-base-table {
             }
 
             .score-bar {
-                height: 24px;
+                height: 1.5rem;
                 border-radius: 0 0.25rem 0.25rem 0;
                 position: relative;
                 overflow: hidden;
