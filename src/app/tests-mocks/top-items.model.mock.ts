@@ -115,12 +115,12 @@ export const mockTopTrackLimited: TopTrackLimited = {
     album: mockAlbumLimited,
     external_urls: { spotify: "https://spotify.com/track/123" },
     name: "Track Name",
-    artists: [mockSimplifiedArtistLimited],
+    artists: mockSimplifiedArtistLimited.name,
 };
 
 export const mockTopGenreLimited: TopGenreLimited = {
     name: "rock",
-    score: 2,
+    score: 50,
 };
 
 export const mockTopTracks: TopTracks = {

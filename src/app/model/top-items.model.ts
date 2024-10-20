@@ -136,8 +136,8 @@ export type AlbumLimited = Pick<
 
 export type TopTrackLimited = Pick<
     TopTrack<AlbumLimited, SimplifiedArtistLimited>,
-    "album" | "external_urls" | "name" | "artists"
->;
+    "album" | "external_urls" | "name"
+> & { artists: string };
 
 export type TopArtistLimited = Pick<
     TopArtist,

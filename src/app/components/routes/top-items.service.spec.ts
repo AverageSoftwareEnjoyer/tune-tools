@@ -51,13 +51,13 @@ describe("TopItemsService", () => {
         expect(result).toEqual(mockTopArtistLimited);
     });
 
-    test("should return an empty array when no artists are provided", () => {
+    it("should return an empty array when no artists are provided", () => {
         const result = topItemsService.convertTopArtistsToTopGenres([]);
 
         expect(result).toEqual([]);
     });
 
-    test("should return an empty array when artists have no genres", () => {
+    it("should return an empty array when artists have no genres", () => {
         const result = topItemsService.convertTopArtistsToTopGenres([
             { ...mockTopArtist, genres: [] },
             { ...mockTopArtist, genres: [] },
@@ -66,7 +66,7 @@ describe("TopItemsService", () => {
         expect(result).toEqual([]);
     });
 
-    test("should return correct scores for genres when genres are shared among artists", () => {
+    it("should return correct scores for genres when genres are shared among artists", () => {
         const artistsWithSharedGenres = [
             mockTopArtist,
             { ...mockTopArtist, genres: ["rock", "pop"] },
@@ -78,12 +78,12 @@ describe("TopItemsService", () => {
         );
 
         expect(result).toEqual([
-            { name: "rock", score: 2 },
-            { name: "pop", score: 2 },
+            { name: "rock", score: 50 },
+            { name: "pop", score: 50 },
         ]);
     });
 
-    test("should filter out genres with a score of 1", () => {
+    it("should filter out genres with a score of 1", () => {
         const result = topItemsService.convertTopArtistsToTopGenres([
             mockTopArtist,
             { ...mockTopArtist, genres: ["rock", "pop"] },
