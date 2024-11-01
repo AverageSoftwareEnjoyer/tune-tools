@@ -45,7 +45,6 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
         TitleCasePipe,
         TopTracksDetailsComponent,
     ],
-    providers: [TitleCasePipe],
     templateUrl: "./base-table.component.html",
     styleUrl: "./base-table.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
