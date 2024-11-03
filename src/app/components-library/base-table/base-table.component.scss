@@ -1,94 +1,94 @@
-app-base-table {
-    .table-container {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
+.table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
 
-        .table {
-            padding: 0 0.5rem 0.5rem;
+    .table {
+        padding: 0 0.5rem 0.5rem;
 
-            .mdc-data-table__header-cell {
+        ::ng-deep {
+            &.mdc-data-table__header-cell {
                 padding: 0 0.125rem;
             }
 
-            .mdc-data-table__cell:not(.mat-column-expandedDetail) {
+            &.mdc-data-table__cell:not(.mat-column-expandedDetail) {
                 padding: 0.125rem;
             }
+        }
 
-            .details-row {
-                height: 0;
+        .details-row {
+            height: 0;
+        }
+
+        .item-details {
+            overflow: hidden;
+            display: flex;
+
+            &--expanded {
+                padding: 0.5rem 0;
             }
+        }
 
-            .item-details {
-                overflow: hidden;
-                display: flex;
+        .item-info-container {
+            display: flex;
+            flex-direction: column;
 
-                &--expanded {
-                    padding: 0.5rem 0;
+            &__line {
+                &--bold {
+                    font-weight: bold;
                 }
             }
+        }
 
-            .item-info-container {
-                display: flex;
-                flex-direction: column;
+        .mat-column-index {
+            width: 5%;
+        }
 
-                &__line {
-                    &--bold {
-                        font-weight: bold;
-                    }
-                }
-            }
+        .mat-column-image {
+            width: 10%;
+        }
 
-            .mat-column-index {
-                width: 5%;
-            }
-
-            .mat-column-image {
-                width: 10%;
-            }
-
-            .mat-column-name {
-                @media (max-width: 959.98px) {
-                    width: 40%;
-                }
-
-                width: 30%;
-            }
-
-            .mat-column-artists {
-                width: 30%;
-            }
-
-            .mat-column-link {
-                width: 10%;
-            }
-
-            .mat-column-expand {
-                width: 5%;
-            }
-
-            .mat-column-genres {
-                width: 30%;
-            }
-
-            .mat-column-genre {
+        .mat-column-name {
+            @media (max-width: 959.98px) {
                 width: 40%;
             }
 
-            .mat-column-score {
-                width: 55%;
-            }
+            width: 30%;
+        }
 
-            .score-bar {
-                height: 1.5rem;
-                border-radius: 0 0.25rem 0.25rem 0;
-                position: relative;
-                overflow: hidden;
-            }
+        .mat-column-artists {
+            width: 30%;
+        }
 
-            .item-row {
-                border-bottom-width: 0;
-            }
+        .mat-column-link {
+            width: 10%;
+        }
+
+        .mat-column-expand {
+            width: 5%;
+        }
+
+        .mat-column-genres {
+            width: 30%;
+        }
+
+        .mat-column-genre {
+            width: 40%;
+        }
+
+        .mat-column-score {
+            width: 55%;
+        }
+
+        .score-bar {
+            height: 1.5rem;
+            border-radius: 0 0.25rem 0.25rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-row {
+            border-bottom-width: 0;
         }
     }
 }
