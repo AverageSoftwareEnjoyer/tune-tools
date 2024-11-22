@@ -1,4 +1,3 @@
-import { AsyncPipe } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatRippleModule } from "@angular/material/core";
@@ -14,7 +13,6 @@ import { SidenavService } from "../sidenav.service";
     selector: "app-header",
     standalone: true,
     imports: [
-        AsyncPipe,
         MatButtonModule,
         MatIconModule,
         MatListModule,

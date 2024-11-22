@@ -1,4 +1,3 @@
-import { AsyncPipe } from "@angular/common";
 import {
     AfterViewInit,
     ChangeDetectionStrategy,
@@ -19,15 +18,12 @@ import { SpinnerComponent } from "@lib/spinner/spinner.component";
 import { MediaQueriesStateService } from "@state/media-queries-state.service";
 import { map } from "rxjs";
 
-import { HeaderComponent } from "../header/header.component";
 import { SidenavService } from "../sidenav.service";
 
 @Component({
     selector: "app-main-content",
     standalone: true,
     imports: [
-        AsyncPipe,
-        HeaderComponent,
         MatIconModule,
         MatListModule,
         MatSidenavModule,
