@@ -226,13 +226,23 @@ html {
         }
     }
 
-    .table .score__bar {
-        @media (prefers-color-scheme: dark) {
-            background-color: mat.get-theme-color($dark-theme, tertiary, 90);
-        }
+    .table .score {
+        &__bar {
+            @media (prefers-color-scheme: dark) {
+                background-color: mat.get-theme-color(
+                    $dark-theme,
+                    tertiary,
+                    90
+                );
+            }
 
-        @media (prefers-color-scheme: light) {
-            background-color: mat.get-theme-color($light-theme, tertiary, 35);
+            @media (prefers-color-scheme: light) {
+                background-color: mat.get-theme-color(
+                    $light-theme,
+                    tertiary,
+                    35
+                );
+            }
         }
 
         &__text {
