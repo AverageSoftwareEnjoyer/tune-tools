@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components-library/item-image/item-image.component.scss"],
+  "sourcesContent": [":host {\n    display: flex;\n    align-items: center;\n\n    img {\n        margin: 0.25rem;\n    }\n}\n"],
+  "mappings": "AAAA,MACI,QAAA,KACA,YAAA,OAEA,MAAA,IAJJ,OAKQ",
+  "names": []
+}
