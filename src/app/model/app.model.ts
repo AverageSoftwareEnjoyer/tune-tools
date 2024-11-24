@@ -22,7 +22,7 @@ export const FEATURES: Feature[] = [
         title: "Recently Played",
         icon: "access_time",
         description: "View your recently played tracks",
-        comingSoon: true,
+        comingSoon: false,
     },
     {
         title: "Your Spotify Profile",

@@ -115,11 +115,11 @@ describe("BaseTableComponent", () => {
             fixture.detectChanges();
 
             const { debugElement } = fixture;
-            const scoreBarCell = debugElement.query(By.css(".score-bar"));
+            const scoreBarCell = debugElement.query(By.css(".score__bar"));
 
             expect(
                 (scoreBarCell.nativeElement as HTMLElement).style.width,
-            ).toBe("50%");
+            ).toBe("99%");
         });
 
         it("should correctly handle an empty array of items", () => {
@@ -127,7 +127,7 @@ describe("BaseTableComponent", () => {
             fixture.detectChanges();
 
             const { debugElement } = fixture;
-            const scoreBarCell = debugElement.query(By.css(".score-bar"));
+            const scoreBarCell = debugElement.query(By.css(".score__bar"));
 
             expect(scoreBarCell).toBeNull();
         });

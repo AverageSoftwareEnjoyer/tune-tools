@@ -26,6 +26,10 @@ describe("UserStateService", () => {
         userHTTPService = TestBed.inject(UserHTTPService);
     });
 
+    afterEach(() => {
+        httpTestingController.verify();
+    });
+
     it("should be created", () => {
         expect(userStateService).toBeTruthy();
     });
@@ -66,19 +70,18 @@ describe("UserStateService", () => {
         );
     });
 
-    it("should fetch and update top tracks for the specified time range", fakeAsync(() => {
+    it("should fetch and update top tracks for the specified time range", () => {
         userHTTPService.getUserInfo$ = jest
             .fn()
             .mockReturnValue(of(mockUserInfo));
 
         userStateService.publishUserInfo();
-        tick();
 
         expect(userStateService.displayName()).toStrictEqual(
             mockUserInfoLimited.display_name,
         );
         expect(userHTTPService.getUserInfo$).toHaveBeenCalledTimes(1);
-    }));
+    });
 
     it("should fetch data again if data for the specified time range has not been loaded yed", fakeAsync(() => {
         jest.spyOn(userHTTPService, "getUserInfo$");

@@ -50,3 +50,13 @@ export const routeParamGuard =
 export const keepOrder = (): 0 => 0;
 
 export type ValueOf<T> = T[keyof T];
+
+/**
+ * Normalizes a score based on the maximum score in an iterable of numbers.
+ *
+ * @param score - A score to normalize.
+ * @param maxScore - The highest score in the iterable that is to be normalized.
+ * @returns A normalized score.
+ */
+export const normalizeScore = (score: number, maxScore: number): number =>
+    (99 - 10) * ((score - 1) / (maxScore - 1)) + 10;

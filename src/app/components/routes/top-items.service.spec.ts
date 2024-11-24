@@ -78,8 +78,8 @@ describe("TopItemsService", () => {
         );
 
         expect(result).toEqual([
-            { name: "rock", score: 50 },
-            { name: "pop", score: 50 },
+            { name: "rock", score: 99 },
+            { name: "pop", score: 99 },
         ]);
     });
 

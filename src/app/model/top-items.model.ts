@@ -5,9 +5,9 @@ export interface Restrictions {
 }
 
 export interface ExternalIds {
-    isrc: string;
-    ean: string;
-    upc: string;
+    isrc?: string;
+    ean?: string;
+    upc?: string;
 }
 
 export type SimplifiedArtist = Omit<TopItem<"artist">, "popularity">;

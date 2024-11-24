@@ -12,7 +12,6 @@ import {
     computed,
     input,
     OnChanges,
-    ViewEncapsulation,
 } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatRippleModule } from "@angular/material/core";
@@ -45,7 +44,6 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
         TitleCasePipe,
         TopTracksDetailsComponent,
     ],
-    providers: [TitleCasePipe],
     templateUrl: "./base-table.component.html",
     styleUrl: "./base-table.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -59,7 +57,6 @@ import { TopTracksDetailsComponent } from "@routes/top-tracks/top-tracks-details
             ),
         ]),
     ],
-    encapsulation: ViewEncapsulation.None,
 })
 export class BaseTableComponent<T extends TopItemsTypeExtended>
     implements OnChanges
