@@ -226,13 +226,29 @@ html {
         }
     }
 
-    app-base-table .score-bar {
+    .table .score__bar {
         @media (prefers-color-scheme: dark) {
             background-color: mat.get-theme-color($dark-theme, tertiary, 90);
         }
 
         @media (prefers-color-scheme: light) {
             background-color: mat.get-theme-color($light-theme, tertiary, 35);
+        }
+
+        &__text {
+            font-size: mat.get-theme-typography(
+                $dark-theme,
+                headline-small,
+                font-size
+            );
+
+            @media (prefers-color-scheme: dark) {
+                color: mat.get-theme-color($dark-theme, neutral, 100);
+            }
+
+            @media (prefers-color-scheme: light) {
+                color: mat.get-theme-color($light-theme, neutral, 0);
+            }
         }
     }
 
