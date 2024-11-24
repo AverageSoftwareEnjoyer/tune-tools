@@ -11,7 +11,11 @@ import {
     TopTrackLimited,
     TopTracks,
 } from "@model/top-items.model";
-import { Image } from "@model/user.model";
+import { ExternalUrls, Image } from "@model/user.model";
+
+export const mockExternalUrls: ExternalUrls = {
+    spotify: "https://spotify.com/track/123",
+};
 
 export const mockImage: Image = {
     url: "https://image.url",
@@ -21,7 +25,7 @@ export const mockImage: Image = {
 
 export const mockSimplifiedArtist: SimplifiedArtist = {
     name: "Artist Name",
-    external_urls: { spotify: "https://spotify.com/artist/123" },
+    external_urls: mockExternalUrls,
     href: "",
     id: "",
     type: "artist",
@@ -29,7 +33,7 @@ export const mockSimplifiedArtist: SimplifiedArtist = {
 };
 
 export const mockAlbum: Album = {
-    external_urls: { spotify: "https://spotify.com/album/123" },
+    external_urls: mockExternalUrls,
     name: "Album Name",
     album_type: "ALBUM",
     total_tracks: 10,
@@ -49,7 +53,7 @@ export const mockAlbum: Album = {
 
 export const mockTopArtist: TopArtist = {
     name: "Artist Name",
-    external_urls: { spotify: "https://spotify.com/artist/123" },
+    external_urls: mockExternalUrls,
     followers: {
         href: null,
         total: 0,
@@ -65,9 +69,9 @@ export const mockTopArtist: TopArtist = {
 
 export const mockTopTrack: TopTrack<Album, TopArtist> = {
     album: mockAlbum,
-    external_urls: { spotify: "https://spotify.com/track/123" },
+    external_urls: mockExternalUrls,
     name: "Track Name",
-    artists: [mockTopArtist],
+    artists: [mockTopArtist, mockTopArtist],
     available_markets: [],
     disc_number: 0,
     duration_ms: 0,
@@ -92,7 +96,7 @@ export const mockTopTrack: TopTrack<Album, TopArtist> = {
 
 export const mockAlbumLimited: AlbumLimited = {
     album_type: "ALBUM",
-    external_urls: { spotify: "https://spotify.com/album/123" },
+    external_urls: mockExternalUrls,
     images: [mockImage, mockImage, mockImage],
     name: "Album Name",
     release_date: "2020-01-01",
@@ -100,27 +104,27 @@ export const mockAlbumLimited: AlbumLimited = {
 };
 
 export const mockTopArtistLimited: TopArtistLimited = {
-    external_urls: { spotify: "https://spotify.com/artist/123" },
+    external_urls: mockExternalUrls,
     genres: ["rock"],
     images: [mockImage, mockImage, mockImage],
     name: "Artist Name",
 };
 
 export const mockSimplifiedArtistLimited: SimplifiedArtistLimited = {
-    external_urls: { spotify: "https://spotify.com/artist/123" },
+    external_urls: mockExternalUrls,
     name: "Artist Name",
 };
 
 export const mockTopTrackLimited: TopTrackLimited = {
     album: mockAlbumLimited,
-    external_urls: { spotify: "https://spotify.com/track/123" },
+    external_urls: mockExternalUrls,
     name: "Track Name",
-    artists: mockSimplifiedArtistLimited.name,
+    artists: `${mockSimplifiedArtistLimited.name}, ${mockSimplifiedArtistLimited.name}`,
 };
 
 export const mockTopGenreLimited: TopGenreLimited = {
     name: "rock",
-    score: 50,
+    score: 99,
 };
 
 export const mockTopTracks: TopTracks = {
