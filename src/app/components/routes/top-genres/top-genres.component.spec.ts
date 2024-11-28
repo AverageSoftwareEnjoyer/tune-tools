@@ -37,7 +37,7 @@ describe("TopGenresComponent", () => {
     });
 
     it("should publish time range on input changes", () => {
-        component.ngOnChanges();
+        fixture.detectChanges();
 
         expect(
             topItemsStateService.publishTopGenresTimeRange,

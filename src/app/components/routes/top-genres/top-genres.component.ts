@@ -1,10 +1,11 @@
 import {
     ChangeDetectionStrategy,
     Component,
+    effect,
     inject,
     input,
-    OnChanges,
     signal,
+    untracked,
 } from "@angular/core";
 import { BaseTabsContainerComponent } from "@lib/base-tabs-container/base-tabs-container.component";
 import {
@@ -21,7 +22,7 @@ import { TopItemsStateService } from "@state/top-items-state.service";
     styleUrl: "./top-genres.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TopGenresComponent implements OnChanges {
+export class TopGenresComponent {
     timeRange = input.required<TimeRangeOptions>();
 
     protected readonly columnsMappings = signal(
@@ -30,7 +31,12 @@ export class TopGenresComponent implements OnChanges {
 
     protected readonly topItemsStateService = inject(TopItemsStateService);
 
-    ngOnChanges(): void {
-        this.topItemsStateService.publishTopGenresTimeRange(this.timeRange());
+    constructor() {
+        effect(() => {
+            const timeRange = this.timeRange();
+            untracked(() =>
+                this.topItemsStateService.publishTopGenresTimeRange(timeRange),
+            );
+        });
     }
 }

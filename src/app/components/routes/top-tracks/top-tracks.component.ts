@@ -2,10 +2,11 @@ import {
     ChangeDetectionStrategy,
     Component,
     computed,
+    effect,
     inject,
     input,
-    OnChanges,
     Signal,
+    untracked,
 } from "@angular/core";
 import { BaseTabsContainerComponent } from "@lib/base-tabs-container/base-tabs-container.component";
 import {
@@ -24,7 +25,7 @@ import { TopItemsStateService } from "@state/top-items-state.service";
     styleUrl: "./top-tracks.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TopTracksComponent implements OnChanges {
+export class TopTracksComponent {
     timeRange = input.required<TimeRangeOptions>();
 
     readonly #mediaQueriesStateService = inject(MediaQueriesStateService);
@@ -42,7 +43,12 @@ export class TopTracksComponent implements OnChanges {
         return this.#mediaQueriesStateService.isBelowMediumWidth;
     }
 
-    ngOnChanges(): void {
-        this.topItemsStateService.publishTopTracksTimeRange(this.timeRange());
+    constructor() {
+        effect(() => {
+            const timeRange = this.timeRange();
+            untracked(() =>
+                this.topItemsStateService.publishTopTracksTimeRange(timeRange),
+            );
+        });
     }
 }

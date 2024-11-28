@@ -46,7 +46,7 @@ describe("TopTracksComponent", () => {
     });
 
     it("should publish time range on input changes", () => {
-        component.ngOnChanges();
+        fixture.detectChanges();
 
         expect(
             topItemsStateService.publishTopTracksTimeRange,
