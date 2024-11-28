@@ -1,7 +1,8 @@
-import "jest-preset-angular/setup-jest";
-
 import structuredClone from "@ungap/structured-clone";
+import { setupZoneTestEnv } from "jest-preset-angular/setup-env/zone";
 import { TextDecoder, TextEncoder } from "util";
+
+setupZoneTestEnv();
 
 Object.assign(global, { TextDecoder, TextEncoder });
 

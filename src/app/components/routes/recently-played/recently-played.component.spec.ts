@@ -80,7 +80,7 @@ describe("RecentlyPlayedComponent", () => {
             fixture.detectChanges();
 
             const { debugElement } = fixture;
-            const scoreBarCell = debugElement.query(By.css("."));
+            const scoreBarCell = debugElement.query(By.css(".score__bar"));
 
             expect(scoreBarCell).toBeNull();
         });
