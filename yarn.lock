@@ -450,15 +450,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/common@npm:^18.2.12":
-  version: 18.2.12
-  resolution: "@angular/common@npm:18.2.12"
+"@angular/common@npm:^19.0.4":
+  version: 19.0.4
+  resolution: "@angular/common@npm:19.0.4"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/core": 18.2.12
+    "@angular/core": 19.0.4
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10/242c692733babfa6e38c48a23b8d22a3f92c466df4f6fb8c3573fceebc7356431ecdd4e829d69f25b21bd8954fb106c45514f722ac74399bf931fb92943aa78b
+  checksum: 10/64d6f6d9265c6c925ba300c31dd3a32ab8ee863fb3011c4cde392bc8a73d1419b8bf5df1f116755ff6a0e99065b118fd2d3c21901eb91fd7188ad089ab97aa2d
   languageName: node
   linkType: hard
 
@@ -13237,7 +13237,7 @@ __metadata:
     "@angular/animations": "npm:^18.2.12"
     "@angular/cdk": "npm:^18.2.14"
     "@angular/cli": "npm:^18.2.12"
-    "@angular/common": "npm:^18.2.12"
+    "@angular/common": "npm:^19.0.4"
     "@angular/compiler": "npm:^18.2.12"
     "@angular/compiler-cli": "npm:^18.2.12"
     "@angular/core": "npm:^18.2.12"
