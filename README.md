@@ -6,7 +6,6 @@ TuneTools is a dynamic web application designed to enrich your Spotify experienc
 
 ## Features
 
--   **Playlist Automation**: Simplify the way you create and manage your playlists with smart, automated tools.
 -   **Listening Analytics**: Gain insights into your listening habits with detailed, interactive statistics.
 -   **Real-Time Data**: Stay updated with real-time information on your listening trends and playlist updates.
 -   **Responsive Design**: Enjoy TuneTools across all your devices, thanks to a fully responsive user interface.
@@ -59,11 +58,6 @@ TuneTools utilizes a robust selection of technologies and tools to deliver a pre
 **UI libraries**
 
 -   **[Angular Material](https://material.angular.io/)**: Material Design components for Angular.
-
-**Backend**
-
--   **[Supabase](https://supabase.io/)**: The open source Firebase alternative.
--   **[Drizzle ORM](https://drizzle.orm.io/)**: A lightweight and intuitive ORM for TypeScript and Node.js.
 
 **Code quality**
 
