@@ -22,7 +22,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/architect@npm:0.1802.12, @angular-devkit/architect@npm:^0.1802.12":
+"@angular-devkit/architect@npm:0.1802.12":
   version: 0.1802.12
   resolution: "@angular-devkit/architect@npm:0.1802.12"
   dependencies:
@@ -34,6 +34,21 @@ __metadata:
     puppeteer:
       built: true
   checksum: 10/eed404bc6a50dbf8c814aea7541efef56f690fa220b3b2d67e44e7a1b77398ce2de3cec853704fa3fc9bdab111d7aa92402f39e38fa26adb8dff2b8bd6b546fc
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/architect@npm:^0.1900.7":
+  version: 0.1900.7
+  resolution: "@angular-devkit/architect@npm:0.1900.7"
+  dependencies:
+    "@angular-devkit/core": "npm:19.0.7"
+    rxjs: "npm:7.8.1"
+  dependenciesMeta:
+    esbuild:
+      built: true
+    puppeteer:
+      built: true
+  checksum: 10/cd5239db50f1e8a4cde45a6a677943621c408607eb92244a97762939806dc14e636b40e2d76a9c2a4428d1f0f4ef88055f448e7f280ef5803dbfaa4deeeae6f5
   languageName: node
   linkType: hard
 
@@ -219,6 +234,30 @@ __metadata:
     chokidar:
       optional: true
   checksum: 10/793c54cc9ac4e064d2580985c6c2de627ab3e2b8a7198e0557033db58bac36896e30ff06fc9b9faf91027a67af2d9b59f1985c0ee3cacf44c7b212823b901667
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/core@npm:19.0.7":
+  version: 19.0.7
+  resolution: "@angular-devkit/core@npm:19.0.7"
+  dependencies:
+    ajv: "npm:8.17.1"
+    ajv-formats: "npm:3.0.1"
+    jsonc-parser: "npm:3.3.1"
+    picomatch: "npm:4.0.2"
+    rxjs: "npm:7.8.1"
+    source-map: "npm:0.7.4"
+  peerDependencies:
+    chokidar: ^4.0.0
+  dependenciesMeta:
+    esbuild:
+      built: true
+    puppeteer:
+      built: true
+  peerDependenciesMeta:
+    chokidar:
+      optional: true
+  checksum: 10/6c0d4422bcff1930f2b9782d60bbfbac030925017621405a4215498f1cfa525c9cbc0a5fb60bae65d8638c7d859a785295d3810a322492ce12050f5ac23e69fe
   languageName: node
   linkType: hard
 
@@ -13225,7 +13264,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tune-tools@workspace:."
   dependencies:
-    "@angular-devkit/architect": "npm:^0.1802.12"
+    "@angular-devkit/architect": "npm:^0.1900.7"
     "@angular-devkit/build-angular": "npm:^18.2.12"
     "@angular-devkit/core": "npm:^18.2.12"
     "@angular-devkit/schematics": "npm:^18.2.12"
