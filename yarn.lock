@@ -198,7 +198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/core@npm:18.2.12, @angular-devkit/core@npm:^18.0.0, @angular-devkit/core@npm:^18.2.12":
+"@angular-devkit/core@npm:18.2.12, @angular-devkit/core@npm:^18.0.0":
   version: 18.2.12
   resolution: "@angular-devkit/core@npm:18.2.12"
   dependencies:
@@ -219,6 +219,30 @@ __metadata:
     chokidar:
       optional: true
   checksum: 10/793c54cc9ac4e064d2580985c6c2de627ab3e2b8a7198e0557033db58bac36896e30ff06fc9b9faf91027a67af2d9b59f1985c0ee3cacf44c7b212823b901667
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/core@npm:^19.0.7":
+  version: 19.0.7
+  resolution: "@angular-devkit/core@npm:19.0.7"
+  dependencies:
+    ajv: "npm:8.17.1"
+    ajv-formats: "npm:3.0.1"
+    jsonc-parser: "npm:3.3.1"
+    picomatch: "npm:4.0.2"
+    rxjs: "npm:7.8.1"
+    source-map: "npm:0.7.4"
+  peerDependencies:
+    chokidar: ^4.0.0
+  dependenciesMeta:
+    esbuild:
+      built: true
+    puppeteer:
+      built: true
+  peerDependenciesMeta:
+    chokidar:
+      optional: true
+  checksum: 10/6c0d4422bcff1930f2b9782d60bbfbac030925017621405a4215498f1cfa525c9cbc0a5fb60bae65d8638c7d859a785295d3810a322492ce12050f5ac23e69fe
   languageName: node
   linkType: hard
 
@@ -13227,7 +13251,7 @@ __metadata:
   dependencies:
     "@angular-devkit/architect": "npm:^0.1802.12"
     "@angular-devkit/build-angular": "npm:^18.2.12"
-    "@angular-devkit/core": "npm:^18.2.12"
+    "@angular-devkit/core": "npm:^19.0.7"
     "@angular-devkit/schematics": "npm:^18.2.12"
     "@angular-eslint/builder": "npm:^18.4.2"
     "@angular-eslint/eslint-plugin": "npm:^18.4.2"
