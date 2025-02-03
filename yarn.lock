@@ -22,7 +22,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/architect@npm:0.1802.12, @angular-devkit/architect@npm:^0.1802.12":
+"@angular-devkit/architect@npm:0.1802.12":
   version: 0.1802.12
   resolution: "@angular-devkit/architect@npm:0.1802.12"
   dependencies:
@@ -34,6 +34,16 @@ __metadata:
     puppeteer:
       built: true
   checksum: 10/eed404bc6a50dbf8c814aea7541efef56f690fa220b3b2d67e44e7a1b77398ce2de3cec853704fa3fc9bdab111d7aa92402f39e38fa26adb8dff2b8bd6b546fc
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/architect@npm:^0.1901.5":
+  version: 0.1901.5
+  resolution: "@angular-devkit/architect@npm:0.1901.5"
+  dependencies:
+    "@angular-devkit/core": "npm:19.1.5"
+    rxjs: "npm:7.8.1"
+  checksum: 10/7fc90360a81fe19f229fde1ecc0cf071a284e8f35debf540d5c0a533d5b363952c3dc2fb540f8eb693e6780d77d4e4e13d0d6d42ff085fdbac31000d2f3d548f
   languageName: node
   linkType: hard
 
@@ -219,6 +229,25 @@ __metadata:
     chokidar:
       optional: true
   checksum: 10/793c54cc9ac4e064d2580985c6c2de627ab3e2b8a7198e0557033db58bac36896e30ff06fc9b9faf91027a67af2d9b59f1985c0ee3cacf44c7b212823b901667
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/core@npm:19.1.5":
+  version: 19.1.5
+  resolution: "@angular-devkit/core@npm:19.1.5"
+  dependencies:
+    ajv: "npm:8.17.1"
+    ajv-formats: "npm:3.0.1"
+    jsonc-parser: "npm:3.3.1"
+    picomatch: "npm:4.0.2"
+    rxjs: "npm:7.8.1"
+    source-map: "npm:0.7.4"
+  peerDependencies:
+    chokidar: ^4.0.0
+  peerDependenciesMeta:
+    chokidar:
+      optional: true
+  checksum: 10/7d81fd1047e9171608674a0efc70e5bb3dbdd19fca484d9696ca61f9282359c87ece7ab60e2796bf0d078014293f96a5a35158caa8d0c90eaf331b5001788555
   languageName: node
   linkType: hard
 
@@ -13225,7 +13254,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tune-tools@workspace:."
   dependencies:
-    "@angular-devkit/architect": "npm:^0.1802.12"
+    "@angular-devkit/architect": "npm:^0.1901.5"
     "@angular-devkit/build-angular": "npm:^18.2.12"
     "@angular-devkit/core": "npm:^18.2.12"
     "@angular-devkit/schematics": "npm:^18.2.12"
